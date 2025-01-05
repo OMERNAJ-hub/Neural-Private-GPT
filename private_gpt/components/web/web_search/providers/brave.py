@@ -307,3 +307,5 @@ class BraveSearchProvider(BaseWebSearchProvider):
         if self._session and not self._session.closed:
             await self._session.close()
             logger.debug("Closed aiohttp ClientSession")
+
+

@@ -176,3 +176,5 @@ async def delete_file(
 ) -> DeletedFile:
     service: FileService = request.state.injector.get(FileService)
     return await service.delete_file(scope_id=scope_id, file_id=file_id)
+
+

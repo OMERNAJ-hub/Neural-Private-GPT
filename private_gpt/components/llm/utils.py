@@ -130,3 +130,5 @@ def partial_json_loads(input_str: str, flags: Allow) -> tuple[Any, int]:
         raise
     except Exception as e:
         raise MalformedJSON(f"Failed to parse JSON: {e!s}") from e
+
+

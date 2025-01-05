@@ -290,3 +290,5 @@ def test_multiple_sections_relationships() -> None:
                 assert any(isinstance(node, TableNode) for node in section.flatten()), (
                     "Table content not preserved in Section 3"
                 )
+
+

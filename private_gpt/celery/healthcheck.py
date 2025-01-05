@@ -76,3 +76,5 @@ async def health() -> dict[str, Any]:
     if status["status"] == "unhealthy":
         raise HTTPException(status_code=503, detail=status)
     return status
+
+

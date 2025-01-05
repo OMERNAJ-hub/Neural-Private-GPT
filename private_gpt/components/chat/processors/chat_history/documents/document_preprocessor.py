@@ -232,3 +232,5 @@ async def preprocess_document_history(
             )
 
     yield DocumentProcessingResponse(chat_history=list(reversed(preprocessed_history)))
+
+

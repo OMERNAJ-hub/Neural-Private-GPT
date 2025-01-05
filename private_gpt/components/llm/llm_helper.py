@@ -110,3 +110,5 @@ def get_tokenizer() -> TokenizerFn | None:
     llm_component = get_global_injector().get(LLMComponent)
     default_tokenizer = llm_component.tokenizer
     return get_tokenizer_fn(default_tokenizer)
+
+

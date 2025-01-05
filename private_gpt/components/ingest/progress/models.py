@@ -21,3 +21,5 @@ class ParseProgressStatus(ProgressStatus):
 
 class StorageProgressStatus(ProgressStatus):
     current_step: ClassVar[IngestionProgressSteps] = IngestionProgressSteps.STORAGE
+
+

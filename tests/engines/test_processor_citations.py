@@ -189,3 +189,5 @@ async def test_process_citations_trailing_backtick_with_stop_event() -> None:
             combined += r.delta.text or ""
 
     assert combined == "This is a test with a trailing backtick `"
+
+

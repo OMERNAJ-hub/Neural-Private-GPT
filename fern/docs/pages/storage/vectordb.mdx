@@ -3,7 +3,7 @@ title: "Vector Store"
 description: "Configure the vector store used for document retrieval."
 ---
 
-PrivateGPT uses [Qdrant](https://qdrant.tech/) as the default vector store. By default it runs in local disk mode — no separate Qdrant server needed.
+Neural-Private uses [Qdrant](https://qdrant.tech/) as the default vector store. By default it runs in local disk mode — no separate Qdrant server needed.
 
 <Warning>
   Local disk mode is not recommended for production. Use a remote Qdrant server for any persistent or multi-instance deployment.
@@ -11,7 +11,7 @@ PrivateGPT uses [Qdrant](https://qdrant.tech/) as the default vector store. By d
 
 ```yaml
 qdrant:
-  path: local_data/qdrant   # relative to PGPT_HOME (~/.local/share/private-gpt by default)
+  path: local_data/qdrant   # relative to PGPT_HOME (~/.local/share/neural-private by default)
 ```
 
 ---
@@ -38,3 +38,5 @@ vectorstore:
 ```
 
 Run `make wipe` before re-ingesting to avoid a dimension mismatch error.
+
+

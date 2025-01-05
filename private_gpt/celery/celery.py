@@ -94,3 +94,5 @@ def create_app(
 
 
 celery_app: Celery = create_app()
+
+

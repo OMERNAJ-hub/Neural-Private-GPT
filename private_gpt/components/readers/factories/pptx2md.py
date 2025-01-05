@@ -20,3 +20,5 @@ class PPTX2MdReaderFactory(ReaderFactory):
             ) from e
 
         return PPTX2MdReader(reader_settings=self.settings.transformation.pptx)
+
+

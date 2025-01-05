@@ -209,3 +209,5 @@ def _assert_only_one_user_block(
         raise ValueError(
             "Chat history contains multiple user blocks. This is not supported."
         )
+
+

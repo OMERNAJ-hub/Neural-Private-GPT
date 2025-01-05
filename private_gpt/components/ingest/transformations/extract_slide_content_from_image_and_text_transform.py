@@ -185,3 +185,5 @@ class ExtractSlideContentFromImageAndTextTransform(TransformComponent):
             del node.metadata["slide_image"]
         if "zones" in node.metadata:
             del node.metadata["zones"]
+
+

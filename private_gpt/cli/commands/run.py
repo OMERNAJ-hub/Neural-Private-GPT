@@ -51,14 +51,14 @@ def _wait_for_server(base_url: str, timeout: float = _HEALTH_TIMEOUT) -> bool:
 
 
 def _server_log_path() -> Path:
-    log_dir = Path.home() / ".private-gpt"
+    log_dir = Path.home() / ".neural-private"
     log_dir.mkdir(parents=True, exist_ok=True)
     return log_dir / "server.log"
 
 
 def _start_server_subprocess() -> "subprocess.Popen[bytes]":
     s = settings().server
-    private_gpt_bin = shutil.which("private-gpt")
+    private_gpt_bin = shutil.which("neural-private")
     base_cmd = (
         [private_gpt_bin, "serve"]
         if private_gpt_bin
@@ -206,7 +206,7 @@ def _inject_opencode_env(model: str | None = None) -> None:
 
     llm_models: dict[str, Any] = {
         m["id"]: {
-            "name": f"PrivateGPT - {m['id']}",
+            "name": f"Neural-Private - {m['id']}",
             "limit": {
                 "context": m.get("max_input_tokens") or _OPENCODE_FALLBACK["context"],
                 "output": m.get("max_tokens") or _OPENCODE_FALLBACK["output"],
@@ -218,7 +218,7 @@ def _inject_opencode_env(model: str | None = None) -> None:
     if not llm_models:
         fid = _OPENCODE_FALLBACK["id"]
         llm_models[fid] = {
-            "name": f"PrivateGPT - {fid}",
+            "name": f"Neural-Private - {fid}",
             "limit": {
                 "context": _OPENCODE_FALLBACK["context"],
                 "output": _OPENCODE_FALLBACK["output"],
@@ -227,13 +227,13 @@ def _inject_opencode_env(model: str | None = None) -> None:
 
     first_model_id = next(iter(llm_models))
     default_model = model or s.llm.default_model or first_model_id
-    default_model = f"PrivateGPT - {default_model}"
+    default_model = f"Neural-Private - {default_model}"
 
     config: dict[str, Any] = {
         "$schema": "https://opencode.ai/config.json",
         "provider": {
             "anthropic": {
-                "name": "PrivateGPT",
+                "name": "Neural-Private",
                 "options": {
                     "baseURL": f"{base_url}/v1",
                     "apiKey": api_key,
@@ -247,7 +247,7 @@ def _inject_opencode_env(model: str | None = None) -> None:
 
     config_dir = Path.home() / ".config" / "opencode"
     config_dir.mkdir(parents=True, exist_ok=True)
-    config_path = config_dir / "private-gpt.json"
+    config_path = config_dir / "neural-private.json"
     config_path.write_text(json.dumps(config, indent=2))
     os.environ["OPENCODE_CONFIG"] = str(config_path)
     os.environ["ANTHROPIC_BASE_URL"] = f"{base_url}/v1"
@@ -294,7 +294,7 @@ def run_command(
 
     Pass extra arguments to the app after --:
 
-        private-gpt run claude-code -- --resume abc123
+        neural-private run claude-code -- --resume abc123
     """
     extra_args: list[str] = ctx.args
 
@@ -333,7 +333,7 @@ def run_command(
 
     if detach:
         run_id = uuid.uuid4().hex[:8]
-        log_dir = Path.home() / ".private-gpt" / "runs"
+        log_dir = Path.home() / ".neural-private" / "runs"
         log_dir.mkdir(parents=True, exist_ok=True)
         log_path = log_dir / f"{run_id}.log"
         with log_path.open("wb") as log_fh:
@@ -362,3 +362,5 @@ def run_command(
     else:
         result = subprocess.run(cmd, check=False)
         raise SystemExit(result.returncode)
+
+

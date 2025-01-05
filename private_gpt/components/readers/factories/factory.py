@@ -59,3 +59,5 @@ class ReaderFactoryRegistry:
                 f"Reader '{normalized_name}' is not supported. Available: {available}"
             )
         return factory
+
+

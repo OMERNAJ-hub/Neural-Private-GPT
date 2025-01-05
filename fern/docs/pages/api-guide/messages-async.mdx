@@ -49,7 +49,7 @@ Response:
 {"message_id": "msg_01abc..."}
 ```
 
-The request body is identical to `POST /v1/messages` — all fields (tools, tool_context, mcp_servers, sampling params) work the same way. The same per-tool dependency rules apply here: install the specific extra you need, or use `private-gpt[tools]` or `private-gpt[core]`.
+The request body is identical to `POST /v1/messages` — all fields (tools, tool_context, mcp_servers, sampling params) work the same way. The same per-tool dependency rules apply here: install the specific extra you need, or use `neural-private[tools]` or `neural-private[core]`.
 
 ---
 
@@ -142,3 +142,5 @@ redis:
   password: ${PGPT_REDIS_PASSWORD:}
   database: ${PGPT_REDIS_DATABASE:0}
 ```
+
+

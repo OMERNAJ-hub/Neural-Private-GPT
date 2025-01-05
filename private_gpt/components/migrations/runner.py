@@ -70,3 +70,5 @@ class MigrationRunner:
                 self._backend.revert(migration)
                 reverted += 1
             logger.info("Migrations down completed: reverted=%s", reverted)
+
+

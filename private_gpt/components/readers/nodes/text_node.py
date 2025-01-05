@@ -81,3 +81,5 @@ class TextNode(TreeNode):
         if self.text.strip() == IMAGE_PLACEHOLDER:
             return None
         return super().prune(metadata_mode)
+
+

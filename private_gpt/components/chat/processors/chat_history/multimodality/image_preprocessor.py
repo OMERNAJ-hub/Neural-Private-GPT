@@ -116,3 +116,5 @@ async def preprocess_image_message(
     yield ImageProcessingResponse(
         message=ChatMessage(role=message.role, blocks=final_blocks)
     )
+
+

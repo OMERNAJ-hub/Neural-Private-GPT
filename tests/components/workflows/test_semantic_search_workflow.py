@@ -158,3 +158,5 @@ async def test_start_step_with_condensing(
     assert isinstance(output, SemanticSearchResultEvent)
     assert output.retrieval is not None
     assert output.condense is not None
+
+

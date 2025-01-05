@@ -49,3 +49,5 @@ class FilterZylonEventInterceptor(BaseEventInterceptor):
                     yield event
 
         return coro()
+
+

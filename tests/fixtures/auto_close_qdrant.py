@@ -20,3 +20,5 @@ def _auto_close_vector_store_client(injector: MockInjector) -> None:
     with contextlib.suppress(Exception):
         # Avoid to close the client if it's already closed
         injector.get(VectorStoreComponent).close()
+
+

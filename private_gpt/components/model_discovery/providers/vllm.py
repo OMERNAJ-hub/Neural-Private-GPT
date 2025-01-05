@@ -56,3 +56,5 @@ class VllmStrategy:
             ):
                 return bool(perm["allow_search_indices"])
         return None
+
+

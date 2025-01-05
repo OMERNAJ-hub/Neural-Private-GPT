@@ -297,3 +297,5 @@ class DatabaseFunctionsInspector(DatabaseObjectInspector):
         except Exception:
             return []
         return functions
+
+

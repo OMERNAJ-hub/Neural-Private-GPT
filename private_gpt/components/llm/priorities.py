@@ -23,3 +23,5 @@ class DefinedPriorities:
     class Embedding:
         # Default priority for Embedding
         DEFAULT_PRIORITY = Priority.DEFAULT
+
+

@@ -47,7 +47,7 @@ make wipe
 ```
 
 <Warning>
-  This deletes everything under `PGPT_HOME/local_data/` (default `~/.local/share/private-gpt/local_data/`) including the vector store. It cannot be undone.
+  This deletes everything under `PGPT_HOME/local_data/` (default `~/.local/share/neural-private/local_data/`) including the vector store. It cannot be undone.
 </Warning>
 
 ---
@@ -79,8 +79,10 @@ make ingest /path/to/folder -- --watch
 
 ## Supported file formats
 
-PrivateGPT handles plain text natively. The following formats are also supported with built-in parsers:
+Neural-Private handles plain text natively. The following formats are also supported with built-in parsers:
 
 `.pdf` · `.docx` · `.pptx` · `.ppt` · `.pptm` · `.hwp` · `.epub` · `.md` · `.csv` · `.json` · `.ipynb` · `.mbox` · `.jpg` · `.jpeg` · `.png` · `.mp3` · `.mp4`
 
 Any other file type is read as plain text.
+
+

@@ -95,3 +95,5 @@ class CitationTextParser:
         context.state["citation_next_index"] = next_index
         context.state["citation_occurrence"] = occurrence
         return ",".join(rendered), tuple(documents)
+
+

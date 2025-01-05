@@ -92,3 +92,5 @@ class OllamaStrategy:
             )
             or (isinstance(model_type, str) and model_type.lower() == "embedding")
         )
+
+

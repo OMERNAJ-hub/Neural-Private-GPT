@@ -357,3 +357,5 @@ class TableNode(TreeNode, arbitrary_types_allowed=True):
                 f"Row length mismatch: {len(row)} != {len(self.df.columns)}"
             )
         self.df.loc[len(self.df)] = row
+
+

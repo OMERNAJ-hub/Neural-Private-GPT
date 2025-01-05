@@ -165,3 +165,5 @@ Alex thrives in a mix of technical, artistic, and social environments, and they 
 
 With these reflections, Alex’s multidimensional personality and ambitions come to life. Whether leading teams, designing apps, or creating art, Alex leaves a unique mark in every realm they touch.
 
+
+

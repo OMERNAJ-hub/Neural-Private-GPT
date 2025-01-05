@@ -3,7 +3,7 @@ title: "Object Storage"
 description: "Configure local disk or S3-compatible storage for skill files, temporary files, and other application data."
 ---
 
-PrivateGPT uses an object storage backend to persist skill bundles, temporary processing files, and other application data. Two providers are supported: **local** (disk) and **S3-compatible** (any S3-compatible service — AWS S3, MinIO, Cloudflare R2, etc.).
+Neural-Private uses an object storage backend to persist skill bundles, temporary processing files, and other application data. Two providers are supported: **local** (disk) and **S3-compatible** (any S3-compatible service — AWS S3, MinIO, Cloudflare R2, etc.).
 
 <Warning>
   This feature requires to have the `storage` extra enabled in your application. If you are adding storage to an existing application, make sure to run the sync command after enabling the module:
@@ -26,7 +26,7 @@ skills:
   storage_provider: local
 ```
 
-Local storage paths default to `local_data/private_gpt/skills` under `PGPT_HOME` (e.g. `~/.local/share/private-gpt/local_data/private_gpt/skills`). No additional configuration is needed.
+Local storage paths default to `local_data/private_gpt/skills` under `PGPT_HOME` (e.g. `~/.local/share/neural-private/local_data/private_gpt/skills`). No additional configuration is needed.
 
 ---
 
@@ -68,7 +68,7 @@ skills:
 
 ## Bucket layout
 
-PrivateGPT uses two buckets with distinct retention semantics:
+Neural-Private uses two buckets with distinct retention semantics:
 
 | Bucket | Purpose | Retention |
 |---|---|---|
@@ -94,9 +94,11 @@ s3:
   public_endpoint_url: http://localhost:9000
   access_key_id: minioadmin
   secret_access_key: minioadmin
-  durable_bucket_name: privategpt-storage
-  temporary_bucket_name: privategpt-temporary
+  durable_bucket_name: Neural-Private-storage
+  temporary_bucket_name: Neural-Private-temporary
 
 skills:
   storage_provider: s3
 ```
+
+

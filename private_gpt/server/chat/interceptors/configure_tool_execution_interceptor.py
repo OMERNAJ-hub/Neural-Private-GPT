@@ -30,3 +30,5 @@ class ConfigureToolExecutionInterceptor(ToolExecutionInterceptor):
     async def intercept(self, context: ToolExecutionInterceptorContext) -> None:
         for interceptor in self._interceptors:
             await interceptor.intercept(context)
+
+

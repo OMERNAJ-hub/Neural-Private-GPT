@@ -284,3 +284,5 @@ class IngestComponent:
             index.set_index_id(index_id)
             index.storage_context.persist(persist_dir=local_data_path / collection)
             logger.info("Finished loading index %s with %d nodes", index_id, len(nodes))
+
+

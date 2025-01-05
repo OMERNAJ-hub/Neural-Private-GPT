@@ -192,3 +192,5 @@ class ValidatorRequestInterceptor(ChatRequestLoopInterceptor):
             if text:
                 return text
         return None
+
+

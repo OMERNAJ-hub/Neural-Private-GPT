@@ -24,3 +24,5 @@ class CombineTreeTransform(TransformComponent):
             tree_node for tree_node in nodes if isinstance(tree_node, TreeNode)
         ]
         return [combine_trees(tree_nodes[0], *(tree_nodes[1:]))]
+
+

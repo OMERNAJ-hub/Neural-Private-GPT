@@ -37,3 +37,5 @@ def find_common_prefix(s1: str, s2: str) -> str:
         else:
             break
     return prefix
+
+

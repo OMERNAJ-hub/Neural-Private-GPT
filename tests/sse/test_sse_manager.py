@@ -136,3 +136,5 @@ async def test_async_stream(producer: SSEProducer) -> None:
 
     assert len(events_processed) == 3
     assert all(isinstance(e, PingEvent) for e in events_processed)
+
+

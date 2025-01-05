@@ -29,3 +29,5 @@ def run_worker(args: Sequence[str] = ()) -> None:
     if not mode:
         raise ValueError("PGPT_WORKER_MODE is required")
     get_worker_mode(mode)(args)
+
+

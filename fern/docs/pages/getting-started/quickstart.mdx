@@ -1,32 +1,32 @@
 ---
 title: "Quickstart"
-description: "Get PrivateGPT running in under 5 minutes."
+description: "Get Neural-Private running in under 5 minutes."
 ---
 
-PrivateGPT connects to any OpenAI-compatible LLM server and exposes a private, self-hosted AI API. This guide gets you from zero to a running server in four steps.
+Neural-Private connects to any OpenAI-compatible LLM server and exposes a private, self-hosted AI API. This guide gets you from zero to a running server in four steps.
 
 <Note>
   **Prerequisites:** You need an OpenAI-compatible LLM server running locally. Pick one from the [Providers](/providers/overview) page — [Ollama](/providers/ollama) is the easiest way to start.
 </Note>
 
 <Steps>
-  <Step title="Install PrivateGPT">
+  <Step title="Install Neural-Private">
     <Tabs>
       <Tab title="Linux">
         ```bash
         # Install uv first
         curl -LsSf https://astral.sh/uv/install.sh | sh
 
-        # Then install PrivateGPT
+        # Then install Neural-Private
         uv tool install --python 3.11 \
-          --find-links https://wheels.privategpt.dev/packages/ \
-          "private-gpt[core]"
+          --find-links https://wheels.Neural-Private.dev/packages/ \
+          "neural-private[core]"
         ```
       </Tab>
       <Tab title="macOS">
         ```bash
         brew tap zylon-ai/tap
-        brew install private-gpt
+        brew install neural-private
         ```
       </Tab>
       <Tab title="Windows">
@@ -34,17 +34,17 @@ PrivateGPT connects to any OpenAI-compatible LLM server and exposes a private, s
         # Install uv first
         powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
-        # Then install PrivateGPT
+        # Then install Neural-Private
         uv tool install --python 3.11 `
-          --find-links https://wheels.privategpt.dev/packages/ `
-          "private-gpt[core]"
+          --find-links https://wheels.Neural-Private.dev/packages/ `
+          "neural-private[core]"
         ```
       </Tab>
     </Tabs>
   </Step>
 
   <Step title="Start your LLM server">
-    Start your server. PrivateGPT auto-discovers all available models on startup.
+    Start your server. Neural-Private auto-discovers all available models on startup.
 
     <Tabs>
       <Tab title="Ollama">
@@ -57,7 +57,7 @@ PrivateGPT connects to any OpenAI-compatible LLM server and exposes a private, s
         ollama serve
         ```
         <Warning>
-          Ollama does not expose a tokenizer endpoint. PrivateGPT falls back to approximate token counting, which may affect context-window management. See [Ollama limitations](/providers/ollama#limitations).
+          Ollama does not expose a tokenizer endpoint. Neural-Private falls back to approximate token counting, which may affect context-window management. See [Ollama limitations](/providers/ollama#limitations).
         </Warning>
       </Tab>
       <Tab title="LM Studio">
@@ -103,34 +103,34 @@ PrivateGPT connects to any OpenAI-compatible LLM server and exposes a private, s
     </Tabs>
   </Step>
 
-  <Step title="Run PrivateGPT">
-    Point PrivateGPT at your servers with `OPENAI_API_BASE` and `OPENAI_EMBEDDING_API_BASE`. Models are discovered automatically — no config file needed.
+  <Step title="Run Neural-Private">
+    Point Neural-Private at your servers with `OPENAI_API_BASE` and `OPENAI_EMBEDDING_API_BASE`. Models are discovered automatically — no config file needed.
 
     <Tabs>
       <Tab title="macOS / Linux">
         ```bash
         OPENAI_API_BASE=http://localhost:<llm-port>/v1 \
           OPENAI_EMBEDDING_API_BASE=http://localhost:<embedding-port>/v1 \
-          private-gpt serve
+          neural-private serve
         ```
       </Tab>
       <Tab title="Windows (PowerShell)">
         ```powershell
         $env:OPENAI_API_BASE = "http://localhost:<llm-port>/v1"
         $env:OPENAI_EMBEDDING_API_BASE = "http://localhost:<embedding-port>/v1"
-        private-gpt serve
+        neural-private serve
         ```
       </Tab>
       <Tab title="Windows (CMD)">
         ```cmd
         set OPENAI_API_BASE=http://localhost:<llm-port>/v1
         set OPENAI_EMBEDDING_API_BASE=http://localhost:<embedding-port>/v1
-        private-gpt serve
+        neural-private serve
         ```
       </Tab>
     </Tabs>
 
-    If startup succeeds, PrivateGPT will be available on port `8080`.
+    If startup succeeds, Neural-Private will be available on port `8080`.
   </Step>
 
   <Step title="Open the UI">
@@ -150,7 +150,7 @@ PrivateGPT connects to any OpenAI-compatible LLM server and exposes a private, s
 
 <CardGroup cols={2}>
   <Card title="Docker install" icon="fa-brands fa-docker" href="/installation/docker">
-    Run PrivateGPT with Docker for a fully isolated, production-ready setup.
+    Run Neural-Private with Docker for a fully isolated, production-ready setup.
   </Card>
   <Card title="Local with uv" icon="fa-solid fa-terminal" href="/installation/local">
     Install from source with `core`, add extras only when needed, and use detailed model configuration.
@@ -162,3 +162,5 @@ PrivateGPT connects to any OpenAI-compatible LLM server and exposes a private, s
     Explore all REST endpoints and start building your application.
   </Card>
 </CardGroup>
+
+

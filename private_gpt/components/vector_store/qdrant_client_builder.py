@@ -101,3 +101,5 @@ class QdrantClientBuilder:
         lock_file = os.path.join(db_dir, ".lock")
         if os.path.exists(lock_file):
             os.remove(lock_file)
+
+

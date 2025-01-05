@@ -22,3 +22,5 @@ class TimelinePhase(StrEnum):
     AFTER_LLM = "after_llm"
     AFTER_TOOLS = "after_tools"
     STOP = "stop"
+
+

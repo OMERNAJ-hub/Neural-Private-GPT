@@ -1330,3 +1330,5 @@ class PatchedQdrantVectorStore(QdrantVectorStore):
         # Patched parent method to use async methods
         parent: VectorStoreQueryResult = await self._aquery(query, **kwargs)
         return parent
+
+

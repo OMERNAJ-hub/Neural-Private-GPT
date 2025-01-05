@@ -1,19 +1,19 @@
 ---
 title: "Docker"
-description: "Run PrivateGPT with Docker — isolated, reproducible, production-ready."
+description: "Run Neural-Private with Docker — isolated, reproducible, production-ready."
 ---
 
 The published Docker image installs the `core` package by default:
 
 ```text
-zylonai/private-gpt:latest
+zylonai/neural-private:latest
 ```
 
 ---
 
 ## Auto mode
 
-Point PrivateGPT at your LLM server. Models are discovered automatically — no config file needed.
+Point Neural-Private at your LLM server. Models are discovered automatically — no config file needed.
 
 <Steps>
   <Step title="Start your LLM server">
@@ -26,14 +26,14 @@ Point PrivateGPT at your LLM server. Models are discovered automatically — no 
         ```bash
         docker run -p 8080:8080 \
           -e OPENAI_API_BASE=http://host.docker.internal:11434/v1 \
-          zylonai/private-gpt:latest
+          zylonai/neural-private:latest
         ```
       </Tab>
       <Tab title="Windows (PowerShell)">
         ```powershell
         docker run -p 8080:8080 `
           -e OPENAI_API_BASE=http://host.docker.internal:11434/v1 `
-          zylonai/private-gpt:latest
+          zylonai/neural-private:latest
         ```
       </Tab>
     </Tabs>
@@ -46,7 +46,7 @@ Point PrivateGPT at your LLM server. Models are discovered automatically — no 
     # Linux alternative
     docker run --network host \
       -e OPENAI_API_BASE=http://localhost:11434/v1 \
-      zylonai/private-gpt:latest
+      zylonai/neural-private:latest
     ```
   </Step>
 
@@ -63,7 +63,7 @@ If your LLM server requires authentication:
 docker run -p 8080:8080 \
   -e OPENAI_API_BASE=http://host.docker.internal:8000/v1 \
   -e OPENAI_API_KEY=your-api-key \
-  zylonai/private-gpt:latest
+  zylonai/neural-private:latest
 ```
 
 ---
@@ -74,19 +74,19 @@ If you want to build the image from source (e.g. after code changes):
 
 <Accordion title="Build from source">
   ```bash
-  git clone https://github.com/zylon-ai/private-gpt
-  cd private-gpt
-  docker build -t private-gpt .
+  git clone https://github.com/zylon-ai/neural-private
+  cd neural-private
+  docker build -t neural-private .
   ```
 
-  Then replace `zylonai/private-gpt:latest` with `private-gpt` in any `docker run` command above.
+  Then replace `zylonai/neural-private:latest` with `neural-private` in any `docker run` command above.
 
   To add optional features when building your own image, pass explicit extras:
 
   ```bash
   docker build \
     --build-arg EXTRAS="core queue observability-opik" \
-    -t private-gpt .
+    -t neural-private .
   ```
 </Accordion>
 
@@ -100,5 +100,7 @@ By default, ingested documents and local data are stored inside the container an
 docker run -p 8080:8080 \
   -e OPENAI_API_BASE=http://host.docker.internal:11434/v1 \
   -v ./local_data:/home/worker/app/local_data \
-  zylonai/private-gpt:latest
+  zylonai/neural-private:latest
 ```
+
+

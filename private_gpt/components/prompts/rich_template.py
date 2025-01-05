@@ -80,3 +80,5 @@ class RichPromptTemplate(BasePromptTemplate):
     def get_template(self, llm: BaseLLM | None = None) -> str:
         """Return the template string."""
         return self._template_source
+
+

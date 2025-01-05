@@ -1,5 +1,5 @@
 # The default configuration file.
-# More information about configuration can be found in the documentation: https://docs.privategpt.dev/
+# More information about configuration can be found in the documentation: https://docs.Neural-Private.dev/
 # Syntax in `private_pgt/settings/settings.py`
 server:
   env_name: ${APP_ENV:prod}
@@ -80,7 +80,7 @@ chat:
   condense_strategy: ${PGPT_CONDENSE_CHAT_HISTORY:condenser}
   format_context_strategy: ${PGPT_FORMAT_CONTEXT:list}
   maximum_context_length: ${PGPT_MAXIMUM_CONTEXT_LENGTH:0}
-  assistant_name: ${PGPT_ASSISTANT_NAME:PrivateGPT}
+  assistant_name: ${PGPT_ASSISTANT_NAME:Neural-Private}
   assistant_description: ${PGPT_ASSISTANT_DESCRIPTION:}
   maximum_history_length: ${PGPT_MAXIMUM_HISTORY_LENGTH:0}
   tldr_timeout: ${PGPT_TLDR_TIMEOUT:300}
@@ -197,7 +197,7 @@ cache:
   provider: ${PGPT_CACHE_PROVIDER:memory}
   ttl_seconds: ${PGPT_CACHE_TTL_SECONDS:86400}
   max_entries: ${PGPT_CACHE_MAX_ENTRIES:1000}
-  key_prefix: ${PGPT_CACHE_KEY_PREFIX:private-gpt}
+  key_prefix: ${PGPT_CACHE_KEY_PREFIX:neural-private}
   redis_database: ${PGPT_CACHE_REDIS_DATABASE:}
 
 unstructured:
@@ -356,3 +356,5 @@ transformation:
         max_iterations: ${PGPT_TRANSFORMATION_VISION_DOCUMENTS_VISION_MAX_ITERATIONS:2}
         enable_semaphore: ${PGPT_TRANSFORMATION_VISION_DOCUMENTS_ENABLE_SEMAPHORE:false}
         mode: ${PGPT_TRANSFORMATION_VISION_DOCUMENTS_VISION_MODE:none}
+
+

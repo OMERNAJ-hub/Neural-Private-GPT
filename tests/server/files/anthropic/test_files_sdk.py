@@ -157,3 +157,5 @@ def test_sdk_delete_parses_as_deleted_file(
     assert isinstance(deleted, anthropic.types.beta.DeletedFile)
     assert deleted.id == file_id
     assert deleted.type == "file_deleted"
+
+

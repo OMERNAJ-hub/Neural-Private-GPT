@@ -60,3 +60,5 @@ class PingEventInterceptor(BaseEventInterceptor):
                         await producer_task
 
         return coro()
+
+

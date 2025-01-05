@@ -71,3 +71,5 @@ class EmbeddingsService:
             )
             for embedding in texts_embeddings
         ]
+
+

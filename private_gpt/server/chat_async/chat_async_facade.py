@@ -98,3 +98,5 @@ class ChatAsyncFacadeService:
         finally:
             logger.debug(f"Stream generator completed for {message_id}")
             await self._chat_async_service.clean_up_stream(message_id)
+
+

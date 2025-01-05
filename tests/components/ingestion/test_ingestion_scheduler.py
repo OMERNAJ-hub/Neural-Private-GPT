@@ -43,7 +43,7 @@ def test_sync_celery_ingest_preserves_filename_and_extension(
     from private_gpt.server.ingest.ingest_router import IngestResponse
 
     store_result_mock.result = IngestResponse(
-        object="list", model="private-gpt", data=[]
+        object="list", model="neural-private", data=[]
     )
     monkeypatch.setattr(
         "celery.result.AsyncResult",
@@ -69,3 +69,5 @@ def test_sync_celery_ingest_preserves_filename_and_extension(
     assert dispatched_body.ingest_body.metadata == {"file_name": expected_filename}
     assert isinstance(dispatched_body.ingest_body.input, UriArtifact)
     assert s3_helper.upload_file_to_s3.call_args.kwargs["filename"] == expected_filename
+
+

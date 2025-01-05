@@ -202,8 +202,8 @@ class SearchResponse(BaseModel):
     object: Literal["list"] = Field(
         default="list", description="Response object type identifier"
     )
-    model: Literal["private-gpt"] = Field(
-        default="private-gpt", description="Model identifier used for chunk retrieval"
+    model: Literal["neural-private"] = Field(
+        default="neural-private", description="Model identifier used for chunk retrieval"
     )
     data: list[DataSearchResponse] = Field(
         ..., description="List of relevant chunks with their metadata and scores"
@@ -239,3 +239,5 @@ class PrimitivesService:
                 )
             case _:
                 raise ValueError(f"Unsupported search type: {type(search)}")
+
+

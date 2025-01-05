@@ -171,3 +171,5 @@ class VectorArtifactIndex(BaseArtifactIndex):
         logger.info("Finished vector index population for = %s", self.artifact)
 
         return [IngestedDoc.from_document(node) for node in nodes[:1]]
+
+

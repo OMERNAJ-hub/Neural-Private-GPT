@@ -17,3 +17,5 @@ class CeleryError(ValueError):
 
     def __str__(self) -> str:
         return f"{self.__class__.__name__}(errors={self.details.errors}, warnings={self.details.warnings})"
+
+

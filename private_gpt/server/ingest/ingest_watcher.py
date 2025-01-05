@@ -45,3 +45,5 @@ class IngestWatcher:
     def stop(self) -> None:
         self._observer.stop()
         self._observer.join()
+
+

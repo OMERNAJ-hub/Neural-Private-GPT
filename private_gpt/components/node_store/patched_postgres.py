@@ -36,3 +36,5 @@ class PatchedPostgresKVStore(PostgresKVStore):
             use_jsonb=use_jsonb,
         )
         self._table_class.__tablename__ = f'"{self._table_class.__tablename__}"'
+
+

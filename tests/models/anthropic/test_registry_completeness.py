@@ -179,3 +179,5 @@ class TestRegistryCompleteness:
                 "Implement the model(s) in private_gpt/chat/models.py, then "
                 "update the registry entry to set our_type."
             )
+
+

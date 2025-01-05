@@ -60,3 +60,5 @@ class RuntimeModelRequestInterceptor(ChatRequestLoopInterceptor):
         reserved_output = num_output or 0
         effective = context_window - reserved_output - 256
         return effective if effective > 0 else context_window
+
+

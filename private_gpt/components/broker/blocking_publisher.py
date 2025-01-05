@@ -130,3 +130,5 @@ class BlockingPublisher(threading.Thread):
         logger.debug("Closing BlockingPublisher")
         self.join(timeout=30.0)
         logger.debug("BlockingPublisher closed")
+
+

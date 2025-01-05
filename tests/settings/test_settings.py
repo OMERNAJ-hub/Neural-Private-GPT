@@ -73,3 +73,5 @@ def test_tool_scheduler_rejects_unsupported_arq_mode() -> None:
 
     with pytest.raises(ValueError, match=r"Unsupported scheduler\.tools\.mode='arq'"):
         Settings(**merged)
+
+

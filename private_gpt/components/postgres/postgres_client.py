@@ -91,3 +91,5 @@ class LazyPostgresFactory:
                 cls._instance.close()
                 cls._instance = None
                 logger.debug("PostgresClient instance closed")
+
+

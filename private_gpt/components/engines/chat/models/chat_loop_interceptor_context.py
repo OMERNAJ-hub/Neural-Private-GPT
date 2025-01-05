@@ -31,3 +31,5 @@ class ChatInterceptorContext(BaseModel):
     def set_state(self, state: ChatState) -> None:
         """Replace context state after interceptor transformation."""
         self.state = state
+
+

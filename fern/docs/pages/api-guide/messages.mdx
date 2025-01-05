@@ -76,7 +76,7 @@ Pass `tool_context` to give the model access to ingested documents or databases.
 
 Pass built-in server tools or custom tools in the `tools` array.
 
-Built-in tool dependencies are granular. Install the specific extra you need, or use `private-gpt[tools]` as the bundle fallback. `private-gpt[core]` also includes that bundle.
+Built-in tool dependencies are granular. Install the specific extra you need, or use `neural-private[tools]` as the bundle fallback. `neural-private[core]` also includes that bundle.
 
 **Built-in server tools** — reference by `type`:
 
@@ -98,7 +98,7 @@ Built-in tools only require `name` and `type`. Do not provide `inputSchema` for 
 
 **Custom tools** — define `inputSchema` (JSON Schema):
 
-For the broadest tool-calling support, use `private-gpt[tools]` or `private-gpt[core]`.
+For the broadest tool-calling support, use `neural-private[tools]` or `neural-private[core]`.
 
 ```json
 {
@@ -126,7 +126,7 @@ The model will return a `tool_use` block when it wants to call a tool. Your appl
 
 Connect MCP servers to extend what tools the model can call:
 
-Requires `private-gpt[tool-mcp]`, or use `private-gpt[tools]` or `private-gpt[core]`.
+Requires `neural-private[tool-mcp]`, or use `neural-private[tools]` or `neural-private[core]`.
 
 ```json
 {
@@ -185,3 +185,5 @@ Returns `{"valid": true}` or a validation error. Useful for checking tool schema
 ## Async messages
 
 For long-running generations, fire-and-forget patterns, or background processing, use the async API. See [Async messages](/api-guide/messages-async) for the full reference.
+
+

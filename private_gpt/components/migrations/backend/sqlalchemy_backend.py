@@ -150,3 +150,5 @@ class SQLAlchemyMigrationBackend(MigrationBackend):
         if schema_name is not None:
             return f"{schema_name}.{self._migration_table_name}"
         return self._migration_table_name
+
+

@@ -79,3 +79,5 @@ class TextReaderFactory(ReaderFactory):
     def create_reader(self, extension: str | None = None) -> IngestionReader:
         provider = _EXTENSION_READERS.get(extension) if extension else None
         return provider() if provider else _text_reader()
+
+

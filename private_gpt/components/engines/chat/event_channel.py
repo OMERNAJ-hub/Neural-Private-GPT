@@ -34,3 +34,5 @@ class BrokerEventChannel(EventChannel):
 
     async def close(self) -> None:
         await self.flush()
+
+

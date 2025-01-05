@@ -40,3 +40,5 @@ class OpenAILikeEmbeddingFactory(EmbeddingFactory):
             model_name=model,
         )
         return embedding_model, model_config.name
+
+

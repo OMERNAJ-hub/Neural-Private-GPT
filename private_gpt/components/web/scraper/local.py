@@ -25,7 +25,7 @@ _SCRAPE_NPROC_LIMIT = 4096
 class LocalWebScraperProvider(PooledWebScraperProvider):
     """Runs the scrape script on the host through the local sandbox executor.
 
-    Uses private-gpt's own interpreter, so the `tool-web-scraping` extra
+    Uses neural-private's own interpreter, so the `tool-web-scraping` extra
     (playwright) and installed chromium browsers serve this provider.
     """
 
@@ -47,3 +47,5 @@ class LocalWebScraperProvider(PooledWebScraperProvider):
             user_id="web-scraper",
         )
         super().__init__(settings, pool, self._BASE_DIR)
+
+

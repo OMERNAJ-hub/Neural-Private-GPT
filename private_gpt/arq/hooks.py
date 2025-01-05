@@ -9,3 +9,5 @@ async def on_job_end(ctx: dict[Any, Any]) -> None:
     with contextlib.suppress(Exception):
         injector = get_global_injector(allow_to_generate_new_injectors=True)
         set_global_injector(injector)
+
+

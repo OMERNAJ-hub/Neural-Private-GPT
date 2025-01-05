@@ -322,9 +322,9 @@ class ServerSettings(BaseModel):
     )
     host: str = Field(
         default="0.0.0.0",
-        description="Host of PrivateGPT FastAPI server, defaults to 0.0.0.0",
+        description="Host of Neural-Private FastAPI server, defaults to 0.0.0.0",
     )
-    port: int = Field(description="Port of PrivateGPT FastAPI server, defaults to 8080")
+    port: int = Field(description="Port of Neural-Private FastAPI server, defaults to 8080")
     cors: CorsSettings = Field(description="CORS configuration", default=CorsSettings())
     auth: AuthSettings = Field(
         description="Authentication configuration",
@@ -1221,7 +1221,7 @@ class CacheSettings(BaseModel):
     )
     ttl_seconds: int = Field(default=86400, gt=0)
     max_entries: int = Field(default=1000, gt=0)
-    key_prefix: str = Field(default="private-gpt")
+    key_prefix: str = Field(default="neural-private")
     redis_database: int | None = Field(default=None, ge=0)
 
     @field_validator("redis_database", mode="before")
@@ -1911,3 +1911,5 @@ def settings() -> Settings:
     from private_gpt.di import get_global_injector
 
     return get_global_injector().get(Settings)
+
+

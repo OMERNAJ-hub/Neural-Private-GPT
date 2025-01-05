@@ -129,3 +129,5 @@ def test_feed_reparses_from_clean_initial_rule_state() -> None:
     assert processor.feed("#").text == "1"
     assert processor.feed("#").text == "2"
     assert processor.context.state == {"count": 2}
+
+

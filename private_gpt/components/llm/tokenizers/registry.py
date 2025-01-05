@@ -108,3 +108,5 @@ class TokenizerRegistry:
         if factory is None:
             raise ValueError(f"Tokenizer mode {tokenizer_mode} not found.")
         return factory(**kwargs)
+
+

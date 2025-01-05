@@ -138,3 +138,5 @@ Event = Annotated[
     | FatalError,
     Field(discriminator="type"),
 ]
+
+

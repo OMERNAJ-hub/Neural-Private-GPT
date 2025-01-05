@@ -13,3 +13,5 @@ class MockEmbeddingFactory(EmbeddingFactory):
         self, model_config: EmbeddingModelConfig
     ) -> tuple[BaseEmbedding, str | None]:
         return MockEmbedding(model_config.context_window), model_config.name
+
+

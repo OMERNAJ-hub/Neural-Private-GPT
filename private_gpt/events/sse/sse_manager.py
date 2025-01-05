@@ -136,3 +136,5 @@ class SSEStreamManager:
             if self._async_thread and self._async_thread.is_alive():
                 self._async_thread.join(timeout=1.0)
                 self._async_thread = None
+
+

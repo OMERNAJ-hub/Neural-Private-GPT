@@ -43,3 +43,5 @@ async def to_sse_stream(
     async with aclosing(event_generator):
         async for event in event_generator:
             yield SSEFormatter.to_sse_event(event)
+
+

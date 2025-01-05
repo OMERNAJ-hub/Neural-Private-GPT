@@ -245,3 +245,5 @@ def convert_mcp_blocks_to_llama_index(block: object) -> ContentBlock | None:
         bytes_arr = base64.b64decode(audio_block.data)
         return AudioBlock(audio=bytes_arr, format=audio_block.mime_type)
     return None
+
+

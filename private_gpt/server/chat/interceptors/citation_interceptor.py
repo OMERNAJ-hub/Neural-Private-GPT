@@ -66,3 +66,5 @@ class CitationRequestInterceptor(ChatRequestLoopInterceptor):
             state.input.context_stack = stack
 
         context.set_state(state)
+
+

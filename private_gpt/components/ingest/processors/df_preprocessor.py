@@ -265,3 +265,5 @@ class DataFramePreprocessor:
         df.columns = pd.Index(self._convert_into_str(list(df.columns)))
 
         return df
+
+

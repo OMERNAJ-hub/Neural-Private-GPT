@@ -51,3 +51,5 @@ def test_worker_registers_only_configured_task_package(
     )
 
     assert set(ast.literal_eval(output.strip())) == expected_tasks
+
+

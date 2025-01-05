@@ -388,3 +388,5 @@ def test_dialect_extraction() -> None:
     assert postgres_gen._dialect == "postgres"
     assert mssql_gen._dialect == "tsql"
     assert mysql_gen._dialect == "mysql"
+
+

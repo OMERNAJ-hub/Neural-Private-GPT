@@ -17,3 +17,5 @@ class HealthResponse(BaseModel):
 async def health() -> HealthResponse:
     """Return ok if the system is up."""
     return HealthResponse(status="ok")
+
+

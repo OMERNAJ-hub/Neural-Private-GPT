@@ -74,3 +74,5 @@ class PatchedKVDocumentStore(SimpleDocumentStore):
             else:
                 return None
         return json_to_doc_tree(json)
+
+

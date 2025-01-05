@@ -60,3 +60,5 @@ def calculate_parsing_timing(
     jitter = min(interval * 0.4, 8)
 
     return interval, jitter
+
+

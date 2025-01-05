@@ -210,3 +210,5 @@ class TestWebSearchServiceInitialization:
         )
 
         assert service._provider.__class__.__name__ == expected_class
+
+

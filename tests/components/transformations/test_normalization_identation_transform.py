@@ -270,3 +270,5 @@ def test_normalize_tabs_and_bold_headers() -> None:
         "## **Header 2**"
     )
     assert normalizer.normalize_markdown(content) == expected
+
+

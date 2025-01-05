@@ -58,3 +58,5 @@ class InternalToolRequestInterceptor(ChatRequestLoopInterceptor):
             )
         state.input.context_stack = stack
         context.set_state(state)
+
+

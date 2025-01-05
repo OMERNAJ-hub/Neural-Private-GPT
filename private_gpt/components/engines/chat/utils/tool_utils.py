@@ -120,3 +120,5 @@ async def execute_tool_call(
         return_direct=tool.metadata.return_direct,
     )
     return result, tool_message
+
+

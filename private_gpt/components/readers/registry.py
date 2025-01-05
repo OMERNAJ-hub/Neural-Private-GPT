@@ -90,3 +90,5 @@ class ReaderRegistry:
 
     def get_all_extensions(self) -> set[str]:
         return set(self._registry.keys())
+
+

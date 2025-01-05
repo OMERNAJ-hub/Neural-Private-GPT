@@ -91,7 +91,7 @@ def parse_task(body: IngestAsyncBody, dispatch_store: bool = True) -> Any:
             collection=body.ingest_body.collection,
             artifact=body.ingest_body.artifact,
         )
-        return IngestResponse(object="list", model="private-gpt", data=[])
+        return IngestResponse(object="list", model="neural-private", data=[])
 
     def notify(status: Any) -> None:
         if body.callback is None:
@@ -210,7 +210,7 @@ def store_vectors_task(body: IngestAsyncBody) -> Any:
             collection=body.ingest_body.collection,
             artifact=body.ingest_body.artifact,
         )
-        return IngestResponse(object="list", model="private-gpt", data=[])
+        return IngestResponse(object="list", model="neural-private", data=[])
 
     def notify(status: Any) -> None:
         if body.callback is None:
@@ -230,7 +230,7 @@ def store_vectors_task(body: IngestAsyncBody) -> Any:
 
     nodes = body.nodes or []
     if not nodes:
-        return IngestResponse(object="list", model="private-gpt", data=[])
+        return IngestResponse(object="list", model="neural-private", data=[])
 
     service = get_global_injector().get(IngestService)
     vector_artifact_index = service._make_vector_artifact_index(
@@ -280,7 +280,7 @@ def store_vectors_task(body: IngestAsyncBody) -> Any:
 
     return IngestResponse(
         object="list",
-        model="private-gpt",
+        model="neural-private",
         data=[IngestedDoc.from_document(nodes[0])],
     )
 
@@ -299,3 +299,5 @@ def ensure_to_remove_temporal_files(body: IngestAsyncBody) -> None:
                 s3_helper.remove_file_from_s3(uri_value)
     except Exception as e:
         logger.error(f"Failed to remove temporal files: {e}")
+
+

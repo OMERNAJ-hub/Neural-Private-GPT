@@ -40,3 +40,5 @@ async def get_model(
 ) -> ModelInfoOutput:
     models_service: ModelsService = request.state.injector.get(ModelsService)
     return models_service.get_model(model_id)
+
+

@@ -1,12 +1,12 @@
 ---
 title: "CLI"
-description: "Manage the server, workers, and connected apps with the private-gpt CLI."
+description: "Manage the server, workers, and connected apps with the neural-private CLI."
 ---
 
-The `private-gpt` CLI covers the full service lifecycle: starting the HTTP server, launching background workers, and running connected apps like Claude Code.
+The `neural-private` CLI covers the full service lifecycle: starting the HTTP server, launching background workers, and running connected apps like Claude Code.
 
 ```
-private-gpt <command> [flags]
+neural-private <command> [flags]
 
 Commands:
   serve     Start the HTTP server
@@ -22,7 +22,7 @@ Commands:
 Starts the uvicorn HTTP server.
 
 ```bash
-private-gpt serve [flags]
+neural-private serve [flags]
 ```
 
 | Flag | Default | Description |
@@ -39,25 +39,25 @@ private-gpt serve [flags]
   <Tab title="macOS / Linux">
     ```bash
     # Start with defaults
-    private-gpt serve
+    neural-private serve
 
     # Development mode with auto-reload
-    private-gpt serve --reload --log-level debug
+    neural-private serve --reload --log-level debug
 
     # Production with PID file for process supervision
-    private-gpt serve --pid-file /var/run/private-gpt.pid
+    neural-private serve --pid-file /var/run/neural-private.pid
     ```
   </Tab>
   <Tab title="Windows (PowerShell)">
     ```powershell
     # Start with defaults
-    private-gpt serve
+    neural-private serve
 
     # Development mode with auto-reload
-    private-gpt serve --reload --log-level debug
+    neural-private serve --reload --log-level debug
 
     # Production with PID file for process supervision
-    private-gpt serve --pid-file C:\ProgramData\private-gpt\private-gpt.pid
+    neural-private serve --pid-file C:\ProgramData\neural-private\neural-private.pid
     ```
   </Tab>
 </Tabs>
@@ -71,7 +71,7 @@ private-gpt serve [flags]
 Starts the Celery worker stack. All behaviour is controlled through environment variables — no CLI flags.
 
 ```bash
-private-gpt worker
+neural-private worker
 ```
 
 `PGPT_WORKER_MODE` is required and selects one registered worker runtime:
@@ -87,32 +87,32 @@ private-gpt worker
 <Tabs>
   <Tab title="macOS / Linux">
     ```bash
-    PGPT_WORKER_MODE=celery private-gpt worker
+    PGPT_WORKER_MODE=celery neural-private worker
 
     # Custom concurrency and queues
-    PGPT_CELERY_QUEUES=ingest,chat PGPT_CELERY_CONCURRENCY=4 private-gpt worker
+    PGPT_CELERY_QUEUES=ingest,chat PGPT_CELERY_CONCURRENCY=4 neural-private worker
     ```
   </Tab>
   <Tab title="Windows (PowerShell)">
     ```powershell
     $env:PGPT_WORKER_MODE = "celery"
-    private-gpt worker
+    neural-private worker
 
     # Custom concurrency and queues
     $env:PGPT_CELERY_QUEUES = "ingest,chat"
     $env:PGPT_CELERY_CONCURRENCY = "4"
-    private-gpt worker
+    neural-private worker
     ```
   </Tab>
   <Tab title="Windows (CMD)">
     ```cmd
     set PGPT_WORKER_MODE=celery
-    private-gpt worker
+    neural-private worker
 
     :: Custom concurrency and queues
     set PGPT_CELERY_QUEUES=ingest,chat
     set PGPT_CELERY_CONCURRENCY=4
-    private-gpt worker
+    neural-private worker
     ```
   </Tab>
 </Tabs>
@@ -126,7 +126,7 @@ Launches a connected app as a managed child process, automatically injecting the
 See the [Integrations](/integrations/claude-code) section for app-specific setup guides.
 
 ```bash
-private-gpt run <app> [flags] [-- <app-args>]
+neural-private run <app> [flags] [-- <app-args>]
 ```
 
 | Flag | Default | Description |
@@ -138,7 +138,7 @@ private-gpt run <app> [flags] [-- <app-args>]
 | `--auto-approve` | off | Skip confirmations (CI mode) |
 | `--no-server` | off | Skip server detection and auto-start |
 
-**Server auto-start:** before launching the app, `private-gpt run` checks `/health`. If the server is not reachable it starts one automatically and waits up to 60 s. Pass `--no-server` to skip this — useful when the server is managed externally (systemd, Docker).
+**Server auto-start:** before launching the app, `neural-private run` checks `/health`. If the server is not reachable it starts one automatically and waits up to 60 s. Pass `--no-server` to skip this — useful when the server is managed externally (systemd, Docker).
 
 ---
 
@@ -147,14 +147,16 @@ private-gpt run <app> [flags] [-- <app-args>]
 Show help for any command:
 
 ```bash
-private-gpt help
-private-gpt help serve
-private-gpt serve --help
+neural-private help
+neural-private help serve
+neural-private serve --help
 ```
 
 Unknown commands print a suggestion:
 
 ```
-$ private-gpt srve
+$ neural-private srve
 Unknown command: 'srve'. Did you mean: 'serve'?
 ```
+
+

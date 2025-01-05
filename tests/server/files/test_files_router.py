@@ -152,3 +152,5 @@ def test_delete_output_returns_404(files_client: TestClient, volume_root: Path) 
 
     resp = files_client.delete(_file_url(output_id, _SESSION_ID))
     assert resp.status_code == 404
+
+

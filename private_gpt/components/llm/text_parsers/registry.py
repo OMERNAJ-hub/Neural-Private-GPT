@@ -41,3 +41,5 @@ class TextParserRegistry:
         if factory is not None:
             return factory(*args, **kwargs)
         return TextParserBase(*args, **kwargs)
+
+

@@ -366,3 +366,5 @@ class TrimmingMemory(BaseChatStoreMemory):
             data["chat_store"] = chat_store
 
         return cls(**data)
+
+

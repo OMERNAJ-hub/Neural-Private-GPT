@@ -35,3 +35,5 @@ async def test_completed_operation_wins_disconnect_race() -> None:
     result = await cancel_on_http_disconnect(request, operation(), poll_interval=0)
 
     assert result == "completed"
+
+

@@ -194,3 +194,5 @@ def test_fake_generator_progress() -> None:
     )
     assert duration < 1.0
     assert all(x <= y for x, y in itertools.pairwise(notifications))
+
+

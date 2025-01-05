@@ -185,3 +185,5 @@ class MarkdownHelper:
 
         # Join chunks
         return "".join("".join(lines) for _, lines in processed_chunks)
+
+

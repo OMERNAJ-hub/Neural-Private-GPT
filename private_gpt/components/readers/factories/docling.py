@@ -38,3 +38,5 @@ class DoclingReaderFactory(ReaderFactory):
         if provider is None:
             raise ValueError(f"Unknown Docling mode: {docling_settings.mode}")
         return provider(self)
+
+

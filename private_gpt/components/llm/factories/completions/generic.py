@@ -38,3 +38,5 @@ class OpenAIGenericCompletionsFactory(LLMFactory):
             model_config,
             tokenizer=tokenizer,
         )
+
+

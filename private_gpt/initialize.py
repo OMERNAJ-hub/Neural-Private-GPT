@@ -1,4 +1,4 @@
-"""Initialization of PrivateGPT common to the main process and the celery worker."""
+"""Initialization of Neural-Private common to the main process and the celery worker."""
 
 import logging
 import sys
@@ -199,3 +199,5 @@ def initialize_observability(settings: Settings) -> None:
         logger.debug("No observability enabled")
         return
     provider(settings)
+
+

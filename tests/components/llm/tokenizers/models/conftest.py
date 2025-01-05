@@ -286,3 +286,5 @@ def create_snapshots_with_timing(hf_cache_dir: Path):
         return repo_dir
 
     return _create
+
+

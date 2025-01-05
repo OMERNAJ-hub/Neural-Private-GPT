@@ -11,7 +11,7 @@ from private_gpt.components.tools.tool_names import (
 
 # Anthropic server tool translation
 # Keys are glob patterns matching Anthropic's date-versioned type strings.
-# Values are the equivalent PrivateGPT internal tool names.
+# Values are the equivalent Neural-Private internal tool names.
 _ANTHROPIC_DATE_SUFFIX_RE = re.compile(r"_\d{8}$")
 
 ANTHROPIC_SERVER_TOOL_TRANSLATION: dict[str, str] = {
@@ -40,7 +40,7 @@ def resolve_anthropic_server_tool_to_internal(tool_type: str | None) -> str | No
 
 
 # Anthropic client tool specs
-# These are tools the API caller executes. PrivateGPT provides description +
+# These are tools the API caller executes. Neural-Private provides description +
 # input_schema so the model knows how to invoke them, but does not run them locally.
 @dataclass(frozen=True)
 class _AnthropicClientToolSpec:
@@ -215,5 +215,7 @@ def resolve_anthropic_client_tool(
 
 async def _client_tool_placeholder_async_fn(*args: Any, **kwargs: Any) -> Any:
     raise NotImplementedError(
-        "This tool is executed by the API caller. PrivateGPT does not run it locally."
+        "This tool is executed by the API caller. Neural-Private does not run it locally."
     )
+
+

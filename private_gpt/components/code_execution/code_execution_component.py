@@ -72,3 +72,5 @@ class CodeExecutionComponent:
             self._container_registry.unregister(session_id)
             if session is not None:
                 provider.delete_session(session)
+
+

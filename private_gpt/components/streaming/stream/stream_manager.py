@@ -123,3 +123,5 @@ class StreamManager:
     async def cleanup(self) -> None:
         """Clean up all resources."""
         await self.stream_service.close()
+
+

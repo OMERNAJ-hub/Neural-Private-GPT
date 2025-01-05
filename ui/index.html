@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="favicon.ico" rel="icon">
-  <title>PrivateGPT Workbench</title>
+  <title>Neural-Private Workbench</title>
   <style>
     :root {
       color-scheme: dark;
@@ -3397,9 +3397,9 @@
   <div class="app">
     <aside class="sidebar glass">
       <div class="logo">
-        <img id="brandLogo"  src="./references/logo-privategpt-wordmark-white-transparent.svg" alt="PrivateGPT" />
+        <img id="brandLogo"  src="./references/logo-Neural-Private-wordmark-white-transparent.svg" alt="Neural-Private" />
         <div class="logo-caption">
-          <strong id="brandNameText">PrivateGPT</strong>
+          <strong id="brandNameText">Neural-Private</strong>
           <span id="brandSurfaceText">Workbench</span>
         </div>
       </div>
@@ -3428,7 +3428,7 @@
         <span data-icon="sliders"></span>
         <span>Settings</span>
       </button>
-      <a class="github-widget" id="githubWidget" href="https://github.com/zylon-ai/private-gpt" target="_blank" rel="noreferrer" aria-label="Open PrivateGPT on GitHub">
+      <a class="github-widget" id="githubWidget" href="https://github.com/zylon-ai/neural-private" target="_blank" rel="noreferrer" aria-label="Open Neural-Private on GitHub">
         <span class="github-widget-main">
           <span data-icon="github"></span>
           <span class="github-widget-name">GitHub</span>
@@ -3486,7 +3486,7 @@
               <div class="panel-head">
                 <div>
                   <h2>Web</h2>
-                  <p class="subtle">Use web search and fetch tools when the PrivateGPT backend has them configured.</p>
+                  <p class="subtle">Use web search and fetch tools when the Neural-Private backend has them configured.</p>
                 </div>
               </div>
               <div class="settings-card">
@@ -3495,7 +3495,7 @@
                   <p class="subtle">Workbench does not store web provider credentials.</p>
                 </div>
                 <div>
-                  <p class="subtle">Configure the web search provider and API key in PrivateGPT's backend config. From the UI, enable Web in a chat's Tools menu to include the `web_search` and `web_fetch` tools in that request.</p>
+                  <p class="subtle">Configure the web search provider and API key in Neural-Private's backend config. From the UI, enable Web in a chat's Tools menu to include the `web_search` and `web_fetch` tools in that request.</p>
                 </div>
               </div>
             </section>
@@ -3564,7 +3564,7 @@
         <div class="context-header">
           <div>
             <h1>Settings</h1>
-            <p class="subtle">Configure the PrivateGPT API connection used by this browser.</p>
+            <p class="subtle">Configure the Neural-Private API connection used by this browser.</p>
           </div>
           <div class="panel-actions">
             <button class="ghost-button" id="restartOnboardingButton" type="button"><span data-icon="sparkles"></span>Run onboarding</button>
@@ -3576,27 +3576,27 @@
         <div class="settings-stack">
           <div class="settings-card">
             <div>
-              <h2>PrivateGPT API</h2>
-              <p class="subtle">Workbench talks only to PrivateGPT. LLM gateway settings belong in the PrivateGPT backend config.</p>
+              <h2>Neural-Private API</h2>
+              <p class="subtle">Workbench talks only to Neural-Private. LLM gateway settings belong in the Neural-Private backend config.</p>
             </div>
             <div class="form-grid">
               <div class="field">
-                <label for="privateGptBaseUrl">PrivateGPT base URL</label>
-                <input id="privateGptBaseUrl" autocomplete="off" spellcheck="false" />
+                <label for="Neural-PrivateBaseUrl">Neural-Private base URL</label>
+                <input id="Neural-PrivateBaseUrl" autocomplete="off" spellcheck="false" />
               </div>
               <details class="advanced-panel">
                 <summary><span>Authentication <span class="subtle" style="font-weight:400;font-size:12px;">(HTTP Basic Auth)</span></span><span data-icon="chevron-down" class="panel-chevron"></span></summary>
                 <div class="advanced-panel-body">
-                  <p class="subtle" style="margin:0;font-size:12px;">Credentials are Base64-encoded and sent as an <code>Authorization</code> header on every request. Only enable if your PrivateGPT server requires Basic Auth. Stored only in this browser; debugger headers are always redacted.</p>
+                  <p class="subtle" style="margin:0;font-size:12px;">Credentials are Base64-encoded and sent as an <code>Authorization</code> header on every request. Only enable if your Neural-Private server requires Basic Auth. Stored only in this browser; debugger headers are always redacted.</p>
                   <div class="auth-grid">
                     <div class="field">
-                      <label for="privateGptUsername">Username</label>
-                      <input id="privateGptUsername" autocomplete="username" spellcheck="false" placeholder="Optional" />
+                      <label for="Neural-PrivateUsername">Username</label>
+                      <input id="Neural-PrivateUsername" autocomplete="username" spellcheck="false" placeholder="Optional" />
                     </div>
                     <div class="field">
-                      <label for="privateGptPassword">Password</label>
+                      <label for="Neural-PrivatePassword">Password</label>
                       <div class="password-field">
-                        <input id="privateGptPassword" type="password" autocomplete="current-password" spellcheck="false" placeholder="Optional" />
+                        <input id="Neural-PrivatePassword" type="password" autocomplete="current-password" spellcheck="false" placeholder="Optional" />
                         <button class="icon-button" id="togglePasswordButton" type="button" aria-label="Show password"><span data-icon="eye"></span></button>
                       </div>
                     </div>
@@ -3658,7 +3658,7 @@
             <div class="settings-card">
               <div>
                 <h2>Look and feel</h2>
-                <p class="subtle">Describe the product surface you want, let PrivateGPT generate a theme, then fine-tune the result if needed.</p>
+                <p class="subtle">Describe the product surface you want, let Neural-Private generate a theme, then fine-tune the result if needed.</p>
               </div>
             <div class="form-grid">
               <div class="field">
@@ -3675,11 +3675,11 @@
                 <div class="advanced-panel-body">
                   <div class="field">
                     <label for="appearanceBrandName">Brand name</label>
-                    <input id="appearanceBrandName" autocomplete="off" spellcheck="false" placeholder="PrivateGPT" />
+                    <input id="appearanceBrandName" autocomplete="off" spellcheck="false" placeholder="Neural-Private" />
                   </div>
                   <div class="field">
                     <label for="appearanceWelcomeTitle">Welcome title</label>
-                    <input id="appearanceWelcomeTitle" autocomplete="off" spellcheck="false" placeholder="Ask PrivateGPT" />
+                    <input id="appearanceWelcomeTitle" autocomplete="off" spellcheck="false" placeholder="Ask Neural-Private" />
                   </div>
                   <div class="field">
                     <label for="appearanceWelcomeSubtitle">Welcome subtitle</label>
@@ -3724,7 +3724,7 @@
             </div>
             <div class="form-grid">
               <div>
-                <p class="subtle">This does not delete data stored in PrivateGPT itself, such as ingested documents or backend configuration.</p>
+                <p class="subtle">This does not delete data stored in Neural-Private itself, such as ingested documents or backend configuration.</p>
               </div>
               <div class="panel-actions">
                 <button class="ghost-button" id="clearLocalDataButton" type="button"><span data-icon="trash"></span>Clear local data</button>
@@ -3802,10 +3802,10 @@
       <aside class="onboarding-aside">
         <div class="onboarding-kicker">Guided setup</div>
         <h1>Get this workspace ready in two short steps.</h1>
-        <p>First, point the UI at PrivateGPT and verify the collection works. Then, if you want, tune the surface so the workbench feels closer to your product.</p>
+        <p>First, point the UI at Neural-Private and verify the collection works. Then, if you want, tune the surface so the workbench feels closer to your product.</p>
         <div class="step-indicator">
           <div class="step-pill active" id="onboardingStepPill1">
-            <strong>1. Connect PrivateGPT</strong>
+            <strong>1. Connect Neural-Private</strong>
             <span>Base URL, collection, and a live check.</span>
             <div class="onboarding-status-chips" id="onboardingCheckChips"></div>
           </div>
@@ -3821,17 +3821,17 @@
           <div class="onboarding-step-content">
             <div class="onboarding-step-header">
               <h2>Connection</h2>
-              <p class="subtle">Use the same PrivateGPT API URL and collection the rest of the workbench will rely on.</p>
+              <p class="subtle">Use the same Neural-Private API URL and collection the rest of the workbench will rely on.</p>
             </div>
             <div class="form-grid">
               <div class="field">
-                <label for="onboardingBaseUrl">PrivateGPT base URL</label>
+                <label for="onboardingBaseUrl">Neural-Private base URL</label>
                 <input id="onboardingBaseUrl" autocomplete="off" spellcheck="false" placeholder="Current host" />
               </div>
               <details class="advanced-panel">
                 <summary><span>Authentication <span class="subtle" style="font-weight:400;font-size:12px;">(HTTP Basic Auth)</span></span><span data-icon="chevron-down" class="panel-chevron"></span></summary>
                 <div class="advanced-panel-body">
-                  <p class="subtle" style="margin:0;font-size:12px;">Credentials are Base64-encoded and sent as an <code>Authorization</code> header on every request. Only enable if your PrivateGPT server requires Basic Auth. Stored only in this browser; debugger headers are always redacted.</p>
+                  <p class="subtle" style="margin:0;font-size:12px;">Credentials are Base64-encoded and sent as an <code>Authorization</code> header on every request. Only enable if your Neural-Private server requires Basic Auth. Stored only in this browser; debugger headers are always redacted.</p>
                   <div class="auth-grid">
                     <div class="field">
                       <label for="onboardingUsername">Username</label>
@@ -3879,11 +3879,11 @@
                 <div class="advanced-panel-body">
                   <div class="field">
                     <label for="onboardingBrandName">Brand name</label>
-                    <input id="onboardingBrandName" autocomplete="off" spellcheck="false" placeholder="PrivateGPT" />
+                    <input id="onboardingBrandName" autocomplete="off" spellcheck="false" placeholder="Neural-Private" />
                   </div>
                   <div class="field">
                     <label for="onboardingWelcomeTitle">Welcome title</label>
-                    <input id="onboardingWelcomeTitle" autocomplete="off" spellcheck="false" placeholder="Ask PrivateGPT" />
+                    <input id="onboardingWelcomeTitle" autocomplete="off" spellcheck="false" placeholder="Ask Neural-Private" />
                   </div>
                   <div class="field">
                     <label for="onboardingWelcomeSubtitle">Welcome subtitle</label>
@@ -3934,7 +3934,7 @@
   <div class="toast-stack" id="toastStack"></div>
 
   <script>
-    const STORAGE_KEY = "privategpt-workbench-state-v1";
+    const STORAGE_KEY = "Neural-Private-workbench-state-v1";
     const DEFAULT_BASE_URL = window.location.origin === "null" ? "http://127.0.0.1:8080" : window.location.origin;
 
     const icons = {
@@ -3971,8 +3971,8 @@
     const DEFAULT_APPEARANCE = Object.freeze({
       brief: "",
       themeMode: "auto",
-      brandName: "PrivateGPT",
-      welcomeTitle: "Ask PrivateGPT",
+      brandName: "Neural-Private",
+      welcomeTitle: "Ask Neural-Private",
       welcomeSubtitle: "Use your local documents, tools, databases, MCP servers, skills, and custom browser tools from one chat.",
       customInstructions: "",
       palette: {
@@ -4023,9 +4023,9 @@
     });
 
     const defaultState = () => ({
-      privateGptBaseUrl: DEFAULT_BASE_URL,
-      privateGptUsername: "",
-      privateGptPassword: "",
+      Neural-PrivateBaseUrl: DEFAULT_BASE_URL,
+      Neural-PrivateUsername: "",
+      Neural-PrivatePassword: "",
       systemPrompt: "",
       useCitations: true,
       useDefaultPrompt: true,
@@ -4123,14 +4123,14 @@
       merged.enableCodeExecution = value.enableCodeExecution !== false;
       merged.extensions = Array.isArray(value.extensions) ? value.extensions : ["zylon"];
       const migratedCredentials =
-        decodeBasicAuthHeader(value.privateGptAuthHeader) ||
-        decodeBasicAuthHeader(value.privateGptToken) ||
+        decodeBasicAuthHeader(value.Neural-PrivateAuthHeader) ||
+        decodeBasicAuthHeader(value.Neural-PrivateToken) ||
         {
-          username: typeof value.privateGptUsername === "string" ? value.privateGptUsername.trim() : "",
-          password: typeof value.privateGptPassword === "string" ? value.privateGptPassword : ""
+          username: typeof value.Neural-PrivateUsername === "string" ? value.Neural-PrivateUsername.trim() : "",
+          password: typeof value.Neural-PrivatePassword === "string" ? value.Neural-PrivatePassword : ""
         };
-      merged.privateGptUsername = migratedCredentials.username;
-      merged.privateGptPassword = migratedCredentials.password;
+      merged.Neural-PrivateUsername = migratedCredentials.username;
+      merged.Neural-PrivatePassword = migratedCredentials.password;
       if (!Array.isArray(merged.context.customTools) || merged.context.customTools.length === 0) {
         merged.context.customTools = [defaultCustomTool()];
       }
@@ -4417,8 +4417,8 @@
       const brandLogo = $("#brandLogo");
       if (brandLogo) {
         brandLogo.src = isLightTheme
-          ? "./references/logo-privategpt-wordmark-dark-transparent.svg"
-          : "./references/logo-privategpt-wordmark-white-transparent.svg";
+          ? "./references/logo-Neural-Private-wordmark-dark-transparent.svg"
+          : "./references/logo-Neural-Private-wordmark-white-transparent.svg";
       }
       document.title = `${brandName} Workbench`;
       $("#brandNameText") && ($("#brandNameText").textContent = brandName);
@@ -4685,9 +4685,9 @@
     }
 
     function renderConnectionForm() {
-      $("#privateGptBaseUrl").value = state.privateGptBaseUrl || DEFAULT_BASE_URL;
-      $("#privateGptUsername").value = state.privateGptUsername || "";
-      $("#privateGptPassword").value = state.privateGptPassword || "";
+      $("#Neural-PrivateBaseUrl").value = state.Neural-PrivateBaseUrl || DEFAULT_BASE_URL;
+      $("#Neural-PrivateUsername").value = state.Neural-PrivateUsername || "";
+      $("#Neural-PrivatePassword").value = state.Neural-PrivatePassword || "";
       $("#systemPrompt").value = state.systemPrompt || "";
       $("#useCitations").checked = state.useCitations !== false;
       $("#useDefaultPrompt").checked = state.useDefaultPrompt !== false;
@@ -4695,9 +4695,9 @@
       $("#enableCodeExecution").checked = state.enableCodeExecution !== false;
       $("#extensions").value = (state.extensions || []).join(", ");
       $("#defaultCollection").value = state.context.documents.defaultCollection || "pgpt_collection";
-      $("#onboardingBaseUrl").value = state.privateGptBaseUrl || DEFAULT_BASE_URL;
-      $("#onboardingUsername").value = state.privateGptUsername || "";
-      $("#onboardingPassword").value = state.privateGptPassword || "";
+      $("#onboardingBaseUrl").value = state.Neural-PrivateBaseUrl || DEFAULT_BASE_URL;
+      $("#onboardingUsername").value = state.Neural-PrivateUsername || "";
+      $("#onboardingPassword").value = state.Neural-PrivatePassword || "";
       $("#onboardingCollection").value = state.context.documents.defaultCollection || "pgpt_collection";
       populateAppearanceForm("appearance");
       populateAppearanceForm("onboarding");
@@ -4911,7 +4911,7 @@
       const list = $("#documentsList");
       const docs = runtime.docs.length ? runtime.docs : (state.context.documents.knownArtifacts || []);
       if (!docs.length) {
-        list.innerHTML = '<div class="empty-state">No documents loaded. Upload files or refresh from PrivateGPT.</div>';
+        list.innerHTML = '<div class="empty-state">No documents loaded. Upload files or refresh from Neural-Private.</div>';
         return;
       }
       list.innerHTML = "";
@@ -5055,7 +5055,7 @@
           progress?.update("No session files.", "ok");
           return;
         }
-        const base = (state.privateGptBaseUrl || DEFAULT_BASE_URL).replace(/\/+$/, "");
+        const base = (state.Neural-PrivateBaseUrl || DEFAULT_BASE_URL).replace(/\/+$/, "");
         files.forEach(f => {
           const row = document.createElement("div");
           row.className = "source-row";
@@ -5143,7 +5143,7 @@
       };
       updateButtonLabel();
       btn.disabled = !models.length;
-      btn.title = models.length ? "Models loaded from PrivateGPT" : "Refresh models to load from PrivateGPT";
+      btn.title = models.length ? "Models loaded from Neural-Private" : "Refresh models to load from Neural-Private";
       const sendBtn = $(".icon-button.send");
       if (sendBtn) sendBtn.disabled = !state.selectedModel;
       dropdown.innerHTML = `<label class="model-search-wrap"><span data-icon="search"></span><input class="model-search" id="modelSearchInput" type="search" placeholder="Search models" autocomplete="off" aria-label="Search models"></label><div class="model-menu-body"><div class="model-options" id="modelOptions"></div><div class="effort-panel" id="effortPanel"></div></div>`;
@@ -5716,7 +5716,7 @@
             const textItems = content.filter(b => b?.type === "text" || typeof b === "string");
             const textHtml = textItems.map(b => escapeHtml(typeof b === "string" ? b : (b.text || ""))).join(" ");
             if (fileItems.length > 0) {
-              const base = (state.privateGptBaseUrl || DEFAULT_BASE_URL).replace(/\/+$/, "");
+              const base = (state.Neural-PrivateBaseUrl || DEFAULT_BASE_URL).replace(/\/+$/, "");
               const chatId = activeChat()?.id;
               resultHtml = `<div class="code-exec-present-files">${fileItems.map(f => {
                 const ext = f.file_path ? "." + f.file_path.split(".").pop() : "";
@@ -6328,7 +6328,7 @@
     }
 
     async function apiFetch(path, { method = "GET", body, headers = {} } = {}, debugMeta = {}) {
-      const base = (state.privateGptBaseUrl || DEFAULT_BASE_URL).replace(/\/+$/, "");
+      const base = (state.Neural-PrivateBaseUrl || DEFAULT_BASE_URL).replace(/\/+$/, "");
       const url = `${base}${path}`;
       const requestHeaders = { ...headers };
       const isGet = method.toUpperCase() === "GET";
@@ -6337,7 +6337,7 @@
         requestHeaders["Cache-Control"] = "no-cache";
         requestHeaders.Pragma = "no-cache";
       }
-      const authHeader = createBasicAuthHeader(state.privateGptUsername, state.privateGptPassword);
+      const authHeader = createBasicAuthHeader(state.Neural-PrivateUsername, state.Neural-PrivatePassword);
       if (authHeader) requestHeaders.Authorization = authHeader;
       const request = body !== undefined ? JSON.parse(JSON.stringify(body)) : undefined;
       const redactedHeaders = redactHeaders(requestHeaders);
@@ -6385,10 +6385,10 @@
     }
 
     async function apiStreamFetch(path, { method = "POST", body, headers = {} } = {}, debugMeta = {}, onDelta) {
-      const base = (state.privateGptBaseUrl || DEFAULT_BASE_URL).replace(/\/+$/, "");
+      const base = (state.Neural-PrivateBaseUrl || DEFAULT_BASE_URL).replace(/\/+$/, "");
       const url = `${base}${path}`;
       const requestHeaders = { "Content-Type": "application/json", ...headers };
-      const authHeader = createBasicAuthHeader(state.privateGptUsername, state.privateGptPassword);
+      const authHeader = createBasicAuthHeader(state.Neural-PrivateUsername, state.Neural-PrivatePassword);
       if (authHeader) requestHeaders.Authorization = authHeader;
       const redactedHeaders = redactHeaders(requestHeaders);
       const debugEvent = addDebugEvent("api:call", { method, path, url, headers: redactedHeaders, request: body, ...debugMeta });
@@ -6469,10 +6469,10 @@
     }
 
     async function apiFormFetch(path, formData, { method = "POST", headers = {} } = {}, debugMeta = {}) {
-      const base = (state.privateGptBaseUrl || DEFAULT_BASE_URL).replace(/\/+$/, "");
+      const base = (state.Neural-PrivateBaseUrl || DEFAULT_BASE_URL).replace(/\/+$/, "");
       const url = `${base}${path}`;
       const requestHeaders = { ...headers };
-      const authHeader = createBasicAuthHeader(state.privateGptUsername, state.privateGptPassword);
+      const authHeader = createBasicAuthHeader(state.Neural-PrivateUsername, state.Neural-PrivatePassword);
       if (authHeader) requestHeaders.Authorization = authHeader;
       const request = {};
       formData.forEach((value, key) => {
@@ -6506,7 +6506,7 @@
     }
 
     async function loadModels() {
-      const progress = toast("Testing PrivateGPT connection...", "loading", { persistent: true });
+      const progress = toast("Testing Neural-Private connection...", "loading", { persistent: true });
       try {
         const result = await apiFetch("/v1/models", {}, { label: "Load models" });
         state.models = Array.isArray(result?.data) ? result.data : [];
@@ -6515,7 +6515,7 @@
         }
         saveState();
         render();
-        progress.update("Connected to PrivateGPT.", "ok");
+        progress.update("Connected to Neural-Private.", "ok");
       } catch (error) {
         progress.update(`Could not load models: ${error.message}`, "error");
       }
@@ -6695,7 +6695,7 @@
       if (!files.length) return;
       const chat = activeChat();
       if (!chat || !chat.settings.enabledCodeExecution) return;
-      const base = (state.privateGptBaseUrl || DEFAULT_BASE_URL).replace(/\/+$/, "");
+      const base = (state.Neural-PrivateBaseUrl || DEFAULT_BASE_URL).replace(/\/+$/, "");
       const progress = toast(`Uploading ${files.length} file${files.length === 1 ? "" : "s"} to session...`, "loading", { persistent: true });
       let uploaded = 0, failed = 0;
       for (const file of files) {
@@ -6704,7 +6704,7 @@
           const formData = new FormData();
           formData.append("file", file);
           const headers = {};
-          const authHeader = createBasicAuthHeader(state.privateGptUsername, state.privateGptPassword);
+          const authHeader = createBasicAuthHeader(state.Neural-PrivateUsername, state.Neural-PrivatePassword);
           if (authHeader) headers.Authorization = authHeader;
           const res = await fetch(`${base}/v1/files?scope_id=${encodeURIComponent(chat.id)}`, {
             method: "POST",
@@ -7096,7 +7096,7 @@
         const result = await handle(toolUse.input || {}, {
           fetch: window.fetch.bind(window),
           localStorage: window.localStorage,
-          privateGptBaseUrl: state.privateGptBaseUrl,
+          Neural-PrivateBaseUrl: state.Neural-PrivateBaseUrl,
           currentChatId: chat.id,
           currentCollection: state.context.documents.defaultCollection || "pgpt_collection",
           log: (message, data) => {
@@ -7135,7 +7135,7 @@
         const result = await handle(input, {
           fetch: window.fetch.bind(window),
           localStorage: window.localStorage,
-          privateGptBaseUrl: state.privateGptBaseUrl,
+          Neural-PrivateBaseUrl: state.Neural-PrivateBaseUrl,
           currentChatId: state.activeChatId,
           currentCollection: state.context.documents.defaultCollection || "pgpt_collection",
           log: console.log
@@ -7377,7 +7377,7 @@
         <div class="modal-head">
           <div>
             <h2>This demonstrator is not intended for Production use</h2>
-            <p class="subtle">This workbench is a local demonstrator for PrivateGPT.</p>
+            <p class="subtle">This workbench is a local demonstrator for Neural-Private.</p>
           </div>
           <button class="icon-button" type="button" data-close-modal aria-label="Close">×</button>
         </div>
@@ -7385,13 +7385,13 @@
           It is useful for trying API capabilities, debugging requests, and exploring local AI workflows, but it should not be published as a production application.
         </p>
         <ul class="risk-list">
-          <li><strong>Browser storage is not secure secret storage.</strong> The PrivateGPT bearer token, chats, context configuration, and settings are saved in localStorage for convenience.</li>
+          <li><strong>Browser storage is not secure secret storage.</strong> The Neural-Private bearer token, chats, context configuration, and settings are saved in localStorage for convenience.</li>
           <li><strong>There is no application-level access control.</strong> Anyone with access to the page can use the configured API endpoint, token, tools, documents, and model access.</li>
           <li><strong>Debugging data is intentionally visible.</strong> The API Debugger can show prompts, document excerpts, headers, metadata, requests, and responses during demos or screen shares.</li>
           <li><strong>Custom tools run browser JavaScript.</strong> Only use trusted code, and do not expose this UI without a reviewed deployment model.</li>
         </ul>
         <p class="subtle" style="margin-top:14px;">
-          If you are looking for an enterprise-ready private AI platform, visit <a href="https://zylon.ai" target="_blank" rel="noreferrer">Zylon</a> or <a href="https://cal.com/zylon/demo?source=privategptui" target="_blank" rel="noreferrer">book a demo with our team</a>. Zylon is an enterprise AI platform delivering on-premise generative AI infrastructure for regulated industries, enabling secure deployment without external cloud dependencies.
+          If you are looking for an enterprise-ready private AI platform, visit <a href="https://zylon.ai" target="_blank" rel="noreferrer">Zylon</a> or <a href="https://cal.com/zylon/demo?source=Neural-Privateui" target="_blank" rel="noreferrer">book a demo with our team</a>. Zylon is an enterprise AI platform delivering on-premise generative AI infrastructure for regulated industries, enabling secure deployment without external cloud dependencies.
         </p>
       `;
       $("#modalBackdrop").classList.add("open");
@@ -7452,9 +7452,9 @@
 
     function readSettingsConnectionForm() {
       return {
-        baseUrl: $("#privateGptBaseUrl").value.trim() || DEFAULT_BASE_URL,
-        username: $("#privateGptUsername").value.trim(),
-        password: $("#privateGptPassword").value,
+        baseUrl: $("#Neural-PrivateBaseUrl").value.trim() || DEFAULT_BASE_URL,
+        username: $("#Neural-PrivateUsername").value.trim(),
+        password: $("#Neural-PrivatePassword").value,
         systemPrompt: $("#systemPrompt").value.trim(),
         useCitations: $("#useCitations").checked,
         useDefaultPrompt: $("#useDefaultPrompt").checked,
@@ -7484,9 +7484,9 @@
     }
 
     function applyConnectionSettings(values) {
-      state.privateGptBaseUrl = values.baseUrl || DEFAULT_BASE_URL;
-      state.privateGptUsername = values.username || "";
-      state.privateGptPassword = values.password || "";
+      state.Neural-PrivateBaseUrl = values.baseUrl || DEFAULT_BASE_URL;
+      state.Neural-PrivateUsername = values.username || "";
+      state.Neural-PrivatePassword = values.password || "";
       if (typeof values.systemPrompt === "string") state.systemPrompt = values.systemPrompt;
       if (typeof values.useCitations === "boolean") state.useCitations = values.useCitations;
       if (typeof values.useDefaultPrompt === "boolean") state.useDefaultPrompt = values.useDefaultPrompt;
@@ -7526,7 +7526,7 @@
         }
         check.steps.push({
           label: "Models",
-          detail: `${state.models.length} model${state.models.length === 1 ? "" : "s"} loaded from ${state.privateGptBaseUrl}.`,
+          detail: `${state.models.length} model${state.models.length === 1 ? "" : "s"} loaded from ${state.Neural-PrivateBaseUrl}.`,
           ok: true
         });
 
@@ -7553,7 +7553,7 @@
         state.onboarding.step = 2;
         saveState();
         render();
-        toast("PrivateGPT connection verified.", "ok");
+        toast("Neural-Private connection verified.", "ok");
       } catch (error) {
         const failedLabel = ["Models", "Artifacts", "Skills"][check.steps.length] || "Connection";
         check.steps.push({
@@ -7657,7 +7657,7 @@
       $("#clearLocalDataButton").addEventListener("click", clearLocalData);
       $("#refreshSkillsButton").addEventListener("click", () => refreshSkills());
       $("#togglePasswordButton").addEventListener("click", () => {
-        const input = $("#privateGptPassword");
+        const input = $("#Neural-PrivatePassword");
         input.type = input.type === "password" ? "text" : "password";
       });
       $("#toggleOnboardingPasswordButton").addEventListener("click", () => {
@@ -7815,7 +7815,7 @@
 
     async function saveConnectionSettings() {
       const values = readSettingsConnectionForm();
-      if (!validateConnectionFields(values, { userSelector: "#privateGptUsername", passwordSelector: "#privateGptPassword" })) return false;
+      if (!validateConnectionFields(values, { userSelector: "#Neural-PrivateUsername", passwordSelector: "#Neural-PrivatePassword" })) return false;
       applyConnectionSettings(values);
       saveAppearanceSettingsFrom("appearance");
       saveState();
@@ -7850,7 +7850,7 @@
 
     async function loadGitHubStars() {
       try {
-        const response = await fetch("https://api.github.com/repos/zylon-ai/private-gpt", {
+        const response = await fetch("https://api.github.com/repos/zylon-ai/neural-private", {
           headers: { Accept: "application/vnd.github+json" }
         });
         if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
@@ -7972,3 +7972,5 @@
   </script>
 </body>
 </html>
+
+

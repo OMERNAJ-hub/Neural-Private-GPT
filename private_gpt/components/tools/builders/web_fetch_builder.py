@@ -79,3 +79,5 @@ class WebFetchToolBuilder:
 def rebuild_web_fetch_tool(**kwargs: Any) -> ToolSpec:
     builder = get_global_injector().get(WebFetchToolBuilder)
     return builder.build_tool(**cast(Any, kwargs))
+
+

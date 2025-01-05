@@ -106,3 +106,5 @@ def combine_trees(root: TreeNode, *trees: TreeNode) -> TreeNode:
         root_copy = combine_trees(root_copy, tree_copy)
 
     return root_copy
+
+

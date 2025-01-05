@@ -33,3 +33,5 @@ def test_stateful_celery_worker_sets_memory_recycling(
 
     assert "--max-tasks-per-child=100" in args
     assert "--max-memory-per-child=2097152" in args
+
+

@@ -27,3 +27,5 @@ class SimpleTextProcessor(BaseWebSearchResultProcessor):
         model_id: str | None = None,
     ) -> list[WebSearchResult]:
         return results
+
+

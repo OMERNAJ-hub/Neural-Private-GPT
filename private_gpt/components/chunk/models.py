@@ -190,7 +190,7 @@ class Website(BaseModel):
         description="The URL of the website",
         examples=[
             "https://www.example.com",
-            "https://docs.privategpt.com/getting-started",
+            "https://docs.Neural-Private.com/getting-started",
             "https://en.wikipedia.org/wiki/Artificial_intelligence",
         ],
     )
@@ -200,7 +200,7 @@ class Website(BaseModel):
         description="The URL of the website's favicon",
         examples=[
             "https://www.example.com/favicon.ico",
-            "https://docs.privategpt.com/favicon.png",
+            "https://docs.Neural-Private.com/favicon.png",
             "https://en.wikipedia.org/static/favicon/wikipedia.ico",
         ],
     )
@@ -210,7 +210,7 @@ class Website(BaseModel):
         description="The title of the website or webpage",
         examples=[
             "Example Domain",
-            "Getting Started with PrivateGPT - Documentation",
+            "Getting Started with Neural-Private - Documentation",
             "Artificial Intelligence - Wikipedia",
         ],
     )
@@ -219,7 +219,7 @@ class Website(BaseModel):
         description="A brief description or summary of the website content",
         examples=[
             "This domain is for use in illustrative examples in documents.",
-            "PrivateGPT is an open-source project that enables private AI interactions.",
+            "Neural-Private is an open-source project that enables private AI interactions.",
             "Artificial intelligence (AI) is intelligence demonstrated by machines.",
         ],
     )
@@ -249,7 +249,7 @@ class Website(BaseModel):
         description="The actual text content extracted from the website",
         examples=[
             "<html><head><title>Example Domain</title></head><body>This domain is for use in illustrative examples in documents.</body></html>",
-            "PrivateGPT is an open-source project that enables private AI interactions.",
+            "Neural-Private is an open-source project that enables private AI interactions.",
             "Artificial intelligence (AI) is intelligence demonstrated by machines.",
         ],
     )
@@ -271,3 +271,5 @@ class Website(BaseModel):
 
 
 SourceType = Chunk | Website
+
+

@@ -67,3 +67,5 @@ class LoopChatEngineAdapter:
     async def cancel(self, correlation_id: str) -> bool:
         del correlation_id
         return True
+
+

@@ -157,3 +157,5 @@ class SkillToolVisibilityInterceptor(ChatRequestLoopInterceptor):
     @staticmethod
     def _normalize_token(value: str) -> str:
         return value.strip().lower()
+
+

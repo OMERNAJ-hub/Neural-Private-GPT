@@ -115,3 +115,5 @@ def test_partial_citation_never_leaks_during_stream(partial: str) -> None:
 
     assert formatted == "Prefix "
     assert citations == []
+
+

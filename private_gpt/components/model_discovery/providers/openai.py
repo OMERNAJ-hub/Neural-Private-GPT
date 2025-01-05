@@ -93,3 +93,5 @@ class OpenAIStrategy(RegexModelClassifier):
         if any(marker in normalized for marker in OPENAI_NON_CHAT_MODEL_MARKERS):
             return False
         return normalized.startswith(OPENAI_CHAT_MODEL_PREFIXES)
+
+

@@ -89,3 +89,5 @@ class WindowPrevNextReplacementPostProcessor(BaseNodePostprocessor):
                 node.node.excluded_llm_metadata_keys.append("next_texts")
 
         return nodes
+
+

@@ -51,3 +51,5 @@ class PatchedOpenAILikeResponsesLLM(  # ty: ignore[inconsistent-mro]
     take precedence while all method patches from PatchedOpenAIResponsesLLM are
     inherited unchanged.
     """
+
+

@@ -227,3 +227,5 @@ class IngestService:
                 raise e
 
         vector_artifact_index.delete()
+
+

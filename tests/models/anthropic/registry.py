@@ -643,3 +643,5 @@ ALL_REGISTRIES: dict[str, list[TypeMapping]] = {
 ALL_MAPPINGS: list[TypeMapping] = [
     m for registry in ALL_REGISTRIES.values() for m in registry if not m.skip
 ]
+
+

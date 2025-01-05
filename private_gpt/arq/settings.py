@@ -30,3 +30,5 @@ def get_redis_settings(settings: Settings) -> RedisSettings:
         retry_on_timeout=True,
         retry=Retry(ExponentialBackoff(cap=30, base=1), retries=10),
     )
+
+

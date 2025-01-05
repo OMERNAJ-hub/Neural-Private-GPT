@@ -65,3 +65,5 @@ class DiffNode(TextNode):
             other_text=other_node.get_content(metadata_mode),
         )
         return cls(text=diff) if diff else None
+
+

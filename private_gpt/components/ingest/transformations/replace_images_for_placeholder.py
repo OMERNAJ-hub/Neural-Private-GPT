@@ -34,3 +34,5 @@ class ReplaceImageByPlaceholder(TransformComponent):
                 node.set_content(content)
 
         return nodes
+
+

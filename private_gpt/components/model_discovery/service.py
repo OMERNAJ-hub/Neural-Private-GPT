@@ -47,3 +47,5 @@ def _build_client(
     timeout: float,
 ) -> DiscoveryHttpClient:
     return DiscoveryHttpClient(api_base=api_base, api_key=api_key, timeout=timeout)
+
+

@@ -679,3 +679,5 @@ def test_timezone_aware_conversion(
     """Test that timezone-aware datetimes are properly converted to UTC."""
     result = serialize_datetime(input_dt)
     assert result == expected_result, f"Timezone conversion failed: {description}"
+
+

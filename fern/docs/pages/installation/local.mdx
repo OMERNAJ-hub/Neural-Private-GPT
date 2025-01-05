@@ -1,9 +1,9 @@
 ---
 title: "Local with uv"
-description: "Run PrivateGPT locally from source using uv — recommended for development and contributors."
+description: "Run Neural-Private locally from source using uv — recommended for development and contributors."
 ---
 
-This guide installs PrivateGPT from the cloned repository using [uv](https://docs.astral.sh/uv/), a fast Python package manager. Use this if you want to modify the source, run tests, or use hot-reload during development.
+This guide installs Neural-Private from the cloned repository using [uv](https://docs.astral.sh/uv/), a fast Python package manager. Use this if you want to modify the source, run tests, or use hot-reload during development.
 
 For the simplest install, use the [package install](/installation/package) instead.
 
@@ -34,14 +34,14 @@ Add feature-specific extras only when you need them, for example `uv sync --froz
       </Step>
       <Step title="Clone and install">
         ```bash
-        git clone https://github.com/zylon-ai/private-gpt
-        cd private-gpt
+        git clone https://github.com/zylon-ai/neural-private
+        cd neural-private
         uv sync --frozen --extra core
         ```
       </Step>
       <Step title="Run">
         ```bash
-        OPENAI_API_BASE=http://localhost:11434/v1 uv run private-gpt serve
+        OPENAI_API_BASE=http://localhost:11434/v1 uv run neural-private serve
         ```
         Open [http://localhost:8080/ui](http://localhost:8080/ui) in your browser.
       </Step>
@@ -57,14 +57,14 @@ Add feature-specific extras only when you need them, for example `uv sync --froz
       </Step>
       <Step title="Clone and install">
         ```bash
-        git clone https://github.com/zylon-ai/private-gpt
-        cd private-gpt
+        git clone https://github.com/zylon-ai/neural-private
+        cd neural-private
         uv sync --frozen --extra core
         ```
       </Step>
       <Step title="Run">
         ```bash
-        OPENAI_API_BASE=http://localhost:11434/v1 uv run private-gpt serve
+        OPENAI_API_BASE=http://localhost:11434/v1 uv run neural-private serve
         ```
         Open [http://localhost:8080/ui](http://localhost:8080/ui) in your browser.
       </Step>
@@ -80,8 +80,8 @@ Add feature-specific extras only when you need them, for example `uv sync --froz
       </Step>
       <Step title="Clone and install">
         ```powershell
-        git clone https://github.com/zylon-ai/private-gpt
-        cd private-gpt
+        git clone https://github.com/zylon-ai/neural-private
+        cd neural-private
         uv sync --frozen --extra core
         ```
       </Step>
@@ -101,8 +101,8 @@ Add feature-specific extras only when you need them, for example `uv sync --froz
       </Step>
       <Step title="Clone and install">
         ```cmd
-        git clone https://github.com/zylon-ai/private-gpt
-        cd private-gpt
+        git clone https://github.com/zylon-ai/neural-private
+        cd neural-private
         uv sync --frozen --extra core
         ```
       </Step>
@@ -134,14 +134,14 @@ When working on the source, run with `--reload` to restart automatically on file
     ```bash
     OPENAI_API_BASE=http://localhost:11434/v1 \
       PGPT_PROFILES=local \
-      uv run private-gpt serve --reload
+      uv run neural-private serve --reload
     ```
   </Tab>
   <Tab title="Windows">
     ```powershell
     $env:OPENAI_API_BASE = "http://localhost:11434/v1"
     $env:PGPT_PROFILES = "local"
-    uv run private-gpt serve --reload
+    uv run neural-private serve --reload
     ```
   </Tab>
 </Tabs>
@@ -151,3 +151,5 @@ Or use the Makefile shortcut (Unix only):
 ```bash
 OPENAI_API_BASE=http://localhost:11434/v1 make dev
 ```
+
+

@@ -1,14 +1,14 @@
 ---
 title: "Ollama"
-description: "Run local LLMs with Ollama — the easiest way to get started with PrivateGPT."
+description: "Run local LLMs with Ollama — the easiest way to get started with Neural-Private."
 ---
 
 [Ollama](https://ollama.ai) lets you run large language models locally with a single command. It handles model downloading, GPU offloading, and serving an OpenAI-compatible API on port `11434`.
 
-## Limitations with PrivateGPT
+## Limitations with Neural-Private
 
 <Warning>
-  Ollama does **not** expose a tokenizer endpoint (`/tokenize`). PrivateGPT falls back to a character-based estimate (4 chars = 1 token) for token counting. This can cause context-window overflow on long inputs.
+  Ollama does **not** expose a tokenizer endpoint (`/tokenize`). Neural-Private falls back to a character-based estimate (4 chars = 1 token) for token counting. This can cause context-window overflow on long inputs.
 
   **Recommendation:** Set `context_window` explicitly in a [detailed model profile](/configuration/advanced) to match your model's actual limit. By default, Ollama assumes the following context window based on the VRAM:
 
@@ -67,23 +67,23 @@ description: "Run local LLMs with Ollama — the easiest way to get started with
     </Tip>
   </Step>
 
-  <Step title="Run PrivateGPT">
+  <Step title="Run Neural-Private">
     <Tabs>
       <Tab title="Package install">
         ```bash
-        OPENAI_API_BASE=http://localhost:11434/v1 private-gpt serve
+        OPENAI_API_BASE=http://localhost:11434/v1 neural-private serve
         ```
       </Tab>
       <Tab title="Docker">
         ```bash
         docker run -p 8080:8080 \
           -e OPENAI_API_BASE=http://host.docker.internal:11434/v1 \
-          zylonai/private-gpt:latest
+          zylonai/neural-private:latest
         ```
       </Tab>
       <Tab title="uv (local)">
         ```bash
-        OPENAI_API_BASE=http://localhost:11434/v1 uv run private-gpt serve
+        OPENAI_API_BASE=http://localhost:11434/v1 uv run neural-private serve
         ```
       </Tab>
     </Tabs>
@@ -162,3 +162,5 @@ Verify the model is available:
 ```bash
 ollama list
 ```
+
+

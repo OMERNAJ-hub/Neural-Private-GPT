@@ -1,4 +1,4 @@
-"""private-gpt."""
+"""neural-private."""
 
 import logging
 import os
@@ -46,3 +46,5 @@ logging.getLogger("oras.logger").setLevel(logging.ERROR)
 
 # Disable httpx request logs
 logging.getLogger("httpx").setLevel(logging.WARNING)
+
+

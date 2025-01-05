@@ -150,3 +150,5 @@ class WebSearchService:
                 f"Unknown processor: {self._settings.web_search.processor}. "
                 f"Available: simple_text, scraped_content, clean_content"
             )
+
+

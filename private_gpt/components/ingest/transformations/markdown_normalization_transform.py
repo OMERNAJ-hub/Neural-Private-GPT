@@ -170,3 +170,5 @@ class MarkdownNormalizerTransform(TransformComponent):
             node.set_content(normalized_content)
 
         return nodes
+
+

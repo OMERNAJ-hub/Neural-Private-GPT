@@ -1,10 +1,10 @@
-# PrivateGPT Workbench PRD
+# Neural-Private Workbench PRD
 
 ## Project Context
 
-PrivateGPT is an open-source local AI API project. Its value proposition is not local inference itself, but the higher-level application layer built on top of any OpenAI-compatible local inference backend.
+Neural-Private is an open-source local AI API project. Its value proposition is not local inference itself, but the higher-level application layer built on top of any OpenAI-compatible local inference backend.
 
-PrivateGPT aims to provide a local implementation of the capabilities developers and users expect from modern Claude-style APIs and applications, including:
+Neural-Private aims to provide a local implementation of the capabilities developers and users expect from modern Claude-style APIs and applications, including:
 
 - Chat/messages API
 - File ingestion
@@ -17,17 +17,17 @@ PrivateGPT aims to provide a local implementation of the capabilities developers
 - Custom tools
 - Embeddings and lower-level primitives
 
-The demonstrator UI, tentatively called **PrivateGPT Workbench**, exists to make these API capabilities tangible.
+The demonstrator UI, tentatively called **Neural-Private Workbench**, exists to make these API capabilities tangible.
 
-For non-technical users, it should show PrivateGPT as:
+For non-technical users, it should show Neural-Private as:
 
 > A free, local AI assistant I can use to query documents, knowledge bases, websites, CSVs, and databases without relying on a cloud API key.
 
-For developers, it should show PrivateGPT as:
+For developers, it should show Neural-Private as:
 
 > A local Claude-compatible API layer I can build applications on top of.
 
-This UI should remain a lightweight demonstrator, not the main product. It now lives inside the PrivateGPT repository under `./ui` and must not become a heavy frontend application or a maintenance burden.
+This UI should remain a lightweight demonstrator, not the main product. It now lives inside the Neural-Private repository under `./ui` and must not become a heavy frontend application or a maintenance burden.
 
 ## OpenAPI Source Of Truth
 
@@ -126,13 +126,13 @@ Use the style guide as the source of truth for layout, glass surfaces, backgroun
 
 ## Purpose
 
-PrivateGPT Workbench is a lightweight demonstrator UI for the PrivateGPT API. It should prove PrivateGPT's value as a local Claude-compatible AI application backend while staying simple enough to live inside the PrivateGPT repo as a non-core demo.
+Neural-Private Workbench is a lightweight demonstrator UI for the Neural-Private API. It should prove Neural-Private's value as a local Claude-compatible AI application backend while staying simple enough to live inside the Neural-Private repo as a non-core demo.
 
-The app is not intended to become a full product, admin console, or design-system-heavy frontend. It is a practical local UI for trying the API, showing non-technical users what PrivateGPT can do, and helping developers understand how to build on top of it.
+The app is not intended to become a full product, admin console, or design-system-heavy frontend. It is a practical local UI for trying the API, showing non-technical users what Neural-Private can do, and helping developers understand how to build on top of it.
 
 ## Primary Goals
 
-1. Let non-technical users experience PrivateGPT as a local AI assistant.
+1. Let non-technical users experience Neural-Private as a local AI assistant.
 2. Let users configure the local context available to the assistant: documents, databases, web search, MCP, skills, and custom tools.
 3. Let developers observe how the UI talks to the API through a lightweight session-level API Debugger.
 4. Keep implementation simple: ideally a single static HTML file with vanilla JS/CSS and browser `localStorage`.
@@ -168,18 +168,18 @@ Browser storage:
 - `localStorage` for persistent app state.
 - In-memory state for debugger events.
 
-Default PrivateGPT API base URL:
+Default Neural-Private API base URL:
 
 ```text
 http://127.0.0.1:8001
 ```
 
-Allow user override from inside the web application. Users must not need to edit config files to point the demonstrator at a different PrivateGPT deployment.
+Allow user override from inside the web application. Users must not need to edit config files to point the demonstrator at a different Neural-Private deployment.
 
 Connection settings should include:
 
-- PrivateGPT API base URL
-- Optional PrivateGPT API key / bearer token
+- Neural-Private API base URL
+- Optional Neural-Private API key / bearer token
 
 If auth is configured, requests should include:
 
@@ -187,25 +187,25 @@ If auth is configured, requests should include:
 Authorization: Basic <base64(username:password)>
 ```
 
-### PrivateGPT API vs LLM Gateway
+### Neural-Private API vs LLM Gateway
 
 There are two separate connection concepts:
 
-1. **PrivateGPT API URL and auth**
+1. **Neural-Private API URL and auth**
    - This is what Workbench calls directly.
    - This must be configurable in the Workbench UI.
    - Default URL: `http://127.0.0.1:8001`.
    - Supported auth in the Workbench UI: optional HTTP Basic auth only, entered as username and password fields.
 
 2. **LLM Gateway URL and auth**
-   - This points PrivateGPT to the underlying inference provider, such as a local Ollama server.
-   - This is configured in PrivateGPT's own configuration files.
+   - This points Neural-Private to the underlying inference provider, such as a local Ollama server.
+   - This is configured in Neural-Private's own configuration files.
    - Workbench must not expose LLM gateway configuration in the UI for v1.
-   - A common local LLM gateway default may be Ollama at `http://127.0.0.1:11434`, but that belongs to PrivateGPT backend configuration, not Workbench.
+   - A common local LLM gateway default may be Ollama at `http://127.0.0.1:11434`, but that belongs to Neural-Private backend configuration, not Workbench.
 
-All Workbench API calls should target the configured PrivateGPT API base URL. Do not call the LLM gateway directly from the browser UI.
+All Workbench API calls should target the configured Neural-Private API base URL. Do not call the LLM gateway directly from the browser UI.
 
-For development and automated testing, a working PrivateGPT deployment may be available through local environment variables:
+For development and automated testing, a working Neural-Private deployment may be available through local environment variables:
 
 ```text
 PGPT_BASE_URL
@@ -214,7 +214,7 @@ PGPT_TOKEN
 
 The implementation may read these at runtime in local test scripts or dev-server setup, but must never store, print, commit, or hardcode the actual values.
 
-Browser/CORS behavior should prioritize the local case first. The app should work when served locally against a local PrivateGPT API. If deployed elsewhere, it should still allow the user to configure API URL and token, but any required cross-origin server policy must be handled by the PrivateGPT deployment.
+Browser/CORS behavior should prioritize the local case first. The app should work when served locally against a local Neural-Private API. If deployed elsewhere, it should still allow the user to configure API URL and token, but any required cross-origin server policy must be handled by the Neural-Private deployment.
 
 ## High-Level UI
 
@@ -246,7 +246,7 @@ Main
     Context configuration screen
 
   If Settings selected:
-    PrivateGPT API connection settings and assistant behavior
+    Neural-Private API connection settings and assistant behavior
 
   If API Debugger selected:
     Session-level API request/response trace
@@ -261,9 +261,9 @@ Store in `localStorage`:
 
 ```ts
 {
-  privateGptBaseUrl: string,
-  privateGptUsername: string,
-  privateGptPassword: string,
+  Neural-PrivateBaseUrl: string,
+  Neural-PrivateUsername: string,
+  Neural-PrivatePassword: string,
   systemPrompt: string,
   useCitations: boolean,
   selectedModel: string | null,
@@ -378,11 +378,11 @@ Sidebar items:
    - Place this in the bottom sidebar group above Settings.
 
 5. **Settings**
-   - Opens PrivateGPT API connection settings.
+   - Opens Neural-Private API connection settings.
    - Place this in the bottom sidebar group below API Debugger.
 
 6. **GitHub**
-   - Links to the PrivateGPT repository.
+   - Links to the Neural-Private repository.
    - Shows live repository stars when GitHub is reachable.
    - Place this below Settings.
 
@@ -398,7 +398,7 @@ The Settings screen owns Workbench-level configuration that is not part of assis
 
 Settings include:
 
-- PrivateGPT API base URL.
+- Neural-Private API base URL.
 - Optional HTTP Basic auth (username and password).
 - Optional system prompt.
 - Optional workspace instructions prepended ahead of the system prompt.
@@ -410,13 +410,13 @@ Settings include:
 - Save settings.
 - Clear local browser data.
 
-The PrivateGPT API settings should not live in the Context screen. Context is for sources/tools the assistant can use; Settings is for how Workbench connects to PrivateGPT.
+The Neural-Private API settings should not live in the Context screen. Context is for sources/tools the assistant can use; Settings is for how Workbench connects to Neural-Private.
 
 The system prompt also belongs in Settings because it controls global assistant behavior. Send it through the top-level `system` field in `ChatBody`, not as a `system` role message. If the user leaves it empty, do not send system prompt text. A `system` object may still be sent without `text` when needed for request-level options such as `citations.enabled`.
 
 The Use citations toggle controls whether document-enabled chats request citation-annotated answers. It should be enabled by default.
 
-The Clear local data action removes this Workbench's saved chats, settings, token, context, and preferences from browser `localStorage`. It must not imply deletion of data stored in PrivateGPT itself, such as ingested documents or backend configuration.
+The Clear local data action removes this Workbench's saved chats, settings, token, context, and preferences from browser `localStorage`. It must not imply deletion of data stored in Neural-Private itself, such as ingested documents or backend configuration.
 
 ## Onboarding
 
@@ -424,7 +424,7 @@ On first launch, Workbench should open an onboarding overlay before normal use.
 
 Step 1 requirements:
 
-- Collect PrivateGPT base URL.
+- Collect Neural-Private base URL.
 - Collect optional HTTP Basic auth.
 - Collect the active collection ID.
 - Save those values into the same persistent state used by Settings.
@@ -466,7 +466,7 @@ The disclosure should cover four concise risks:
 End the modal with a commercial Zylon CTA:
 
 - Link `Zylon` to `https://zylon.ai`.
-- Link `book a demo with our team` to `https://cal.com/zylon/demo?source=privategptui`.
+- Link `book a demo with our team` to `https://cal.com/zylon/demo?source=Neural-Privateui`.
 - Use this text: `Zylon is an enterprise AI platform delivering on-premise generative AI infrastructure for regulated industries, enabling secure deployment without external cloud dependencies.`
 
 ## Context Screen
@@ -500,7 +500,7 @@ Capabilities:
 - Optional diagnostic search box using `POST /v1/tools/semantic-search`.
 - Optional content preview using `POST /v1/artifacts/content`.
 
-The collection field is important and must be user-configurable. Some PrivateGPT deployments create collections on the fly, while others sit behind a gateway that restricts each bearer token to one or more allowed collections. If a deployment enforces allowed collections, ingest/list/search calls must use one of those allowed collection ids or the API may reject the request.
+The collection field is important and must be user-configurable. Some Neural-Private deployments create collections on the fly, while others sit behind a gateway that restricts each bearer token to one or more allowed collections. If a deployment enforces allowed collections, ingest/list/search calls must use one of those allowed collection ids or the API may reject the request.
 
 The Collection field lives in **Settings**, not in the Documents panel. It applies globally and is used for:
 
@@ -615,7 +615,7 @@ The current OpenAPI exposes:
 - `POST /v1/tools/web-search`
 - `POST /v1/tools/web-fetch`
 
-The web search provider and its credentials belong in PrivateGPT backend config. In Workbench, show static explanatory text in Context > Web and let the chat Tools menu decide whether `web_search` and `web_extract` are included in a chat request. The direct diagnostic endpoint may still be named `/v1/tools/web-fetch`; for `/v1/messages`, use the chat tool spec `{ "name": "web_extract", "type": "web_extract_v1" }`.
+The web search provider and its credentials belong in Neural-Private backend config. In Workbench, show static explanatory text in Context > Web and let the chat Tools menu decide whether `web_search` and `web_extract` are included in a chat request. The direct diagnostic endpoint may still be named `/v1/tools/web-fetch`; for `/v1/messages`, use the chat tool spec `{ "name": "web_extract", "type": "web_extract_v1" }`.
 
 ### MCP
 
@@ -722,7 +722,7 @@ Handler execution context:
 {
   fetch: window.fetch.bind(window),
   localStorage: window.localStorage,
-  privateGptBaseUrl: string,
+  Neural-PrivateBaseUrl: string,
   currentChatId: string,
   currentCollection: string,
   log: (message: string, data?: unknown) => void
@@ -783,7 +783,7 @@ Message rendering:
 - For semantic-search tool results, extract the source excerpt from the `tool_result` payload by parsing the JSON text, matching the inline citation id against `nodes[].id`, and using the matched node's `content` field as the excerpt. The matcher should tolerate bracket differences such as `4C40` vs `[4C40]`.
 - Errors clearly shown.
 - Do not show a raw response block in Chat; raw request/response details belong in Debugger.
-- While waiting for PrivateGPT, show an in-chat pending response indicator using the PrivateGPT circular avatar with a subtle breathing animation.
+- While waiting for Neural-Private, show an in-chat pending response indicator using the Neural-Private circular avatar with a subtle breathing animation.
 
 Request behavior:
 
@@ -916,7 +916,7 @@ async function apiFetch(path, options, debugMeta)
 
 Responsibilities:
 
-- Prefix with `privateGptBaseUrl`.
+- Prefix with `Neural-PrivateBaseUrl`.
 - Set JSON headers.
 - Build `Authorization: Basic <base64(username:password)>` from the configured username and password when provided.
 - Measure duration.
@@ -971,7 +971,7 @@ Streaming/async endpoints can be deferred:
 10. User can enable document context for chat.
 11. Document-enabled chat requests add the `semantic_search` tool and an `ingested_artifact` tool context scoped to the configured Documents collection.
 12. User can configure database artifacts locally.
-13. User can configure MCP, skills, and custom tools locally, and can see that web provider credentials are configured in the PrivateGPT backend rather than in Workbench.
+13. User can configure MCP, skills, and custom tools locally, and can see that web provider credentials are configured in the Neural-Private backend rather than in Workbench.
 14. User can define a custom tool with name, description, JSON schema, and JavaScript handler.
 15. Chat can pass selected custom tools to the API.
 16. Chat can execute a browser JavaScript handler when the assistant emits a matching tool call.
@@ -997,3 +997,5 @@ Streaming/async endpoints can be deferred:
 10. Custom tool definition UI.
 11. Browser JavaScript handler execution loop.
 12. Polish errors, empty states, and reload behavior.
+
+

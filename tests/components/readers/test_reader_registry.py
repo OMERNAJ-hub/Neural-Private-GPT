@@ -239,3 +239,5 @@ def test_forced_reader_setting_overrides_auto(injector: MockInjector) -> None:
 
     reader_component = injector.get(ReaderComponent)
     assert reader_component.get_reader_names(extension=".docx") == ["markitdown"]
+
+

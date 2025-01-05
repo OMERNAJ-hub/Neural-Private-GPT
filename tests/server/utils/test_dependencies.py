@@ -34,3 +34,5 @@ def test_format_missing_dependency_message_can_disable_inexact_sync() -> None:
         message == "MCP tools dependencies are not installed. "
         "Install with `uv sync --extra tool-mcp`."
     )
+
+

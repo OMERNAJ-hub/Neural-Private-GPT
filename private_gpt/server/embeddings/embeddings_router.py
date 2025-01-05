@@ -56,8 +56,8 @@ class EmbeddingsResponse(BaseModel):
     object: Literal["list"] = Field(
         default="list", description="The type of object returned"
     )
-    model: Literal["private-gpt"] = Field(
-        default="private-gpt", description="The model used to generate embeddings"
+    model: Literal["neural-private"] = Field(
+        default="neural-private", description="The model used to generate embeddings"
     )
     data: list[Embedding] = Field(
         ..., description="List of embeddings, one for each input text"
@@ -68,7 +68,7 @@ class EmbeddingsResponse(BaseModel):
             "examples": [
                 {
                     "object": "list",
-                    "model": "private-gpt",
+                    "model": "neural-private",
                     "data": [
                         {
                             "index": 0,
@@ -79,7 +79,7 @@ class EmbeddingsResponse(BaseModel):
                 },
                 {
                     "object": "list",
-                    "model": "private-gpt",
+                    "model": "neural-private",
                     "data": [
                         {
                             "index": 0,
@@ -112,7 +112,7 @@ class EmbeddingsResponse(BaseModel):
                             "summary": "Embedding for single text input",
                             "value": {
                                 "object": "list",
-                                "model": "private-gpt",
+                                "model": "neural-private",
                                 "data": [
                                     {
                                         "index": 0,
@@ -137,7 +137,7 @@ class EmbeddingsResponse(BaseModel):
                             "summary": "Embeddings for multiple text inputs",
                             "value": {
                                 "object": "list",
-                                "model": "private-gpt",
+                                "model": "neural-private",
                                 "data": [
                                     {
                                         "index": 0,
@@ -194,7 +194,7 @@ class EmbeddingsResponse(BaseModel):
                             "summary": "Embeddings for semantic similarity comparison",
                             "value": {
                                 "object": "list",
-                                "model": "private-gpt",
+                                "model": "neural-private",
                                 "data": [
                                     {
                                         "index": 0,
@@ -335,4 +335,6 @@ def embeddings_generation(request: Request, body: EmbeddingsBody) -> EmbeddingsR
         model=body.model,
         texts=body.input if isinstance(body.input, list) else [body.input],
     )
-    return EmbeddingsResponse(object="list", model="private-gpt", data=embeddings)
+    return EmbeddingsResponse(object="list", model="neural-private", data=embeddings)
+
+

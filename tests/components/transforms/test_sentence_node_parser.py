@@ -208,3 +208,5 @@ def test_no_chunking_for_short_text(dummy_text_splitter) -> None:
     assert len(parsed_child.children) == 0
     # The text should remain unchanged.
     assert parsed_child.text == short_text
+
+

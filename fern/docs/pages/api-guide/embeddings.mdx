@@ -3,7 +3,7 @@ title: "Embeddings"
 description: "Generate vector embeddings from text for semantic search, clustering, and similarity."
 ---
 
-The Embeddings API (`POST /v1/embeddings`) converts text into high-dimensional vectors. Use them to build your own semantic search, clustering pipelines, or similarity scoring outside of PrivateGPT's built-in retrieval.
+The Embeddings API (`POST /v1/embeddings`) converts text into high-dimensional vectors. Use them to build your own semantic search, clustering pipelines, or similarity scoring outside of Neural-Private's built-in retrieval.
 
 ---
 
@@ -53,6 +53,8 @@ curl -X POST http://localhost:8080/v1/embeddings \
 
 ## Choosing a model
 
-The `model` field must match the name of an embedding model registered in your PrivateGPT instance. Use `GET /v1/models` to list available models and their types.
+The `model` field must match the name of an embedding model registered in your Neural-Private instance. Use `GET /v1/models` to list available models and their types.
 
 For consistent similarity results, always use the same model to embed both your corpus and your queries. Mixing models produces incomparable vectors.
+
+

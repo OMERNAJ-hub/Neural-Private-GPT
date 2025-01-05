@@ -16,7 +16,7 @@ except ImportError:
     _CELERY_AVAILABLE = False
 
 app = typer.Typer(
-    name="private-gpt",
+    name="neural-private",
     help="Private GPT server CLI — manage the server, workers, and connected apps.",
     no_args_is_help=True,
     add_completion=False,
@@ -40,7 +40,7 @@ def help_command(
 ) -> None:
     """Show help for any command."""
     if command:
-        sys.argv = ["private-gpt", command, "--help"]
+        sys.argv = ["neural-private", command, "--help"]
         app(standalone_mode=False)
     else:
         typer.echo(app.info.help or "")
@@ -70,3 +70,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+

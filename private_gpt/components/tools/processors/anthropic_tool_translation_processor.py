@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 
 @singleton
 class AnthropicToolTranslationProcessor(ToolProcessor):
-    """Translate Anthropic date-versioned tool type strings to PrivateGPT tool specs.
+    """Translate Anthropic date-versioned tool type strings to Neural-Private tool specs.
 
     Must run first in the pipeline. For each tool matching the Anthropic date-suffix
     pattern (e.g. web_search_20250305, bash_20250124):
@@ -76,3 +76,5 @@ class AnthropicToolTranslationProcessor(ToolProcessor):
             return True
 
         return False
+
+

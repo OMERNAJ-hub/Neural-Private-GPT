@@ -23,3 +23,5 @@ class EventHandler(Protocol):
     def error_event(self, correlation_id: str, error: Exception) -> BaseModel:
         """Convert an Exception to a serializable error event."""
         ...
+
+

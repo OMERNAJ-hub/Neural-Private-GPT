@@ -76,3 +76,5 @@ class EnsureToolAreFlattenInterceptor(ChatRequestLoopInterceptor):
             new_messages.append(message)
 
         return new_messages
+
+

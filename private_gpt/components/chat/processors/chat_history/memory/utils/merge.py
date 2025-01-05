@@ -26,3 +26,5 @@ def merge_adjacent_messages(
         merged_history.append(last_message)
 
     return merged_history
+
+

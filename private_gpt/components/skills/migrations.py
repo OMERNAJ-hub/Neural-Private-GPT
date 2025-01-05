@@ -59,3 +59,5 @@ SKILL_MIGRATIONS: list[Migration] = [
         down=_drop_skills_tables,
     ),
 ]
+
+

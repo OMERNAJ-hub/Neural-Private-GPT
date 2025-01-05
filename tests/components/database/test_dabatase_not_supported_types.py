@@ -250,3 +250,5 @@ def test_select_columns_right_join_excludes_geography(
 
     assert result is not None
     assert result == expected_sql
+
+

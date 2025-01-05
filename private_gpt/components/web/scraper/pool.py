@@ -180,3 +180,5 @@ class PooledWebScraperProvider(WebScraperProvider):
     async def close(self) -> None:
         await self._batcher.close()
         await self._pool.close()
+
+

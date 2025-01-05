@@ -301,7 +301,7 @@ async def chat_messages(
                             "summary": "Server-sent events for async streaming",
                             "value": (
                                 "event: message_start\n"
-                                'data: {"type":"message_start","message":{"id":"msg_async_12345","type":"message","role":"assistant","content":[],"model":"private-gpt","usage":{}}}\n\n'
+                                'data: {"type":"message_start","message":{"id":"msg_async_12345","type":"message","role":"assistant","content":[],"model":"neural-private","usage":{}}}\n\n'
                                 "event: content_block_start\n"
                                 'data: {"type":"content_block_start","block_id":"block_001","content_block":{"type":"text","start_timestamp":"2025-07-10T09:12:41.819953Z","text":""}}\n\n'
                                 "event: content_block_delta\n"
@@ -318,7 +318,7 @@ async def chat_messages(
                             "summary": "Async streaming with tool usage",
                             "value": (
                                 "event: message_start\n"
-                                'data: {"type":"message_start","message":{"id":"msg_async_67890","type":"message","role":"assistant","content":[],"model":"private-gpt","usage":{}}}\n\n'
+                                'data: {"type":"message_start","message":{"id":"msg_async_67890","type":"message","role":"assistant","content":[],"model":"neural-private","usage":{}}}\n\n'
                                 "event: content_block_start\n"
                                 'data: {"type":"content_block_start","block_id":"block_001","content_block":{"type":"text","text":""}}\n\n'
                                 "event: content_block_delta\n"
@@ -701,3 +701,5 @@ async def delete_stream(
         )
 
     await chat_service.stream_manager.clean_up_stream(message_id)
+
+

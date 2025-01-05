@@ -26,3 +26,5 @@ async def cancel_on_http_disconnect(
         with suppress(asyncio.CancelledError):
             await task
         raise
+
+

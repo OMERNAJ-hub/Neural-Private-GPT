@@ -104,3 +104,5 @@ class SkillFilter(BaseModel):
             "Each item may be a skill id (resolved to latest version) or a skill version id."
         ),
     )
+
+

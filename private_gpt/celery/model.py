@@ -45,7 +45,7 @@ class TaskStatus(BaseModel, Generic[T]):
         examples=[
             None,
             "File format not supported",
-            {"object": "list", "model": "private-gpt", "data": []},
+            {"object": "list", "model": "neural-private", "data": []},
         ],
     )
 
@@ -58,7 +58,7 @@ class TaskStatus(BaseModel, Generic[T]):
                     "task_status": "SUCCESS",
                     "task_result": {
                         "object": "list",
-                        "model": "private-gpt",
+                        "model": "neural-private",
                         "data": [
                             {
                                 "object": "ingest.document",
@@ -118,3 +118,5 @@ class TaskStatus(BaseModel, Generic[T]):
                 task_status=async_result.status,
                 task_result=task_result,
             )
+
+

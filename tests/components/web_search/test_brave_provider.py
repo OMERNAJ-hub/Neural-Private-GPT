@@ -198,3 +198,5 @@ class TestBraveProviderErrorHandling:
                 spellcheck=True,
                 language=None,
             )
+
+

@@ -5,7 +5,7 @@ description: "Run local models with LM Studio's built-in server — GUI-driven, 
 
 [LM Studio](https://lmstudio.ai) is a desktop application for discovering, downloading, and running GGUF models locally. Its built-in local server exposes an OpenAI-compatible API with **full tokenizer support**.
 
-## Capabilities with PrivateGPT
+## Capabilities with Neural-Private
 
 | Capability | Status |
 |---|---|
@@ -48,23 +48,23 @@ description: "Run local models with LM Studio's built-in server — GUI-driven, 
     </Note>
   </Step>
 
-  <Step title="Run PrivateGPT">
+  <Step title="Run Neural-Private">
     <Tabs>
       <Tab title="Package install">
         ```bash
-        OPENAI_API_BASE=http://localhost:1234/v1 private-gpt serve
+        OPENAI_API_BASE=http://localhost:1234/v1 neural-private serve
         ```
       </Tab>
       <Tab title="Docker">
         ```bash
         docker run -p 8080:8080 \
           -e OPENAI_API_BASE=http://host.docker.internal:1234/v1 \
-          zylonai/private-gpt:latest
+          zylonai/neural-private:latest
         ```
       </Tab>
       <Tab title="uv (local)">
         ```bash
-        OPENAI_API_BASE=http://localhost:1234/v1 uv run private-gpt serve
+        OPENAI_API_BASE=http://localhost:1234/v1 uv run neural-private serve
         ```
       </Tab>
     </Tabs>
@@ -127,3 +127,5 @@ curl http://localhost:1234/v1/models
 ```
 
 Use the `id` field from the response as the model name in your profile.
+
+

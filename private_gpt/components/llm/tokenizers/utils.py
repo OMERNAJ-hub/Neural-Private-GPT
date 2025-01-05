@@ -52,3 +52,5 @@ def build_minimal_messages(
         content.append({"type": "text", "text": ""})
 
     return [{"role": "user", "content": content}]
+
+

@@ -107,3 +107,5 @@ class TestAddSuffixToLastUserMessage:
         result = _add_suffix_to_last_user_message([msg, assistant_msg], "Use a tool.")
         assert result[-1].blocks[0].text == "Assistant response"
         assert result[0].blocks[0].text == "User query"
+
+

@@ -61,3 +61,5 @@ class PGPTPandasAILLM(PandasAILLM):  # type: ignore[misc]
     @property
     def type(self) -> str:
         return self._llm_alias
+
+

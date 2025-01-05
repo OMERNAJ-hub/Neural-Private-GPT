@@ -106,3 +106,5 @@ async def test_async_add_uses_bounded_batch_consumers() -> None:
         ],
         any_order=True,
     )
+
+

@@ -25,3 +25,5 @@ class InvalidToolSetError(ToolsetsDomainError):
     def __init__(self, message: str) -> None:
         """Initialize an invalid-toolset error."""
         super().__init__(ToolsetsErrorCode.INVALID_TOOLSET, message)
+
+

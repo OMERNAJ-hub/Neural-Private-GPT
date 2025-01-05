@@ -236,3 +236,5 @@ class PlatformGuidelinesInterceptor(ChatRequestLoopInterceptor):
         return self._prompt_builder.create_citation_guidelines(
             documents=documents
         ).format()
+
+

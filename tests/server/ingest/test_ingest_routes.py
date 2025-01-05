@@ -380,3 +380,5 @@ def test_delete_async(
         routing_key="delete.done",
         body=bytes(expected_response.model_dump_json(), "utf-8"),
     )
+
+

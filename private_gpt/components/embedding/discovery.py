@@ -105,3 +105,5 @@ def get_embedding_models(
         )
         for model_info in discovery.embedding_models
     ]
+
+

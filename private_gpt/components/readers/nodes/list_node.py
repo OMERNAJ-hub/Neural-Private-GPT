@@ -41,3 +41,5 @@ class ListItemNode(TextNode):
             return self.text
 
         return super().get_content_internal(metadata_mode)
+
+

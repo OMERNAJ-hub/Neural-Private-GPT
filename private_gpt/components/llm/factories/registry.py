@@ -34,3 +34,5 @@ class LLMFactoryRegistry:
                 f"LLM mode '{mode}' is not supported. Available: {available}"
             )
         return self._factories[mode]
+
+

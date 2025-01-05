@@ -287,3 +287,5 @@ class ParseComponent:
             return None
 
         return vision_nodes
+
+

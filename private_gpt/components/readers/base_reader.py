@@ -66,3 +66,5 @@ class LlamaIndexReaderAdapter(IngestionReader):
         )
         for document in documents:
             yield document
+
+

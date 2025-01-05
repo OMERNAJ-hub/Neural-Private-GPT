@@ -80,3 +80,5 @@ class StreamingEventHandler:
     def error_event(self, correlation_id: str, error: Exception) -> FatalError:
         """Convert an Exception to a serializable error event."""
         return FatalError.from_exception(error, request_id=correlation_id)
+
+

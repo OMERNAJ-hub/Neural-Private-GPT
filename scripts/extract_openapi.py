@@ -32,3 +32,5 @@ if __name__ == "__main__":
             yaml.dump(openapi, f, sort_keys=False)
 
     print(f"spec written to {args.out}")
+
+

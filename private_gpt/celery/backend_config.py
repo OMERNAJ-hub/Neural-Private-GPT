@@ -46,3 +46,5 @@ def get_backend_config() -> BackendConfig:
     if provider is None:
         raise ValueError(f"Invalid backend mode: {celery_settings.backend_mode}")
     return provider()
+
+

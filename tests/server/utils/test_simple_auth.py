@@ -56,3 +56,5 @@ def test_default_auth_working_when_enabled_200(test_client: TestClient) -> None:
         headers={"Authorization": settings().server.auth.secret},
     )
     assert response_success.status_code == 200
+
+

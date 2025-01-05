@@ -44,3 +44,5 @@ class IngestedDoc(BaseModel):
             artifact=str(ref_doc_info.metadata.get(MetadataKeys.ARTIFACT_ID.value)),
             doc_metadata=ref_doc_info.metadata if ref_doc_info else None,
         )
+
+

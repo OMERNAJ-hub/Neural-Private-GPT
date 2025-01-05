@@ -40,3 +40,5 @@ MIGRATIONS = [
     # Skill Models
     *SKILL_MIGRATIONS,
 ]
+
+

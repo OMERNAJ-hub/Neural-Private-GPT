@@ -260,3 +260,5 @@ class HuggingFaceTokenizer(TokenizerBase):
         self, ids: list[int], skip_special_tokens: bool = True
     ) -> list[str]:
         raise NotImplementedError()
+
+

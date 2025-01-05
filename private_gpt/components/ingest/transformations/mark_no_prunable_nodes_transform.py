@@ -32,3 +32,5 @@ class MarkNoPrunableNodesTransform(TransformComponent):
         cls,
     ) -> "MarkNoPrunableNodesTransform":
         return cls()
+
+

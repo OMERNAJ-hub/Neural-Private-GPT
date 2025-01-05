@@ -33,3 +33,5 @@ async def test_event_generator_close_propagates_to_engine_generator() -> None:
     await event_generator.aclose()
 
     assert closed.is_set()
+
+

@@ -393,3 +393,5 @@ async def test_tool_instructions_external_tool_with_explicit_instructions(
 
     system_prompt_lower = prompt_capture.system_prompt.lower()
     assert "always use this tool" in system_prompt_lower
+
+

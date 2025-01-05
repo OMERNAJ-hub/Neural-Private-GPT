@@ -52,7 +52,7 @@ chat_router = APIRouter(
                                         "text": "Based on the analysis, I found 3 potential security issues...",
                                     }
                                 ],
-                                "model": "private-gpt",
+                                "model": "neural-private",
                                 "stop_reason": "end_turn",
                                 "stop_sequence": None,
                                 "usage": {"input_tokens": 432, "output_tokens": 89},
@@ -79,7 +79,7 @@ chat_router = APIRouter(
                                         },
                                     },
                                 ],
-                                "model": "private-gpt",
+                                "model": "neural-private",
                                 "stop_reason": "tool_use",
                                 "usage": {"input_tokens": 156, "output_tokens": 234},
                             },
@@ -121,7 +121,7 @@ chat_router = APIRouter(
                                         "text": "Based on the scan results, you should address the vulnerabilities found in /src...",
                                     },
                                 ],
-                                "model": "private-gpt",
+                                "model": "neural-private",
                                 "stop_reason": "end_turn",
                                 "usage": {"input_tokens": 156, "output_tokens": 324},
                             },
@@ -134,7 +134,7 @@ chat_router = APIRouter(
                             "summary": "Server-sent events for streaming",
                             "value": (
                                 "event: message_start\n"
-                                'data: {"type":"message_start","message":{"id":"msg_12345","type":"message","role":"assistant","content":[],"model":"private-gpt","usage":{}}}\n\n'
+                                'data: {"type":"message_start","message":{"id":"msg_12345","type":"message","role":"assistant","content":[],"model":"neural-private","usage":{}}}\n\n'
                                 "event: content_block_start\n"
                                 'data: {"type":"content_block_start","block_id":"block_001","content_block":{"type":"text","start_timestamp":"2025-07-10T09:12:41.819953Z","text":""}}\n\n'
                                 "event: content_block_delta\n"
@@ -420,3 +420,5 @@ async def validate_messages(
     if not result.valid:
         response.status_code = 400
     return result
+
+

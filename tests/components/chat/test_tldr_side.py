@@ -754,3 +754,5 @@ class TestCondensationInterceptor:
         assert isinstance(events[1], RawContentBlockDeltaEvent)
         assert isinstance(events[2], RawContentBlockStopEvent)
         assert result_container.condensed is True
+
+

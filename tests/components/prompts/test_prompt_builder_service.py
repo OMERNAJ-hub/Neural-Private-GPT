@@ -727,3 +727,5 @@ def test_create_code_execution_prompt_cross_references_text_editor(
 
     assert "text editor" in prompt_with_editor.format().lower()
     assert "text editor" not in prompt_without_editor.format().lower()
+
+

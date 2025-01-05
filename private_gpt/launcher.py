@@ -272,3 +272,5 @@ def create_app(root_injector: Injector) -> FastAPI:
     configure_openapi(app)
 
     return app
+
+

@@ -40,3 +40,5 @@ class MarkItDownReader(TextReader):
             text=content,
             extra_info=extra_info if extra_info is not None else {},
         )
+
+

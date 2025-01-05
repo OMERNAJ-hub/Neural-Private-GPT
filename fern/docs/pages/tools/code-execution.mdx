@@ -43,13 +43,13 @@ When the model submits a `code_execution_v1` tool call, the server expands it in
 4. **Subprocess isolation** — bash commands run as child processes with OS-level resource limits (`setrlimit`)
 5. **Output scrubbing** — real host paths are removed from output before returning to the LLM
 
-Code execution requires no external containers or Docker-in-Docker. The entire sandbox runs in the same process as the PrivateGPT server, using OS-level isolation primitives.
+Code execution requires no external containers or Docker-in-Docker. The entire sandbox runs in the same process as the Neural-Private server, using OS-level isolation primitives.
 
 ---
 
 ## How to install
 
-Code execution is part of the core PrivateGPT package. No additional extras are required:
+Code execution is part of the core Neural-Private package. No additional extras are required:
 
 ```bash
 uv sync --extra core
@@ -210,3 +210,5 @@ The tool result contains a `resource_link` block whose `uri` is the publicly rea
 <Note>
   HTTP ingress support depends on the configured `code_execution.provider`. Only sandbox backends that support per-session endpoint tunneling can fulfill `present_server_v1` calls.
 </Note>
+
+

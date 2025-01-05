@@ -195,3 +195,5 @@ def _get_extension(mime_type: str) -> str:
         "audio/webm": "webm",
     }
     return mime_map.get(mime_type, "bin")
+
+

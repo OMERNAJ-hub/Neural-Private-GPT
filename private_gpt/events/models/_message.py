@@ -138,7 +138,7 @@ class Message(BaseModel, StandardContentProtocol):
     content: list[ContentBlockType] = Field(
         default_factory=list, description="Assistant content blocks."
     )
-    model: str = Field(default="private-gpt", description="Model name used.")
+    model: str = Field(default="neural-private", description="Model name used.")
     container: Container | None = Field(
         default=None, description="Optional execution container."
     )
@@ -169,3 +169,5 @@ class MessageOutputDelta(BaseModel, StandardContentProtocol):
     stop_reason: str | None = Field(default=None, description="Stop-reason delta.")
     stop_sequence: str | None = Field(default=None, description="Stop-sequence delta.")
     usage: Usage | None = Field(default=None, description="Usage delta.")
+
+

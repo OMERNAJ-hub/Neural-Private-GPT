@@ -206,3 +206,5 @@ class ReduceHeaderLevelsTransform(TransformComponent):
         result = self._header_pattern.sub(replace_header, content)
 
         return result.strip() + "\n\n\n"
+
+

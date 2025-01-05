@@ -207,3 +207,5 @@ def test_existing_indices_continue_without_renumbering() -> None:
     )
     assert [citation.value["index"] for citation in citations] == ["7", "8"]
     assert indices == {first.id_: 7, second.id_: 8}
+
+

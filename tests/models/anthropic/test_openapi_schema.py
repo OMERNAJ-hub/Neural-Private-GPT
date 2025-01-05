@@ -556,3 +556,5 @@ class TestOpenAPISchemaCompatibility:
             "Serialised Zylon models failed OpenAPI schema validation:\n\n"
             + "\n\n".join(failures)
         )
+
+

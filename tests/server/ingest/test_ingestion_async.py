@@ -526,3 +526,5 @@ def test_cleanup_ignores_file_artifact():
 
         ensure_to_remove_temporal_files(body)
         mock_s3_helper.remove_file_from_s3.assert_not_called()
+
+

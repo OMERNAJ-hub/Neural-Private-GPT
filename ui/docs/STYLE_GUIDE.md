@@ -1,8 +1,8 @@
-# PrivateGPT Workbench Style Guide
+# Neural-Private Workbench Style Guide
 
-This guide defines the visual and UX direction for PrivateGPT Workbench. It complements the product requirements in [`docs/PRD.md`](./PRD.md).
+This guide defines the visual and UX direction for Neural-Private Workbench. It complements the product requirements in [`docs/PRD.md`](./PRD.md).
 
-The goal is to keep the implementation simple while aligning the demonstrator with the public-facing PrivateGPT/Zylon visual language.
+The goal is to keep the implementation simple while aligning the demonstrator with the public-facing Neural-Private/Zylon visual language.
 
 ## Reference Assets
 
@@ -15,11 +15,11 @@ Use these repo-local images as visual references:
 | Chat tools composer | [`../references/chat-tools-composer.png`](../references/chat-tools-composer.png) | Reference for the chat composer, file/tool controls, message density, and chat bubble treatment. |
 | Context knowledge base | [`../references/context-knowledge-base.png`](../references/context-knowledge-base.png) | Reference for Context rows, source lists, file badges, overflow menus, and glass list surfaces. |
 
-The PrivateGPT logo should be embedded directly in `./index.html` as inline SVG so the page does not depend on an external logo asset at runtime.
+The Neural-Private logo should be embedded directly in `./index.html` as inline SVG so the page does not depend on an external logo asset at runtime.
 
 ## Design Intent
 
-PrivateGPT Workbench should feel like a polished local AI workspace, not a generic admin console and not a marketing landing page.
+Neural-Private Workbench should feel like a polished local AI workspace, not a generic admin console and not a marketing landing page.
 
 The interface should communicate:
 
@@ -59,7 +59,7 @@ Use a dark, atmospheric workspace:
 - A fine grain/noise texture over the background.
 - Frosted glass panels with blur, light borders, and soft shadows.
 - White primary text and muted gray secondary text.
-- Small blue/orange/purple gradient accents inspired by the PrivateGPT/Zylon orb.
+- Small blue/orange/purple gradient accents inspired by the Neural-Private/Zylon orb.
 
 Avoid:
 
@@ -93,7 +93,7 @@ The sidebar should be a vertical frosted-glass panel.
 Content:
 
 ```text
-PrivateGPT logo
+Neural-Private logo
 
 Context
 New Chat
@@ -111,7 +111,7 @@ Not for Production
 
 Requirements:
 
-- Place the PrivateGPT logo at the top-left. In the single-file app, use the inline embedded SVG.
+- Place the Neural-Private logo at the top-left. In the single-file app, use the inline embedded SVG.
 - Keep navigation compact and readable.
 - Active item uses a brighter glass state.
 - Chat rows should truncate long titles.
@@ -145,13 +145,13 @@ Use `chat-tools-composer.png` as the main composer reference.
 
 The composer should include:
 
-- Compact two-row glass input inspired by the reference composer. Copy only its visual treatment and interaction patterns; do not introduce labels, modes, context syntax, or capabilities that PrivateGPT does not implement.
+- Compact two-row glass input inspired by the reference composer. Copy only its visual treatment and interaction patterns; do not introduce labels, modes, context syntax, or capabilities that Neural-Private does not implement.
 - A text area above a single toolbar row.
 - Left-side toolbar controls for a consolidated add/actions menu, searchable model and reasoning-effort selection, and model refresh.
 - Right-side circular send control.
 - Use a slightly taller composer input and 32px toolbar controls with medium-weight labels so the primary input remains visually substantial without becoming a large card.
 - Composer controls use self-contained inline SVGs so global icon hydration and sizing cannot distort them.
-- The add/actions control starts as a centered circular plus button and smoothly expands to reveal a short “Add” label on hover or keyboard focus. Its menu contains file attachment first, followed by the existing PrivateGPT context/tool configuration.
+- The add/actions control starts as a centered circular plus button and smoothly expands to reveal a short “Add” label on hover or keyboard focus. Its menu contains file attachment first, followed by the existing Neural-Private context/tool configuration.
 - Toolbar icons use restrained hover motion: refresh rotates, send lifts, and dropdown chevrons respond to hover/open state.
 - Composer dropdowns morph outward from their trigger using a spring-like scale and corner-radius transition, then reverse into the trigger when closed.
 - The model effort rail reveals after the main model list with a short lateral clip transition, while model and effort rows enter with a restrained stagger. Filtering repeats the row transition so list changes remain legible.
@@ -229,7 +229,7 @@ Use the same row/card language:
 - Configuration summary.
 - Overflow actions.
 
-The Web section is informational only. Do not collect provider credentials in Workbench; web provider and API key configuration belongs in the PrivateGPT backend.
+The Web section is informational only. Do not collect provider credentials in Workbench; web provider and API key configuration belongs in the Neural-Private backend.
 
 Custom Tools should not be hidden behind an "Advanced" label. They are a first-class Context section.
 
@@ -237,7 +237,7 @@ Custom Tools should not be hidden behind an "Advanced" label. They are a first-c
 
 Settings owns Workbench-level connection configuration:
 
-- PrivateGPT API base URL.
+- Neural-Private API base URL.
 - Optional HTTP Basic auth (username and password fields displayed side by side).
 - Optional system prompt.
 - Optional workspace instructions for the current branded experience.
@@ -299,7 +299,7 @@ Clicking it opens a glass-style modal. The title should be:
 This demonstrator is not intended for Production use
 ```
 
-Keep the body concise, with four merged bullets covering browser `localStorage` secrets, lack of access control, visible debugger data, and browser-executed custom tools. End with links to Zylon (`https://zylon.ai`) and the demo booking page (`https://cal.com/zylon/demo?source=privategptui`).
+Keep the body concise, with four merged bullets covering browser `localStorage` secrets, lack of access control, visible debugger data, and browser-executed custom tools. End with links to Zylon (`https://zylon.ai`) and the demo booking page (`https://cal.com/zylon/demo?source=Neural-Privateui`).
 
 ## GitHub Widget
 
@@ -307,7 +307,7 @@ The sidebar includes a clickable GitHub widget below Settings.
 
 Requirements:
 
-- Link to `https://github.com/zylon-ai/private-gpt`.
+- Link to `https://github.com/zylon-ai/neural-private`.
 - Show the GitHub icon, label, star icon, and live star count when available.
 - If the star fetch fails, keep the widget usable and show a neutral `Stars` label.
 
@@ -597,3 +597,5 @@ Preferred implementation:
 - No design system extraction required.
 
 The styling should support the PRD's simplicity requirement: polished enough for a public-facing demo, but not architected like a long-term product frontend.
+
+

@@ -111,3 +111,5 @@ async def test_valid_content_produces_summary(
     result = await engine.agenerate_summary_nodes(query_bundle, node)
     assert result is not None
     assert result.get_content() == "This is a valid summary."
+
+

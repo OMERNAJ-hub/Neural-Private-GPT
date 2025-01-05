@@ -5,7 +5,7 @@ description: "Startup flow, model discovery, configuration profiles, and environ
 
 ## Startup flow
 
-When PrivateGPT starts, it:
+When Neural-Private starts, it:
 
 1. Loads `settings.yaml` and any additional profiles specified in `PGPT_PROFILES`.
 2. Calls `GET /v1/models` on your LLM server and registers all returned models automatically.
@@ -23,7 +23,7 @@ For full control over model settings (tokenizer, context window, sampling parame
 Load one or more profiles at startup:
 
 ```bash
-PGPT_PROFILES=my-profile private-gpt serve
+PGPT_PROFILES=my-profile neural-private serve
 ```
 
 Profiles are merged in order on top of the base `settings.yaml` — later ones override earlier ones.
@@ -45,12 +45,12 @@ Then edit `settings-model.yaml` to tune tokenizer, context window, and sampling 
 
 ## Model discovery
 
-On startup PrivateGPT queries your LLM server for available models. Every model returned is registered and available immediately via `GET /v1/models`.
+On startup Neural-Private queries your LLM server for available models. Every model returned is registered and available immediately via `GET /v1/models`.
 
 To disable auto-discovery and manage models manually:
 
 ```bash
-PGPT_LLM_AUTO_DISCOVER_MODELS=false private-gpt serve
+PGPT_LLM_AUTO_DISCOVER_MODELS=false neural-private serve
 ```
 
 ---
@@ -64,4 +64,6 @@ PGPT_LLM_AUTO_DISCOVER_MODELS=false private-gpt serve
 | `OPENAI_EMBEDDING_API_BASE` | same as `OPENAI_API_BASE` | Embeddings server endpoint if different |
 | `PGPT_PROFILES` | _(none)_ | Comma-separated profile names to load |
 | `PGPT_LLM_AUTO_DISCOVER_MODELS` | `true` | Auto-discover models from `/v1/models` on startup |
-| `PORT` | `8080` | Port the PrivateGPT server listens on |
+| `PORT` | `8080` | Port the Neural-Private server listens on |
+
+

@@ -95,3 +95,5 @@ async def to_async_iterator(
     finally:
         if not executor:
             internal_executor.shutdown(wait=False)
+
+

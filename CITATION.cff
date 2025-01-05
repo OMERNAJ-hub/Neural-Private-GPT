@@ -2,15 +2,17 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: PrivateGPT
+title: Neural-Private
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
 type: software
 authors:
-  - name: Zylon by PrivateGPT
+  - name: Zylon by Neural-Private
     address: hello@zylon.ai
     website: 'https://www.zylon.ai/'
-repository-code: 'https://github.com/zylon-ai/private-gpt'
+repository-code: 'https://github.com/zylon-ai/neural-private'
 license: Apache-2.0
 date-released: '2023-05-02'
+
+

@@ -25,3 +25,5 @@ class StoredBundle(ContentBundle):
 
     storage_prefix: str  # e.g. "skills/{collection}/{skill_id}/{version_id}"
     fetch: Callable[[], Awaitable[list[BundledFile]]] = Field(exclude=True)
+
+

@@ -211,3 +211,5 @@ class SkillsInterceptor(ChatRequestLoopInterceptor):
             if isinstance(artifact, SkillArtifact):
                 return artifact.skill_filter
         return None
+
+

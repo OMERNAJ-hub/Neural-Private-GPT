@@ -24,3 +24,4 @@ jobs:
 
       - name: Check Fern API is valid
         run: fern check
+

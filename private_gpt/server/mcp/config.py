@@ -42,3 +42,5 @@ class McpServerConfig(BaseModel):
         return {
             k: v.strip() if v and isinstance(v, str) else v for k, v in values.items()
         }
+
+

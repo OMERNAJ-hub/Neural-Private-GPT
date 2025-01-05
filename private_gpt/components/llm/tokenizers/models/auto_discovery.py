@@ -87,3 +87,5 @@ def auto_discover_model(
         return cast(Callable[P, T], sync_wrapper)
 
     return decorator
+
+

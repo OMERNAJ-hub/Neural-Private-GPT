@@ -72,3 +72,5 @@ class LazySQLiteFactory:
                 cls._instance.close()
                 cls._instance = None
                 logger.debug("SQLiteClient instance closed")
+
+

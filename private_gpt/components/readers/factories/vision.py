@@ -21,3 +21,5 @@ class VisionReaderFactory(ReaderFactory):
         return VisionReader(
             reader_settings=self.settings.transformation.vision_documents
         )
+
+

@@ -453,3 +453,5 @@ class StatefulBackgroundTask(_BackgroundTask):
             raise e
         finally:
             release_unused_worker_memory()
+
+

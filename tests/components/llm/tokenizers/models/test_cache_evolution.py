@@ -257,3 +257,5 @@ class TestSnapshotRootOrdering:
         assert "snap_c" in str(snapshot_candidates[0])
         assert "snap_b" in str(snapshot_candidates[1])
         assert "snap_a" in str(snapshot_candidates[2])
+
+

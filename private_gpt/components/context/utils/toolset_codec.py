@@ -27,3 +27,5 @@ def deserialize_tool_specs(raw_content: str) -> list[ToolSpec]:
         return []
     valid_payload = [item for item in payload if isinstance(item, dict)]
     return [ToolSpec.model_validate(item) for item in valid_payload]
+
+

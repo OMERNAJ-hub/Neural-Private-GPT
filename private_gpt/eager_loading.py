@@ -101,3 +101,5 @@ def warm(injector: Injector, profile: str = "full") -> None:
 def eager_loading(injector: Injector) -> None:
     """Full warm-up: everything. Kept for API server backward compat."""
     warm(injector, "full")
+
+

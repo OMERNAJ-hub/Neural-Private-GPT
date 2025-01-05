@@ -95,3 +95,5 @@ skills:
   storage_provider: local
   skill_injection_mode: system_prompt
   maximum_loaded_skills: 1
+
+

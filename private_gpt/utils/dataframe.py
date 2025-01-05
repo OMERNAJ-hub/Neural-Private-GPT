@@ -25,3 +25,5 @@ def df_to_minimal_markdown(df: pd.DataFrame, allow_empty: bool = True) -> str:
 
     # Combine all parts into the final Markdown table
     return "\n".join([header_row, separator_row, *data_rows]) + "\n"
+
+

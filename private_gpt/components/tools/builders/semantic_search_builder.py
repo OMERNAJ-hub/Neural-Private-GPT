@@ -350,3 +350,5 @@ class SemanticSearchToolBuilder:
 async def rebuild_semantic_search_tool(**kwargs: Any) -> ToolSpec:
     builder = get_global_injector().get(SemanticSearchToolBuilder)
     return await builder.build_tool(**kwargs)
+
+

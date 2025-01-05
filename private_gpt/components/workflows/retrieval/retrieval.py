@@ -283,3 +283,5 @@ class RetrieverWorkflow(Workflow):
             postprocessor.callback_manager = self._callback_manager
 
         return node_postprocessors
+
+

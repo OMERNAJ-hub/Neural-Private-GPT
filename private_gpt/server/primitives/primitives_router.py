@@ -68,7 +68,7 @@ SEARCH_REQUEST_EXAMPLES = cast(
                             "summary": "Semantic search with chunks",
                             "value": {
                                 "object": "list",
-                                "model": "private-gpt",
+                                "model": "neural-private",
                                 "data": [
                                     {
                                         "object": "context.chunk",
@@ -111,7 +111,7 @@ SEARCH_REQUEST_EXAMPLES = cast(
                             "summary": "Keyword-based search results",
                             "value": {
                                 "object": "list",
-                                "model": "private-gpt",
+                                "model": "neural-private",
                                 "data": [
                                     {
                                         "object": "context.chunk",
@@ -135,7 +135,7 @@ SEARCH_REQUEST_EXAMPLES = cast(
                             "summary": "Combined semantic and keyword search",
                             "value": {
                                 "object": "list",
-                                "model": "private-gpt",
+                                "model": "neural-private",
                                 "data": [
                                     {
                                         "object": "context.chunk",
@@ -277,7 +277,7 @@ SEARCH_REQUEST_EXAMPLES = cast(
                 "response": {
                     "body": {
                         "object": "list",
-                        "model": "private-gpt",
+                        "model": "neural-private",
                         "data": [
                             {
                                 "object": "context.chunk",
@@ -366,3 +366,5 @@ def search(
     service: PrimitivesService = request.state.injector.get(PrimitivesService)
     response = service.search(body)
     return response
+
+

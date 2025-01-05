@@ -3,7 +3,7 @@ title: "Observability"
 description: "Trace LLM calls and monitor performance with Arize Phoenix or Opik."
 ---
 
-PrivateGPT can emit traces for every LLM call, embedding request, and retrieval step. Set `observability.mode` in `settings.yaml` or in a profile such as `settings-local.yaml` to choose a backend.
+Neural-Private can emit traces for every LLM call, embedding request, and retrieval step. Set `observability.mode` in `settings.yaml` or in a profile such as `settings-local.yaml` to choose a backend.
 
 <Warning>
   This feature requires to have the `observability` extra enabled in your application. If you are adding storage to an existing application, make sure to run the sync command after enabling the module:
@@ -62,5 +62,7 @@ observability:
 opik:
   host: http://localhost:5173/
   workspace: default
-  project_name: private-gpt
+  project_name: neural-private
 ```
+
+

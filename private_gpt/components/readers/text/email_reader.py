@@ -403,3 +403,5 @@ class EmailTextReader(TextReader):
             text = re.sub(pattern, "", text, flags=re.DOTALL | re.IGNORECASE)
 
         return text.strip()
+
+

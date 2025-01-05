@@ -270,3 +270,5 @@ class StructuredChatMixin:
                     yield typing.cast("Model | FlexibleModel", output)
 
         return gen()
+
+

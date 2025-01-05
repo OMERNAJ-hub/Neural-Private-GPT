@@ -121,3 +121,5 @@ def handle_worker_shutdown(**kwargs: dict[str, Any]) -> None:
     """Signal handler for worker shutdown event."""
     READINESS_FILE.unlink(missing_ok=True)
     HEARTBEAT_FILE.unlink(missing_ok=True)
+
+

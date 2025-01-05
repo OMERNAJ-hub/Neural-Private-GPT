@@ -163,3 +163,5 @@ class MemorySemaphoreManager(SemaphoreManager):
                 self._queue.task_done()
 
         logger.info("Local queue closed: %s", self.queue_key)
+
+

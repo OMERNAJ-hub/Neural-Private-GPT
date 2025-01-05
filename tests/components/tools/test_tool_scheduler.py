@@ -150,3 +150,5 @@ async def test_celery_tool_scheduler_cancel_revokes_task(
         while not celery_app.control.revoke.called:
             await asyncio.sleep(0.01)
     celery_app.control.revoke.assert_called_once_with("task-abc", terminate=True)
+
+

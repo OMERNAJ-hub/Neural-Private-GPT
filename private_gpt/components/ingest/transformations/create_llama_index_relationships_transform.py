@@ -66,3 +66,5 @@ class CreateLlamaIndexRelationshipsTransform(TransformComponent):
             process_node(root, root, None)
 
         return list(nodes)
+
+

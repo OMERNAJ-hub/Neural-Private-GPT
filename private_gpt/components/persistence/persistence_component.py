@@ -125,3 +125,5 @@ class PersistenceComponent:
             runner = MigrationRunner(migration_backend)
             runner.run_down(migrations=list(MIGRATIONS))
             logger.info("Migrations reverted")
+
+

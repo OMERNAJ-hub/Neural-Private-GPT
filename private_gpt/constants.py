@@ -16,10 +16,12 @@ def _default_pgpt_home() -> str:
             if local_app_data
             else Path.home() / "AppData" / "Local"
         )
-        return str(base / "private-gpt")
-    return str(Path.home() / ".local" / "share" / "private-gpt")
+        return str(base / "neural-private")
+    return str(Path.home() / ".local" / "share" / "neural-private")
 
 
 PGPT_HOME: Path = (
     Path(os.environ.get("PGPT_HOME", _default_pgpt_home())).expanduser().resolve()
 )
+
+

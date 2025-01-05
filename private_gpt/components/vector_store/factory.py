@@ -26,3 +26,5 @@ class VectorStoreFactory(ABC):
 
     @abstractmethod
     def vector_store(self, collection: str) -> BasePydanticVectorStore: ...
+
+

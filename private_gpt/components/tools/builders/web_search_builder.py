@@ -106,3 +106,5 @@ class WebSearchToolBuilder:
 async def rebuild_web_search_tool(**kwargs: Any) -> ToolSpec:
     builder = get_global_injector().get(WebSearchToolBuilder)
     return await builder.build_tool(**cast(Any, kwargs))
+
+

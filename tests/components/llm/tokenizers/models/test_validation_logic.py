@@ -230,3 +230,5 @@ class TestValidateModelPath:
 
         # But not for full model (needs safetensors)
         assert validate_model_path(test_dir, tokenizer_only=False) is False
+
+

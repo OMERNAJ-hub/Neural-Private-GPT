@@ -64,3 +64,5 @@ def test_chunks_retrieval_without_query(
     assert response.status_code == 200
     chunk_response = SearchResponse.model_validate(response.json())
     assert len(chunk_response.data) == 0
+
+

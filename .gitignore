@@ -48,3 +48,5 @@ celery.pidbox.exchange
 
 # Websearch cache
 .cache/
+
+

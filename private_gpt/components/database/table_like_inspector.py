@@ -141,3 +141,5 @@ class DatabaseTableLikeInspector(DatabaseObjectInspector, ABC):
             return str(val)
         except Exception:
             return repr(val)
+
+

@@ -1359,3 +1359,5 @@ class DatabaseQueryGenerator:
                 out_columns.append(f"OUT_PARAM_{idx + 1}")
 
         return out_values, out_columns
+
+

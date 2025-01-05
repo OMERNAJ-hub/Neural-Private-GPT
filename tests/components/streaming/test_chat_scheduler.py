@@ -85,3 +85,5 @@ def test_chat_scheduler_factory_raises_on_unknown_mode(injector: Injector) -> No
             ),
             injector=injector,
         )
+
+

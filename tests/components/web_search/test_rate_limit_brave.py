@@ -206,3 +206,5 @@ class TestRateLimiting:
 
         # 3 requests = 2 intervals = 2s minimum
         assert elapsed >= 2.0, f"Rate limiting failed: elapsed={elapsed:.2f}s"
+
+

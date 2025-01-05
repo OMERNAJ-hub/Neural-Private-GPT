@@ -88,3 +88,5 @@ def test_skill_management_visibility_depends_on_catalog_and_loaded_non_eager(
     }
 
     assert visible == expected_visible
+
+

@@ -951,3 +951,5 @@ def test_streaming_partial_citations(
         f"{format_cite(0, documents[0], 0)} and {format_cite(1, documents[1], 1)}"
     )
     assert len(citations) == 2
+
+

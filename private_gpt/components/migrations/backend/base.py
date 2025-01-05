@@ -22,3 +22,5 @@ class MigrationBackend(ABC):
 
     @abstractmethod
     def is_applied(self, version: str) -> bool: ...
+
+

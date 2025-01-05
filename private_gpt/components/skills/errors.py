@@ -54,3 +54,5 @@ class SkillValidationErrors(Exception):
     def __init__(self, errors: list[SkillDomainError]) -> None:
         self.errors = errors
         super().__init__("; ".join(e.message for e in errors))
+
+

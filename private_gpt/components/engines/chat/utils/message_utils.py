@@ -22,3 +22,5 @@ def upsert_system_message(
     without_system = [m for m in messages if m.role != MessageRole.SYSTEM]
     system_message = ChatMessage(role=MessageRole.SYSTEM, content=content)
     return [system_message, *without_system]
+
+

@@ -29,3 +29,5 @@ async def startup(ctx: dict[Any, Any]) -> None:
 async def shutdown(ctx: dict[Any, Any]) -> None:
     del ctx
     await clean_global_injector()
+
+

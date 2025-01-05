@@ -174,3 +174,5 @@ class ExtractDocumentContentFromImage(TransformComponent):
     def _clean_doc_metadata(node: BaseNode) -> None:
         if "slide_image" in node.metadata:
             del node.metadata["slide_image"]
+
+

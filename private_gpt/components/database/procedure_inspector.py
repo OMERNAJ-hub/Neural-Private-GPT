@@ -288,3 +288,5 @@ class DatabaseProcedureInspector(DatabaseObjectInspector):
         except Exception:
             return []
         return procedures
+
+

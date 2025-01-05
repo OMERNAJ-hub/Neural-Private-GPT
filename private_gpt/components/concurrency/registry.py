@@ -78,3 +78,5 @@ def create_semaphore_manager(
             f"Available: {', '.join(sorted(_PROVIDERS))}"
         )
     return provider(settings, max_concurrency, queue_key)
+
+

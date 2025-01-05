@@ -69,3 +69,5 @@ class CompletionService:
     @staticmethod
     def extract_text_from_content(content: Sequence[object]) -> str:
         return "".join(block.text for block in content if isinstance(block, TextBlock))
+
+

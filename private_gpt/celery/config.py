@@ -104,3 +104,5 @@ class CeleryConfig:
     worker_max_tasks_per_child = (
         1  # Each worker process handles one task to prevent memory leaks.
     )
+
+

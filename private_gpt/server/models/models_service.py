@@ -151,3 +151,5 @@ class ModelsService:
 
     def get_model(self, model_id: str) -> ModelInfoOutput:
         return self._to_model_info(self.resolve_model_config(model_id))
+
+

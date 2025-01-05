@@ -112,3 +112,5 @@ def test_convert_object_format_returns_tree(test_client: TestClient) -> None:
     # object format returns a dict (ContentTree), not a plain string
     assert isinstance(result["content"], dict)
     assert "children" in result["content"]
+
+

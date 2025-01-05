@@ -47,3 +47,5 @@ async def test_abort_chat_job_waits_for_all_jobs_when_one_abort_fails(
 
     assert cancelled is True
     assert abort_job.await_count == 4
+
+

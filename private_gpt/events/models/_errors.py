@@ -173,3 +173,5 @@ class FatalError(BaseModel, StandardContentProtocol):
         self, response_mode: Literal["anthropic", "zylon"]
     ) -> Self | None:
         return self
+
+

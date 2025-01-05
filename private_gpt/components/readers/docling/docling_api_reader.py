@@ -261,3 +261,5 @@ class DoclingApiReader(IngestionReader):
         sampled_text = "".join(contents[i] for i in sampled_indices)
 
         return _glyph_unknown_ratio(sampled_text) > self.config.failure_threshold
+
+

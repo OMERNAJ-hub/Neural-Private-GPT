@@ -152,3 +152,5 @@ if __name__ == "__main__":
         ]
         watcher = IngestWatcher(args.folder, worker.ingest_on_watch)
         watcher.start()
+
+

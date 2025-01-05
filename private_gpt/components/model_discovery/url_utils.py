@@ -34,3 +34,5 @@ def api_base_host(value: str | None) -> str | None:
 
 def is_openai_api_base(value: str | None) -> bool:
     return api_base_host(value) == OPENAI_API_HOST
+
+

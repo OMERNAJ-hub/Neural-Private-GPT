@@ -216,3 +216,5 @@ def test_field_name_collisions() -> None:
     assert "field_3" in without_aliases
     assert without_aliases["field_3"] == "test5"
     assert len(without_aliases) == 5  # All fields are unique
+
+

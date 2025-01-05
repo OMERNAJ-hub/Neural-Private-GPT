@@ -338,3 +338,5 @@ class TestStoredFilesFromUploads:
         with pytest.raises(SkillDomainError) as exc_info:
             await stored_files_from_uploads([upload])
         assert exc_info.value.code == SkillErrorCode.MISSING_SKILL_MD
+
+

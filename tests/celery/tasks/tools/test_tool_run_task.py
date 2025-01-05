@@ -95,3 +95,5 @@ async def test_notify_completion_propagates_callback_failure(
 
     with pytest.raises(RuntimeError, match="ARQ enqueue failed"):
         await _notify_completion(request, response)
+
+

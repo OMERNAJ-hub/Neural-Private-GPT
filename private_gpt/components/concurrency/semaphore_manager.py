@@ -40,3 +40,5 @@ class SemaphoreManager(ABC):
     @abstractmethod
     async def close(self) -> None:
         raise NotImplementedError
+
+

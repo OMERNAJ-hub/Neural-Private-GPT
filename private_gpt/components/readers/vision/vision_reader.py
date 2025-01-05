@@ -197,3 +197,5 @@ class VisionReader(IngestionReader):
             yield transformed_node
 
         logger.debug("Finished PDF vision parsing of file: %s", file_info.file_name)
+
+

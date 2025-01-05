@@ -9,3 +9,5 @@ SystemPromptFn: TypeAlias = (
 ToolsFn: TypeAlias = (
     Callable[..., Sequence[ToolSpec]] | Callable[..., Awaitable[Sequence[ToolSpec]]]
 )
+
+

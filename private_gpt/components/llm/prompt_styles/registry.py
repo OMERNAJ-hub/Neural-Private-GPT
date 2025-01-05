@@ -41,3 +41,5 @@ class PromptStyleRegistry:
         if factory is None:
             raise ValueError(f"Unknown prompt_style='{prompt_style}'")
         return factory(*args, **kwargs)
+
+

@@ -47,3 +47,5 @@ class BaseWebSearchProvider(ABC):
         exceptions if validation fails.
         """
         pass
+
+

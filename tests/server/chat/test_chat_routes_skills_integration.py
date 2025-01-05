@@ -470,3 +470,5 @@ async def test_maximum_loaded_skills_evicts_oldest_loaded_skill(
         assert "BODY_ALPHA" not in prompt
     finally:
         settings.skills.skill_injection_mode = previous_mode
+
+

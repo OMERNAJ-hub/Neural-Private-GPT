@@ -218,3 +218,5 @@ class CondensationRequestInterceptor(ChatRequestLoopInterceptor):
             state.input.request.messages = result.chat_history
 
         context.set_state(state)
+
+

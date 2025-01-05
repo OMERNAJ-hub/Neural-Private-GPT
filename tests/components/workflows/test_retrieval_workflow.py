@@ -329,3 +329,5 @@ async def test_different_query_types(query_type) -> None:
 
     assert isinstance(result, FinalNodesRetrievalEvent)
     assert len(result.nodes) == 1
+
+

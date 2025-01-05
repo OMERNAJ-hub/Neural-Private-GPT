@@ -5,7 +5,7 @@ description: "Use DaoXE as an OpenAI-compatible cloud gateway — access GPT, Cl
 
 [DaoXE](https://daoxe.com) is a multi-model, multi-protocol AI API gateway. It exposes an OpenAI-compatible endpoint at `https://daoxe.com/v1`, giving you access to models from multiple providers (GPT, Claude, Grok, GLM, and others) through a single API key.
 
-## Capabilities with PrivateGPT
+## Capabilities with Neural-Private
 
 | Capability | Status |
 |---|---|
@@ -28,13 +28,13 @@ description: "Use DaoXE as an OpenAI-compatible cloud gateway — access GPT, Cl
     3. Note the available model IDs in your account — these are the models you can use.
   </Step>
 
-  <Step title="Run PrivateGPT">
+  <Step title="Run Neural-Private">
     <Tabs>
       <Tab title="Package install">
         ```bash
         OPENAI_API_BASE=https://daoxe.com/v1 \
           OPENAI_API_KEY=your-daoxe-api-key \
-          private-gpt serve
+          neural-private serve
         ```
       </Tab>
       <Tab title="Docker">
@@ -42,14 +42,14 @@ description: "Use DaoXE as an OpenAI-compatible cloud gateway — access GPT, Cl
         docker run -p 8080:8080 \
           -e OPENAI_API_BASE=https://daoxe.com/v1 \
           -e OPENAI_API_KEY=your-daoxe-api-key \
-          zylonai/private-gpt:latest
+          zylonai/neural-private:latest
         ```
       </Tab>
       <Tab title="uv (local)">
         ```bash
         OPENAI_API_BASE=https://daoxe.com/v1 \
           OPENAI_API_KEY=your-daoxe-api-key \
-          uv run private-gpt serve
+          uv run neural-private serve
         ```
       </Tab>
     </Tabs>
@@ -125,5 +125,7 @@ openai:
 
 - **Model IDs** depend on your DaoXE account plan. Check your dashboard for available models.
 - **Not available in mainland China.** The service is accessible from other regions worldwide.
-- DaoXE supports the OpenAI, Anthropic Messages, and other protocols — PrivateGPT uses the OpenAI-compatible endpoint.
+- DaoXE supports the OpenAI, Anthropic Messages, and other protocols — Neural-Private uses the OpenAI-compatible endpoint.
 - Because DaoXE does not expose `/tokenize`, set `context_window` explicitly in your model profiles for accurate token management.
+
+

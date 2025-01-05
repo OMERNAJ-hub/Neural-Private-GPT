@@ -63,3 +63,5 @@ def test_real_openai_endpoint_keeps_real_key() -> None:
 
     _, kwargs = mock_embedding.call_args
     assert kwargs["api_key"] == ""
+
+

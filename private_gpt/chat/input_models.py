@@ -1122,7 +1122,7 @@ def validate_tool_spec(tool: ToolSpecBody | dict[str, Any] | str | Any) -> ToolS
 
     internal_tool_name = resolve_internal_tool_name(tool_type)
     if internal_tool_name is not None:
-        # Tools baked in private-gpt
+        # Tools baked in neural-private
         tool_context: list[ArtifactType] | None = None
         if isinstance(tool, dict):
             tool_context = tool.get("context")
@@ -1498,3 +1498,5 @@ class CountTokensOutput(BaseModel):
     input_tokens: int = Field(
         description="Estimated number of input tokens for the provided payload."
     )
+
+

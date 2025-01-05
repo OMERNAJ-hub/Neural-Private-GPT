@@ -57,3 +57,5 @@ class ProcessDelta:
     text: str
     metadata: tuple[Any, ...]
     pending: str
+
+

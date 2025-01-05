@@ -182,3 +182,5 @@ class SplitSubtreeAlg:
         root.metadata[MetadataNode.TOKEN_COUNT.value] = sum(all_token_count)
 
         return root
+
+

@@ -41,3 +41,5 @@ def test_streaming_citation_examples_do_not_rewrite_previous_text() -> None:
     assert "Consolidate: <citation id='LLFB'" in emitted_text
     assert ", <citation id='CPCY'" in emitted_text
     assert "</citation>`. End." not in emitted_text
+
+

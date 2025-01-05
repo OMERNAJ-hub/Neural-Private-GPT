@@ -52,3 +52,5 @@ class FrozenNode(TreeNode):
             return ""
 
         return self.contents[metadata_mode]
+
+

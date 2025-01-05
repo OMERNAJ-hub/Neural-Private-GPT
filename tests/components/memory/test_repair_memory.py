@@ -492,3 +492,5 @@ async def test_repair_with_tools_preserves_message_order(
     assert result[2].role == MessageRole.TOOL
     assert result[3].role == MessageRole.ASSISTANT
     assert result[3].additional_kwargs.get("tool_calls") is None
+
+

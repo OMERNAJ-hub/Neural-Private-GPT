@@ -228,7 +228,7 @@ class LocalIngestionScheduler(BaseIngestionScheduler):
         )
         return IngestResponse(
             object="list",
-            model="private-gpt",
+            model="neural-private",
             data=[IngestedDoc.from_document(nodes[0])] if nodes else [],
         )
 
@@ -384,7 +384,7 @@ class CeleryIngestionScheduler(BaseIngestionScheduler):
         )
         return IngestResponse(
             object="list",
-            model="private-gpt",
+            model="neural-private",
             data=[IngestedDoc.from_document(nodes[0])] if nodes else [],
         )
 
@@ -624,3 +624,5 @@ class IngestionSchedulerFactory:
                 else provider(self._injector)
             )
         return self._scheduler
+
+

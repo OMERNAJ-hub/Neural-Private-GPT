@@ -12,3 +12,5 @@ async def health() -> dict[str, Any]:
         "mode": "arq-worker",
         "services": {"worker": "healthy"},
     }
+
+

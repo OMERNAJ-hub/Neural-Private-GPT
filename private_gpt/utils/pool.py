@@ -204,3 +204,5 @@ class AsyncSimplePool(ABC, Generic[_T]):
             raise e
         finally:
             await self.release(obj)
+
+

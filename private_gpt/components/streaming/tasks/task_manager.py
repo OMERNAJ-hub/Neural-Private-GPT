@@ -98,3 +98,5 @@ class TaskManager:
     def get_active_count(self) -> int:
         """Get number of active tasks."""
         return len(self._active_tasks)
+
+

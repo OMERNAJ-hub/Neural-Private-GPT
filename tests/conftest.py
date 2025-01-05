@@ -180,3 +180,5 @@ def pytest_sessionfinish(session, exitstatus):
         and exitstatus == pytest.ExitCode.NO_TESTS_COLLECTED
     ):
         session.exitstatus = pytest.ExitCode.OK
+
+

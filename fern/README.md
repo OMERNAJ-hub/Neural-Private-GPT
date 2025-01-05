@@ -2,7 +2,7 @@
 
 This folder contains the Fern configuration and the checked-in documentation pages for the root repository.
 
-Most page content mirrors the newer docs content from the sibling `private-gpt` checkout, but the published site for this repo is driven from `fern/docs.yml` and `fern/openapi/openapi.json`.
+Most page content mirrors the newer docs content from the sibling `neural-private` checkout, but the published site for this repo is driven from `fern/docs.yml` and `fern/openapi/openapi.json`.
 
 ## Common tasks
 
@@ -23,3 +23,5 @@ navigation:
           - page: My page
             path: ./docs/pages/manual/my-page.mdx
 ```
+
+

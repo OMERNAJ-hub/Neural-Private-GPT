@@ -318,3 +318,5 @@ def _extract_skill_md(files: list[StoredFile]) -> str:
         if file.path == "SKILL.md":
             return file.content.decode("utf-8")
     raise SkillDomainError(SkillErrorCode.MISSING_SKILL_MD, "SKILL.md is required")
+
+

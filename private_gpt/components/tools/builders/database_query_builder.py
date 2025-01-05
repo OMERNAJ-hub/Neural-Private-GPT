@@ -429,3 +429,5 @@ class DatabaseQueryToolBuilder:
 async def rebuild_database_query_tool(**kwargs: Any) -> ToolSpec:
     builder = get_global_injector().get(DatabaseQueryToolBuilder)
     return await builder.build_tool(**cast(Any, kwargs))
+
+

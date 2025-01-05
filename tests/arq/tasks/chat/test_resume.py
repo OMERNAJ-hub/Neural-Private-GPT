@@ -168,3 +168,5 @@ async def test_timeout_cancels_real_tool_only_when_timeout_result_wins(
     await timeout_tool_job({}, "chat-1", "tool-1", "search", "celery-task-1", 30)
 
     scheduler.cancel_task.assert_awaited_once_with("celery-task-1")
+
+

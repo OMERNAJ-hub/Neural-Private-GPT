@@ -72,3 +72,5 @@ class OpenAICompatStrategy(Protocol):
         *,
         force_kind: ModelKind | None = None,
     ) -> ModelClassificationResult | None: ...
+
+

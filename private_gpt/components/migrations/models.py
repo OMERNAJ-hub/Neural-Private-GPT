@@ -18,3 +18,5 @@ class Migration:
     up: Callable[[Connection], None]
     down: Callable[[Connection], None]
     checksum: str | None = None
+
+

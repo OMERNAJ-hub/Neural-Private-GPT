@@ -103,3 +103,5 @@ class TextParserBase:
     def close(self) -> None:
         """Close the reasoning parser."""
         pass
+
+

@@ -120,3 +120,5 @@ class CondenserWorkflow(Workflow):
         except Exception as e:
             logger.error(f"Error in condense_question: {e}")
             return CondenseResultEvent(condensed_query=query, original_query=query)
+
+

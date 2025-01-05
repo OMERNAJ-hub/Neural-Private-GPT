@@ -226,3 +226,5 @@ class FileService:
     def _validate_file_id(file_id: str) -> None:
         if ".." in file_id.split("/"):
             raise HTTPException(status_code=400, detail="Invalid file ID.")
+
+

@@ -275,3 +275,5 @@ class TabularDataAnalysisWorkflow(Workflow):
         return TabularDataAnalysisResultEvent(
             content=result.content, is_error=bool(result.error)
         )
+
+

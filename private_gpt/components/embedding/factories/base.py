@@ -32,3 +32,5 @@ class EmbeddingFactory(ABC):
     ) -> tuple[BaseEmbedding, str | None]:
         """Create Embedding instance, to be implemented by subclasses."""
         pass
+
+

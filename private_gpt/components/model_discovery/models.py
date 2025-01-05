@@ -79,3 +79,5 @@ class ModelDiscoveryResult:
                 item.model for item in classified if item.kind == ModelKind.EMBEDDING
             ),
         )
+
+

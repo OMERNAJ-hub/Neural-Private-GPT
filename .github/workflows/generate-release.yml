@@ -7,11 +7,11 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: zylonai/private-gpt
+  IMAGE_NAME: zylonai/neural-private
   HOMEBREW_TAP_REPOSITORY: zylon-ai/homebrew-tap
   RELEASE_PACKAGE_EXTRA: "core"
   PACKAGE_INDEX_BRANCH: gh-pages
-  PACKAGE_FILES_URL: https://wheels.privategpt.dev/packages/
+  PACKAGE_FILES_URL: https://wheels.Neural-Private.dev/packages/
   platforms: linux/amd64,linux/arm64
 jobs:
   build-and-publish-package:
@@ -239,7 +239,7 @@ jobs:
             --sha256 "${{ needs.build-and-publish-package.outputs.source_sha256 }}" \
             --extra "${{ env.RELEASE_PACKAGE_EXTRA }}" \
             --package-files-url "${{ env.PACKAGE_FILES_URL }}" \
-            --output private-gpt.rb
+            --output neural-private.rb
 
       - name: Checkout tap repository
         uses: actions/checkout@v7
@@ -251,18 +251,20 @@ jobs:
       - name: Update formula
         run: |
           mkdir -p tap/Formula
-          mv private-gpt.rb tap/Formula/private-gpt.rb
+          mv neural-private.rb tap/Formula/neural-private.rb
 
       - name: Commit and push formula update
         working-directory: tap
         run: |
-          if git diff --quiet -- Formula/private-gpt.rb; then
+          if git diff --quiet -- Formula/neural-private.rb; then
             echo "No tap changes detected"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Formula/private-gpt.rb
-          git commit -m "private-gpt ${{ needs.build-and-publish-package.outputs.version }}"
+          git add Formula/neural-private.rb
+          git commit -m "neural-private ${{ needs.build-and-publish-package.outputs.version }}"
           git push
+
+

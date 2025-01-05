@@ -164,3 +164,5 @@ def test_stateless_task_does_not_close_global_injector(
     assert stateless_task.apply().get() == "success"
     assert callback_ran
     assert not global_resource.closed
+
+

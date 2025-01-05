@@ -128,3 +128,5 @@ async def test_close_fails_pending_requests() -> None:
     with pytest.raises(RuntimeError, match="closed"):
         await pending
     assert recorder.batches == []
+
+

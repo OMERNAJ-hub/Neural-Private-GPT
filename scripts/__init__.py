@@ -1,1 +1,3 @@
-"""PrivateGPT scripts."""
+"""Neural-Private scripts."""
+
+

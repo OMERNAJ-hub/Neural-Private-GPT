@@ -51,3 +51,5 @@ def test_keep_result_can_be_configured(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("PGPT_ARQ_KEEP_RESULT", "900")
 
     assert _keep_result_seconds(MagicMock()) == 900
+
+

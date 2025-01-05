@@ -248,3 +248,5 @@ class SemanticSearchWorkflow(Workflow):
             retrieval=retrieval_result,
             condense=condense_result,
         )
+
+

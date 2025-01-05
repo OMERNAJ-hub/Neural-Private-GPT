@@ -17,3 +17,5 @@ body:
       placeholder: "Detailed description of the documentation change"
     validations:
       required: true
+
+

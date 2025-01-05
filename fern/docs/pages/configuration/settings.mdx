@@ -3,7 +3,7 @@ title: "Settings & Profiles"
 description: "Settings files, profiles, and environment variable expansion."
 ---
 
-PrivateGPT is configured through YAML settings files. The base file is `settings.yaml` at the project root. Additional **profiles** can be layered on top to override or extend the base config.
+Neural-Private is configured through YAML settings files. The base file is `settings.yaml` at the project root. Additional **profiles** can be layered on top to override or extend the base config.
 
 ---
 
@@ -12,13 +12,13 @@ PrivateGPT is configured through YAML settings files. The base file is `settings
 A profile is a file named `settings-{name}.yaml`. Activate one or more profiles at startup by setting `PGPT_PROFILES`:
 
 ```bash
-PGPT_PROFILES=model private-gpt serve
+PGPT_PROFILES=model neural-private serve
 ```
 
 Multiple profiles are merged in order — later profiles override earlier ones:
 
 ```bash
-PGPT_PROFILES=model,local private-gpt serve
+PGPT_PROFILES=model,local neural-private serve
 ```
 
 This loads `settings.yaml`, then merges `settings-model.yaml`, then `settings-local.yaml` on top.
@@ -42,10 +42,10 @@ The syntax is `${VARIABLE_NAME:default_value}`. If the variable is not set, the 
 
 ## Settings folder
 
-By default, PrivateGPT looks for settings files in the project root. Override this with:
+By default, Neural-Private looks for settings files in the project root. Override this with:
 
 ```bash
-PGPT_SETTINGS_FOLDER=/path/to/settings private-gpt serve
+PGPT_SETTINGS_FOLDER=/path/to/settings neural-private serve
 ```
 
 ---
@@ -62,3 +62,5 @@ data:
 ```
 
 Requires at least one multimodal model configured. See [Model Configuration](./advanced.mdx) for setup instructions.
+
+

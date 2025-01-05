@@ -34,3 +34,5 @@ def remove_multimodal_blocks(message: ChatMessage) -> ChatMessage:
         content=message.content,
         blocks=filtered_blocks,
     )
+
+

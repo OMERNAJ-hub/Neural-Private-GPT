@@ -98,3 +98,5 @@ def test_get_favicon_url_handles_absolute_urls() -> None:
         == "https://cdn.example.com/i.png"
     )
     assert service.get_favicon_url("https://example.com", "<html></html>") is None
+
+

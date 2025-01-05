@@ -44,3 +44,5 @@ def test_wait_for_celery_result_enforces_timeout(
 
     with pytest.raises(CeleryTimeoutError, match="task-1"):
         wait_for_celery_result(result, timeout=0.5)
+
+

@@ -7,3 +7,5 @@ async def test_healthcheck_does_not_require_redis() -> None:
         "mode": "arq-worker",
         "services": {"worker": "healthy"},
     }
+
+

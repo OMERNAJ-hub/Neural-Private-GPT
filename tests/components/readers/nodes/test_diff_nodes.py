@@ -89,3 +89,5 @@ def test_empty_texts() -> None:
     ref_node = TextNode(text="")
     other_node = TextNode(text="")
     run_diff_test(ref_node, other_node, None)
+
+

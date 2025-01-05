@@ -57,3 +57,5 @@ class EnsureIndexIsRefreshedInterceptor(ChatResponseLoopInterceptor):
     ) -> "EnsureIndexIsRefreshedInterceptor":
         # Return a new instance with the same logic but reset state
         return EnsureIndexIsRefreshedInterceptor()
+
+

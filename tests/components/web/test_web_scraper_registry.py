@@ -73,3 +73,5 @@ async def test_close_all_closes_instantiated_providers() -> None:
     registry.get_provider("closing")
     await registry.close_all()
     assert closed == ["closed"]
+
+

@@ -68,3 +68,5 @@ def load_file_from_uri(uri: str, **kwargs: Any) -> BinaryIO:
     else:
         # Default to Local file
         return _load_file_from_disk(uri, **kwargs)
+
+

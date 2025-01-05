@@ -104,3 +104,5 @@ def test_subtree_within_limit_preserves_original_node() -> None:
     chunks = _split_subtree_to_fit(subtree, max_length=3, tokenizer_fn=str.split)
 
     assert chunks == [subtree]
+
+

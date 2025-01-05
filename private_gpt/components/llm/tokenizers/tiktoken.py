@@ -164,3 +164,5 @@ class TikTokenTokenizer(TokenizerBase):
     ) -> list[str]:
         del skip_special_tokens
         return [self._encoding.decode([token_id]) for token_id in ids]
+
+

@@ -60,3 +60,5 @@ def get_broker_config() -> BrokerConfig:
     if provider is None:
         raise ValueError(f"Invalid broker mode: {celery_settings.broker_mode}")
     return provider()
+
+

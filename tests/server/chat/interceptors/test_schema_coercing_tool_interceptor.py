@@ -1492,3 +1492,5 @@ def test_create_model_from_json_schema_preserves_untyped_properties() -> None:
     model = create_model_from_json_schema(original, "Obj")
     regenerated = model.model_json_schema()
     assert "type" not in regenerated["properties"]["object_param"]
+
+

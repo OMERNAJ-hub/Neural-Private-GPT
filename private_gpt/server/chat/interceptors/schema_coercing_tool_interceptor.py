@@ -422,3 +422,5 @@ class SchemaCoercingToolInterceptor(
                 context.request.tool_spec.name,
                 exc_info=e,
             )
+
+

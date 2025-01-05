@@ -51,3 +51,5 @@ _PROVIDERS: dict[str, StreamProvider] = {
 
 def register_stream(name: str, provider: StreamProvider) -> None:
     _PROVIDERS[name] = provider
+
+

@@ -77,3 +77,5 @@ class ChatAsyncService:
     async def get_stream_metadata(self, message_id: str) -> StreamMetadata | None:
         """Get stream status and metadata."""
         return await self.stream_manager.get_stream_metadata(message_id)
+
+

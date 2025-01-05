@@ -19,3 +19,5 @@ class StreamComponent:
                 f"Unsupported streaming provider: {settings.stream.broker}"
             )
         self.stream = provider(settings)
+
+

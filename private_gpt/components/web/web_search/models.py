@@ -37,3 +37,5 @@ class WebSearchResult(BaseModel):
             result += f"Content: {self.content}\n"
 
         return result
+
+

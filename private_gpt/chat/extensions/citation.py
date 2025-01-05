@@ -47,3 +47,5 @@ class ZylonCitation(BaseModel):
             if zylon_citation.index is not None
             else None,
         )
+
+

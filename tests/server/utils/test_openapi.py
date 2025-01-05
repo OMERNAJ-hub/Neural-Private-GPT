@@ -203,3 +203,5 @@ def test_all_schemas_have_required_properties(test_client: TestClient) -> None:
 
     if errors:
         pytest.fail("Schema validation failed:\n" + "\n".join(errors))
+
+

@@ -339,3 +339,5 @@ class SummaryQueryEngine(BaseQueryEngine):
             return result
         else:
             raise TypeError(f"The result is not of a supported type: {type(response)}")
+
+

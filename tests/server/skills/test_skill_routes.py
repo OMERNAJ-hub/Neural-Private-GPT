@@ -679,3 +679,5 @@ def test_skill_upload_no_wrapper_still_works(
     assert version_resp.status_code == 200
     version = version_resp.json()
     assert version["name"] == "normal-skill"
+
+

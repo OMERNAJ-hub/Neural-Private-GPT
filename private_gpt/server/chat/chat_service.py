@@ -301,3 +301,5 @@ class ChatService:
             tokenizer_fn=tokenizer_fn,
         )
         return CountTokensOutput(input_tokens=input_tokens)
+
+

@@ -282,8 +282,8 @@ class IngestResponse(BaseModel):
         default="list",
         description="Response object type, always 'list' for ingestion responses",
     )
-    model: Literal["private-gpt"] = Field(
-        default="private-gpt", description="Model identifier, always 'private-gpt'"
+    model: Literal["neural-private"] = Field(
+        default="neural-private", description="Model identifier, always 'neural-private'"
     )
     data: list[IngestedDoc] = Field(
         ...,
@@ -295,7 +295,7 @@ class IngestResponse(BaseModel):
             "examples": [
                 {
                     "object": "list",
-                    "model": "private-gpt",
+                    "model": "neural-private",
                     "data": [
                         {
                             "object": "ingest.document",
@@ -390,7 +390,7 @@ class DeleteIngestedDocumentAsyncBody(BaseCallbackInput):
                 "application/json": {
                     "example": {
                         "object": "list",
-                        "model": "private-gpt",
+                        "model": "neural-private",
                         "data": [
                             {
                                 "object": "ingest.document",
@@ -441,7 +441,7 @@ class DeleteIngestedDocumentAsyncBody(BaseCallbackInput):
                 "response": {
                     "body": {
                         "object": "list",
-                        "model": "private-gpt",
+                        "model": "neural-private",
                         "data": [
                             {
                                 "object": "ingest.document",
@@ -709,7 +709,7 @@ def ingest_data_sync(
     )
     return IngestResponse(
         object="list",
-        model="private-gpt",
+        model="neural-private",
         data=ingested_documents,
     )
 
@@ -735,7 +735,7 @@ if _CELERY_AVAILABLE:
                                     "task_status": "SUCCESS",
                                     "task_result": {
                                         "object": "list",
-                                        "model": "private-gpt",
+                                        "model": "neural-private",
                                         "data": [
                                             {
                                                 "object": "ingest.document",
@@ -817,7 +817,7 @@ if _CELERY_AVAILABLE:
                 "application/json": {
                     "example": {
                         "object": "list",
-                        "model": "private-gpt",
+                        "model": "neural-private",
                         "data": [
                             {
                                 "object": "ingest.document",
@@ -873,7 +873,7 @@ def list_ingested(
     """
     service = request.state.injector.get(IngestService)
     ingested_documents = list(service.get_ingested_files(collection))
-    return IngestResponse(object="list", model="private-gpt", data=ingested_documents)
+    return IngestResponse(object="list", model="neural-private", data=ingested_documents)
 
 
 @ingest_router.post(
@@ -1044,3 +1044,5 @@ if _CELERY_AVAILABLE:
         - REVOKED: Task was cancelled before completion
         """
         return TaskStatus[None].from_celery_task(celery_app=celery_app, task_id=task_id)
+
+

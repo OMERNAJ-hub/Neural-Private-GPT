@@ -85,3 +85,5 @@ def test_multiple_environment_variables_without_default_fails() -> None:
     """
     with pytest.raises(ValueError):
         load_yaml_with_envvars(io.StringIO(sample_yaml), {})
+
+

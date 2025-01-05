@@ -34,3 +34,5 @@ class ContextFilter(BaseModel):
         description="Metadata filter to apply on the context.",
         examples=[[{"key": "file_id", "operator": "==", "value": "artifact_id_1"}]],
     )
+
+

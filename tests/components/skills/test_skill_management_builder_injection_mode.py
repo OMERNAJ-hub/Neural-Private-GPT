@@ -87,3 +87,5 @@ async def test_load_skill_system_prompt_mode_skips_instructions() -> None:
 
     assert payload["loaded"] is True
     assert "instructions" not in payload
+
+

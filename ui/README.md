@@ -1,6 +1,6 @@
-# PrivateGPT Workbench
+# Neural-Private Workbench
 
-PrivateGPT Workbench is a lightweight static demo UI for the PrivateGPT API. It lives in `./ui`, keeps the implementation in a single `index.html`, and stores supporting documentation separately so the runtime file stays easy to inspect.
+Neural-Private Workbench is a lightweight static demo UI for the Neural-Private API. It lives in `./ui`, keeps the implementation in a single `index.html`, and stores supporting documentation separately so the runtime file stays easy to inspect.
 
 ## Layout
 
@@ -26,3 +26,5 @@ For changes to `./ui/index.html`, validate that the inline script parses:
 ```sh
 node -e "const fs=require('fs'); const html=fs.readFileSync('./ui/index.html','utf8'); const m=html.match(/<script>([\s\S]*)<\/script>/); if(!m) throw new Error('script tag not found'); new Function(m[1]); console.log('script ok')"
 ```
+
+

@@ -31,3 +31,5 @@ def test_unknown_worker_mode_lists_registered_modes() -> None:
 
     with pytest.raises(ValueError, match=r"Registered modes: .*known"):
         get_worker_mode("unknown")
+
+

@@ -63,3 +63,5 @@ class StrategyChain:
                 return result
 
         return self._fallback.classify(unclassified, force_kind=force_kind)
+
+

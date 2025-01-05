@@ -46,3 +46,5 @@ class FlattenTreeNodesTransform(TransformComponent):
             else:
                 flattened_nodes.append(node)
         return flattened_nodes
+
+

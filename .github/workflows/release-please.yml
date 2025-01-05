@@ -19,3 +19,5 @@ jobs:
           config-file: .github/release_please/.release-please-config.json
           manifest-file: .github/release_please/.release-please-manifest.json
           token: ${{ secrets.PAT }}
+
+

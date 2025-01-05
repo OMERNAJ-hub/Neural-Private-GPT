@@ -80,3 +80,5 @@ class SkillVersionORM(SkillBase):
     )
 
     skill: Mapped[SkillORM] = relationship("SkillORM", back_populates="versions")
+
+

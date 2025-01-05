@@ -67,3 +67,5 @@ def serve_command(
     finally:
         if pid_file and pid_file.exists():
             pid_file.unlink(missing_ok=True)
+
+

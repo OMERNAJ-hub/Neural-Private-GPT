@@ -198,3 +198,5 @@ class TreePrinter(Generic[T]):
         )
         printer = cls(config)
         printer.print_tree(node)
+
+

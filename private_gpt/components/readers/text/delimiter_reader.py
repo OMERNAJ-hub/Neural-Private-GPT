@@ -84,3 +84,5 @@ class DelimiterTextReader(TextReader):
 
         except Exception as e:
             raise ValueError(f"Error reading delimited file: {e}") from e
+
+

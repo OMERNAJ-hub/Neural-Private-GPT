@@ -217,5 +217,7 @@ ENV TIKTOKEN_CACHE_DIR=/home/worker/app/tiktoken_cache
 ENV TIKTOKEN_ENCODINGS_BASE=/home/worker/app/encodings
 ENV TIKTOKEN_RS_CACHE_DIR=/home/worker/app/encodings
 
-ENTRYPOINT ["private-gpt"]
+ENTRYPOINT ["neural-private"]
 CMD ["serve"]
+
+

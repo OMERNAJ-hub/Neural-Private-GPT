@@ -134,3 +134,5 @@ class EngineEventBrokerFactory:
         if self._settings.scheduler.chat.mode == "arq":
             return self._injector.get(RedisEngineEventBroker)
         return self._injector.get(InMemoryEngineEventBroker)
+
+

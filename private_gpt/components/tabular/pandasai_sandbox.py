@@ -597,3 +597,5 @@ class PandasAISandboxAdapter(Sandbox):  # type: ignore[misc]
     def __del__(self) -> None:
         if getattr(self, "_started", False):
             self.stop()
+
+

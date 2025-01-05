@@ -23,3 +23,5 @@ class ContainerRegistry:
 
     def get_ttl(self, session_id: str) -> int | None:
         return self._sessions.get(session_id)
+
+

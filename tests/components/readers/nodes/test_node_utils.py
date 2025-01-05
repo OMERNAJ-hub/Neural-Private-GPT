@@ -55,3 +55,5 @@ def test_unknown_version() -> None:
     }
     with pytest.raises(ValueError, match="Unknown node type: DocumentRoot-v2"):
         metadata_dict_to_tree_node(metadata)
+
+

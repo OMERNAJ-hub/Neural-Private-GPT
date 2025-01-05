@@ -39,3 +39,5 @@ class BaseWebSearchResultProcessor(ABC):
         validation fails.
         """
         pass
+
+

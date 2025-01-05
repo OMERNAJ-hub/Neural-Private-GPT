@@ -118,3 +118,5 @@ def test_checkpoint_payload_persists_only_model_identity() -> None:
     assert serialized["model_id"] == "persisted-model"
     assert "tokenizer_fn" not in serialized
     assert "effective_token_limit" not in serialized
+
+

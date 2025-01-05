@@ -9,3 +9,5 @@ class OpenAPIValidationErrorResponse(BaseModel):
     detail: str | list[dict[str, Any]] = Field(
         description="Error detail — a string message or a list of validation error objects.",
     )
+
+

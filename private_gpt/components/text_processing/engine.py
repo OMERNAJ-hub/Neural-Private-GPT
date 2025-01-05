@@ -112,3 +112,5 @@ class IncrementalTextProcessor:
         self._emitted = result.text
         self._metadata_count = len(result.metadata)
         return delta
+
+

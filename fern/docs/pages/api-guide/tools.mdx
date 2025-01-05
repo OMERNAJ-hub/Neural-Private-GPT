@@ -3,13 +3,13 @@ title: "Built-in Tools"
 description: "Built-in server tools, custom tools, and MCP — what they are and how to use them."
 ---
 
-PrivateGPT exposes tools in two ways:
+Neural-Private exposes tools in two ways:
 
 1. **Model-driven tool use** — pass tools in the `tools` array of `/v1/messages` and let the model decide when to call them.
 2. **Standalone tool endpoints** (`/v1/tools/*`) — call them directly without going through a chat.
 
 <Note>
-  Built-in tool dependencies are granular. Install the specific extra for the feature you need, or use `private-gpt[tools]` as the bundle fallback. `private-gpt[core]` also includes that bundle.
+  Built-in tool dependencies are granular. Install the specific extra for the feature you need, or use `neural-private[tools]` as the bundle fallback. `neural-private[core]` also includes that bundle.
 </Note>
 
 ---
@@ -18,7 +18,7 @@ PrivateGPT exposes tools in two ways:
 
 Pass tools in `/v1/messages` and the model decides when to call them.
 
-Model-driven tool use follows the same per-tool dependency rules. For the broadest support, use `private-gpt[tools]` or `private-gpt[core]`.
+Model-driven tool use follows the same per-tool dependency rules. For the broadest support, use `neural-private[tools]` or `neural-private[core]`.
 
 ### Built-in server tools
 
@@ -26,7 +26,7 @@ Built-in server tools only require `name` and `type`. Do not provide `inputSchem
 
 | Type identifier | Tool | Notes |
 |---|---|---|
-| `semantic_search_v1` | Search ingested documents | Available in `private-gpt[core]` and installs with ingestion support |
+| `semantic_search_v1` | Search ingested documents | Available in `neural-private[core]` and installs with ingestion support |
 | `tabular_analysis_v1` | Analyze ingested tabular data | Requires `tool-tabular` or `tools` |
 | `database_query_v1` | Query a SQL database | Requires database extras |
 | `web_search_v1` | Search the web | Requires `tool-web-scraping` or `tools` |
@@ -73,7 +73,7 @@ Requires `context` with an ingested artifact.
 
 #### Example: `tabular_analysis_v1`
 
-Requires `private-gpt[tool-tabular]`, `private-gpt[tools]`, or `private-gpt[core]`. Also requires `context` with an ingested artifact.
+Requires `neural-private[tool-tabular]`, `neural-private[tools]`, or `neural-private[core]`. Also requires `context` with an ingested artifact.
 
 ```json
 {
@@ -98,7 +98,7 @@ Requires `private-gpt[tool-tabular]`, `private-gpt[tools]`, or `private-gpt[core
 
 #### Example: `database_query_v1`
 
-Requires `private-gpt[tool-database]`, `private-gpt[database]`, or a driver-specific extra such as `private-gpt[database-postgres]`. `private-gpt[tools]` and `private-gpt[core]` also work. Also requires `context` with a `sql_database` artifact. See [Database Tools](/tools/database-tools) for install and configuration.
+Requires `neural-private[tool-database]`, `neural-private[database]`, or a driver-specific extra such as `neural-private[database-postgres]`. `neural-private[tools]` and `neural-private[core]` also work. Also requires `context` with a `sql_database` artifact. See [Database Tools](/tools/database-tools) for install and configuration.
 
 ```json
 {
@@ -140,7 +140,7 @@ db2://user:pass@localhost:50000/sample
 
 #### Example: `web_search_v1`
 
-Requires `private-gpt[tool-web-scraping]`, `private-gpt[tools]`, or `private-gpt[core]`. No `context` is required.
+Requires `neural-private[tool-web-scraping]`, `neural-private[tools]`, or `neural-private[core]`. No `context` is required.
 
 ```json
 {
@@ -161,7 +161,7 @@ Requires `private-gpt[tool-web-scraping]`, `private-gpt[tools]`, or `private-gpt
 
 `web_extract_v1` remains accepted as a legacy alias.
 
-Requires `private-gpt[tool-web-scraping]`, `private-gpt[tools]`, or `private-gpt[core]`. No `context` is required.
+Requires `neural-private[tool-web-scraping]`, `neural-private[tools]`, or `neural-private[core]`. No `context` is required.
 
 ```json
 {
@@ -233,14 +233,14 @@ Direct `load_skill_v1` example:
 
 ### Code execution in chat
 
-PrivateGPT exposes built-in code-execution tools in two layers:
+Neural-Private exposes built-in code-execution tools in two layers:
 
 1. `code_execution_v1` expands into `bash_v1` and `text_editor_v1`.
 2. `text_editor_v1` expands into `view_v1`, `str_replace_v1`, `create_v1`, and `insert_v1`.
 
-These are built-in server tools executed by PrivateGPT.
+These are built-in server tools executed by Neural-Private.
 
-`code_execution_v1` is a server tool. Anthropic `code_execution_*` tool types translate to this server-side flow in PrivateGPT. That is different from Anthropic `bash_*` and `text_editor_*`, which are client tools passed back to the API caller.
+`code_execution_v1` is a server tool. Anthropic `code_execution_*` tool types translate to this server-side flow in Neural-Private. That is different from Anthropic `bash_*` and `text_editor_*`, which are client tools passed back to the API caller.
 
 Anthropic reference: [Code execution tool](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/code-execution-tool).
 
@@ -297,7 +297,7 @@ Anthropic reference: [Code execution tool](https://docs.anthropic.com/en/docs/ag
 
 ### Anthropic-compatible client tools
 
-PrivateGPT also accepts Anthropic-style client tool types. These are passed through to your application with canonical schemas; PrivateGPT does **not** execute them locally.
+Neural-Private also accepts Anthropic-style client tool types. These are passed through to your application with canonical schemas; Neural-Private does **not** execute them locally.
 
 Supported client tool families:
 
@@ -327,9 +327,9 @@ Example:
 
 ### Custom tools
 
-Define any tool with a JSON Schema. PrivateGPT passes the tool definition to the model; when the model calls it, your application receives a `tool_use` block and must return a `tool_result`:
+Define any tool with a JSON Schema. Neural-Private passes the tool definition to the model; when the model calls it, your application receives a `tool_use` block and must return a `tool_result`:
 
-For the broadest tool-calling support, use `private-gpt[tools]` or `private-gpt[core]`.
+For the broadest tool-calling support, use `neural-private[tools]` or `neural-private[core]`.
 
 ```json
 {
@@ -378,7 +378,7 @@ Send the result back by appending a message with `role: "user"` containing a `to
 
 Search ingested documents using natural language:
 
-Available in `private-gpt[core]` and installs with ingestion support.
+Available in `neural-private[core]` and installs with ingestion support.
 
 ```bash
 curl -X POST http://localhost:8080/v1/tools/semantic-search \
@@ -393,7 +393,7 @@ curl -X POST http://localhost:8080/v1/tools/semantic-search \
 
 Search the web and get aggregated results:
 
-Requires `private-gpt[tool-web-scraping]`, `private-gpt[tools]`, or `private-gpt[core]`.
+Requires `neural-private[tool-web-scraping]`, `neural-private[tools]`, or `neural-private[core]`.
 
 ```bash
 curl -X POST http://localhost:8080/v1/tools/web-search \
@@ -405,7 +405,7 @@ curl -X POST http://localhost:8080/v1/tools/web-search \
 
 Fetch and extract text content from a URL:
 
-Requires `private-gpt[tool-web-scraping]`, `private-gpt[tools]`, or `private-gpt[core]`.
+Requires `neural-private[tool-web-scraping]`, `neural-private[tools]`, or `neural-private[core]`.
 
 ```bash
 curl -X POST http://localhost:8080/v1/tools/web-fetch \
@@ -417,7 +417,7 @@ curl -X POST http://localhost:8080/v1/tools/web-fetch \
 
 Run a natural language query against CSV or tabular data ingested into a collection:
 
-Requires `private-gpt[tool-tabular]`, `private-gpt[tools]`, or `private-gpt[core]`.
+Requires `neural-private[tool-tabular]`, `neural-private[tools]`, or `neural-private[core]`.
 
 ```bash
 curl -X POST http://localhost:8080/v1/tools/tabular-data-analysis \
@@ -432,7 +432,7 @@ curl -X POST http://localhost:8080/v1/tools/tabular-data-analysis \
 
 Run a natural language query against a connected SQL database:
 
-Requires `private-gpt[tool-database]`, `private-gpt[database]`, or a driver-specific extra such as `private-gpt[database-postgres]`. `private-gpt[tools]` and `private-gpt[core]` also work. See [Database Tools](/tools/database-tools) for install and configuration.
+Requires `neural-private[tool-database]`, `neural-private[database]`, or a driver-specific extra such as `neural-private[database-postgres]`. `neural-private[tools]` and `neural-private[core]` also work. See [Database Tools](/tools/database-tools) for install and configuration.
 
 ```bash
 curl -X POST http://localhost:8080/v1/tools/database-query \
@@ -456,3 +456,5 @@ mysql://user:pass@localhost:3306/mydb
 mssql+pyodbc://user:pass@localhost:1433/mydb?driver=ODBC+Driver+18+for+SQL+Server
 db2://user:pass@localhost:50000/sample
 ```
+
+

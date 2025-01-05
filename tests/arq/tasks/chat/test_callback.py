@@ -67,3 +67,5 @@ async def test_resume_chat_callback_sends_error_tool_result_to_scheduler(
         tool_id="semantic-search-1",
         result=response.model_dump(mode="json"),
     )
+
+

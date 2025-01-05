@@ -617,3 +617,5 @@ class AdaptiveStreamReader:
             mux, self.multiplexer = self.multiplexer, None
         if mux:
             await mux.stop()
+
+

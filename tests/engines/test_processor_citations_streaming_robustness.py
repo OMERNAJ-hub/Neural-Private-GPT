@@ -183,3 +183,5 @@ async def test_repeated_citation_across_delayed_events_reuses_index() -> None:
         f"First {format_cite(0, document, 0)}, second {format_cite(1, document, 0)}."
     )
     assert citation_count == 2
+
+

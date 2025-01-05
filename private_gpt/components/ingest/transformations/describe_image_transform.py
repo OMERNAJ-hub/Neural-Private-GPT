@@ -239,3 +239,5 @@ class DescribeImageTransform(TransformComponent):
             return True
         except Exception:
             return False
+
+

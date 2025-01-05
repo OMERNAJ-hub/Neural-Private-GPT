@@ -160,3 +160,5 @@ class AsyncTokenizerBase(TokenizerBase, ABC):
         **kwargs: Any,
     ) -> list[int] | str:
         raise NotImplementedError()
+
+

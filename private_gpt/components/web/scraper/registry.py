@@ -39,3 +39,5 @@ class WebScraperProviderRegistry:
         providers, self._providers = list(self._providers.values()), {}
         for provider in providers:
             await provider.close()
+
+

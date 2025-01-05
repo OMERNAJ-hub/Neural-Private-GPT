@@ -41,3 +41,5 @@ class MockInjector:
 @pytest.fixture
 def injector() -> MockInjector:
     return MockInjector()
+
+

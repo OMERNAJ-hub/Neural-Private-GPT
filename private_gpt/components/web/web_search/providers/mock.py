@@ -42,9 +42,9 @@ class MockSearchProvider(BaseWebSearchProvider):
             ),
             WebSearchResult(
                 idx=4,
-                title="GitHub - zylon-ai/private-gpt: Interact with your documents using the power of GPT, 100% privately, no data leaks",
-                url="https://github.com/zylon-ai/private-gpt",
-                description="Crafted by the team behind PrivateGPT, Zylon is <strong>a best-in-class AI collaborative workspace</strong> that can be easily deployed on-premise (data center, bare metal...) or in your private cloud (AWS, GCP, Azure...).",
+                title="GitHub - zylon-ai/neural-private: Interact with your documents using the power of GPT, 100% privately, no data leaks",
+                url="https://github.com/zylon-ai/neural-private",
+                description="Crafted by the team behind Neural-Private, Zylon is <strong>a best-in-class AI collaborative workspace</strong> that can be easily deployed on-premise (data center, bare metal...) or in your private cloud (AWS, GCP, Azure...).",
                 age="",
             ),
             WebSearchResult(
@@ -71,3 +71,5 @@ class MockSearchProvider(BaseWebSearchProvider):
 
     async def close(self) -> None:
         logger.debug("MockSearchProvider closed")
+
+

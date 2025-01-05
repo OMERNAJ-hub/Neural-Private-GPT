@@ -29,3 +29,5 @@ class SSEFormatter:
     def to_sse_stream(cls, sse_events: Iterator[Event]) -> Iterator[str]:
         for event in sse_events:
             yield cls.to_sse_event(event)
+
+

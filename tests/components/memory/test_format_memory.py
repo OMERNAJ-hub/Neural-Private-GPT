@@ -583,3 +583,5 @@ async def test_parametrized_sequences(
             MessageRole.ASSISTANT,
             MessageRole.USER,
         ]
+
+

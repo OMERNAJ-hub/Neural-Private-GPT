@@ -37,3 +37,5 @@ class EnsureTimestampInContentBlocksInterceptor(ChatResponseLoopInterceptor):
     ) -> "EnsureTimestampInContentBlocksInterceptor":
         # Return a new instance with the same logic but reset state
         return EnsureTimestampInContentBlocksInterceptor()
+
+

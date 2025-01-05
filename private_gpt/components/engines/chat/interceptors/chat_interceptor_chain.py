@@ -121,3 +121,5 @@ class ChatLoopInterceptorChain(BaseModel):
     @property
     def tool_interceptors(self) -> list[ToolExecutionInterceptor]:
         return [t for e in self.entries if e.is_active for t in e.tools]
+
+

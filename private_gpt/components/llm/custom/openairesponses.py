@@ -599,3 +599,5 @@ class PatchedOpenAIResponsesLLM(StructuredChatMixin, OpenAIResponsesBase):  # ty
         chat_response.message.additional_kwargs["stop_reason"] = stop_reason
 
         return chat_response
+
+

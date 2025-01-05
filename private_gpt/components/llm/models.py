@@ -36,3 +36,5 @@ def _get_exception_types() -> tuple[type[BaseException], ...]:
 
 
 MODEL_NOT_AVAILABLE_EXCEPTION_TYPES = _get_exception_types()
+
+

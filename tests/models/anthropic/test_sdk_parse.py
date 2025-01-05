@@ -96,3 +96,5 @@ class TestSDKParse:
         assert not failures, (
             "Registry sdk_sample payloads are invalid:\n\n" + "\n\n".join(failures)
         )
+
+

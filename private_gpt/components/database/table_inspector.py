@@ -23,3 +23,5 @@ class DatabaseTableInspector(DatabaseTableLikeInspector):
         for table_name in tables:
             result.append(self._extract_schema(schema, table_name, InspectedTable))
         return result
+
+

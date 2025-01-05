@@ -260,3 +260,5 @@ class InspectedSchema:
         return f"Schema: {self.name}{SEPARATION}" + SEPARATION_SECTION.join(
             str(obj) for obj in self._objects
         )
+
+

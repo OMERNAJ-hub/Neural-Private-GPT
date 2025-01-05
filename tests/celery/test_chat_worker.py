@@ -84,3 +84,5 @@ async def test_stateful_worker_requires_explicit_warm_profile(
 
     with pytest.raises(ValueError, match="PGPT_WORKER_WARM_PROFILE"):
         await StatefulBackgroundTask._warm_async()
+
+

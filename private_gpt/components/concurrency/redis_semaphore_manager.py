@@ -250,3 +250,5 @@ class RedisSemaphoreManager(SemaphoreManager):
             self.redis = None
 
         logger.info("Queue closed: %s", self.queue_key)
+
+

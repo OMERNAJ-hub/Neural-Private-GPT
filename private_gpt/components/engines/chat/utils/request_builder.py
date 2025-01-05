@@ -77,3 +77,5 @@ def _render_system_prompt_text(context_stack: ContextStack) -> list[TextBlock] |
         return None
 
     return [TextBlock(text=part) for part in parts]
+
+

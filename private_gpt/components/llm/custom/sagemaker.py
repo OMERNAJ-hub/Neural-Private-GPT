@@ -345,3 +345,5 @@ class SagemakerLLM(CustomLLM):
         self, prompt: str, formatted: bool = False, **kwargs: Any
     ) -> CompletionResponseAsyncGen:
         raise NotImplementedError
+
+

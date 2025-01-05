@@ -342,3 +342,5 @@ class S3Helper:
         )
         public_endpoint = self._s3_settings.public_endpoint_url + prefix
         return url.replace(self._s3_settings.endpoint_url, public_endpoint)
+
+

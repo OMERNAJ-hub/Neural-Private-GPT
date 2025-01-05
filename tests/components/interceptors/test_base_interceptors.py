@@ -464,3 +464,5 @@ class TestToolThenReasoningPipeline:
         )
         assert len(result["tools"]) == 1
         assert "".join(result["reasoning"]) == "think"
+
+

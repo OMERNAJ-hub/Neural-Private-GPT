@@ -67,3 +67,5 @@ else:
         if not _simple_authentication:
             raise NOT_AUTHENTICATED
         return True
+
+

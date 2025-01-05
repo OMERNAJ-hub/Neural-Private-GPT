@@ -377,3 +377,5 @@ def with_reasoning_budget_astream_chat(fn: _AStreamChatFn) -> _AStreamChatFn:
         return _gen()  # type: ignore[return-value]
 
     return wrapper  # type: ignore[return-value]
+
+

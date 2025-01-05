@@ -296,3 +296,5 @@ def cleanup_stale_candidates(
         if not validate_model_path(repo_dir, tokenizer_only=tokenizer_only):
             logger.debug(f"Removing stale directory: {repo_dir}")
             shutil.rmtree(repo_dir, ignore_errors=True)
+
+

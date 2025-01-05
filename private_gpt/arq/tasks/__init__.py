@@ -53,3 +53,5 @@ def autodiscover_registered_tasks(*task_packages: str) -> list[Function]:
     for package_name in get_task_packages(*task_packages):
         discovered.extend(autodiscover_tasks(package_name))
     return discovered
+
+

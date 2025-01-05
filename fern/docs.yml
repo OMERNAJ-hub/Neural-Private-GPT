@@ -1,8 +1,8 @@
 instances:
-  - url: privategpt.docs.buildwithfern.com
-    custom-domain: docs.privategpt.dev
+  - url: Neural-Private.docs.buildwithfern.com
+    custom-domain: docs.Neural-Private.dev
 
-title: PrivateGPT | Docs
+title: Neural-Private | Docs
 
 redirects:
   - source: "/overview/welcome/introduction"
@@ -196,7 +196,7 @@ navbar-links:
     text: Contact us
     url: "mailto:hello@zylon.ai"
   - type: github
-    value: "https://github.com/zylon-ai/private-gpt"
+    value: "https://github.com/zylon-ai/neural-private"
   - type: primary
     text: Join the Discord
     url: https://discord.com/invite/bK6mRVpErU
@@ -212,3 +212,5 @@ logo:
   height: 50
 
 favicon: docs/assets/favicon.ico
+
+

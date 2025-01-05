@@ -25,3 +25,5 @@ class StoredFile(BaseModel):
         default=None,
         description="Optional MIME type stored with the object.",
     )
+
+

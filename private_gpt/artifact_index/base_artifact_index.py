@@ -683,3 +683,5 @@ class ExtendIndex(Generic[IS]):
         return await _aget_node_with_embedding(
             self._source, nodes, show_progress=show_progress
         )
+
+

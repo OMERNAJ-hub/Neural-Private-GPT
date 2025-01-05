@@ -163,3 +163,5 @@ def load_active_settings() -> dict[str, Any]:
             *discovered_models,
         ]
     return merged
+
+

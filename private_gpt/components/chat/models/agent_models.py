@@ -19,3 +19,5 @@ class ToolResultOrNothing(Event):
     tool: BaseTool
     result: ToolCallResult | None = None
     executed: bool = False
+
+

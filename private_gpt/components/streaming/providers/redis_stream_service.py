@@ -378,3 +378,5 @@ class LazyRedisClientFactory:
         if cls._instance:
             cls._instance.close()
             cls._instance = None
+
+

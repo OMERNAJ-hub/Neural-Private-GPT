@@ -2,9 +2,9 @@ from typing import Any
 
 from fastapi import FastAPI
 
-TITLE = "Private-GPT API"
+TITLE = "neural-private API"
 DESCRIPTION = """\
-PrivateGPT -built by Zylon- is a production-ready AI project that allows you to ask questions about your documents using the power
+Neural-Private -built by Zylon- is a production-ready AI project that allows you to ask questions about your documents using the power
 of Large Language Models (LLMs), even in scenarios without an Internet connection. 100% private, no data leaves your
 execution environment at any point."""
 
@@ -131,3 +131,5 @@ def configure_openapi(app: FastAPI) -> None:
     openapi_schema = ensure_descriptions(openapi_schema)
     openapi_schema = uniquify_property_titles(openapi_schema)
     app.openapi_schema = openapi_schema
+
+

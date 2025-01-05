@@ -1,8 +1,8 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Private-GPT API",
-    "description": "PrivateGPT -built by Zylon- is a production-ready AI project that allows you to ask questions about your documents using the power\nof Large Language Models (LLMs), even in scenarios without an Internet connection. 100% private, no data leaves your\nexecution environment at any point.",
+    "title": "neural-private API",
+    "description": "Neural-Private -built by Zylon- is a production-ready AI project that allows you to ask questions about your documents using the power\nof Large Language Models (LLMs), even in scenarios without an Internet connection. 100% private, no data leaves your\nexecution environment at any point.",
     "version": "1.0.1"
   },
   "paths": {
@@ -49,7 +49,7 @@
                           "text": "Based on the analysis, I found 3 potential security issues..."
                         }
                       ],
-                      "model": "private-gpt",
+                      "model": "neural-private",
                       "stop_reason": "end_turn",
                       "usage": {
                         "input_tokens": 432,
@@ -78,7 +78,7 @@
                           }
                         }
                       ],
-                      "model": "private-gpt",
+                      "model": "neural-private",
                       "stop_reason": "tool_use",
                       "usage": {
                         "input_tokens": 156,
@@ -123,7 +123,7 @@
                           "text": "Based on the scan results, you should address the vulnerabilities found in /src..."
                         }
                       ],
-                      "model": "private-gpt",
+                      "model": "neural-private",
                       "stop_reason": "end_turn",
                       "usage": {
                         "input_tokens": 156,
@@ -137,7 +137,7 @@
                 "examples": {
                   "streaming_response": {
                     "summary": "Server-sent events for streaming",
-                    "value": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_12345\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"model\":\"private-gpt\",\"usage\":{}}}\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"block_id\":\"block_001\",\"content_block\":{\"type\":\"text\",\"start_timestamp\":\"2025-07-10T09:12:41.819953Z\",\"text\":\"\"}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"block_id\":\"block_001\",\"delta\":{\"type\":\"text_delta\",\"text\":\"Analyzing your codebase\"}}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"stop_timestamp\":\"2025-07-10T09:12:54.044672Z\",\"block_id\":\"block_001\"}\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"end_turn\"},\"usage\":{\"input_tokens\":432,\"output_tokens\":89}}\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"}\n\n"
+                    "value": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_12345\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"model\":\"neural-private\",\"usage\":{}}}\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"block_id\":\"block_001\",\"content_block\":{\"type\":\"text\",\"start_timestamp\":\"2025-07-10T09:12:41.819953Z\",\"text\":\"\"}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"block_id\":\"block_001\",\"delta\":{\"type\":\"text_delta\",\"text\":\"Analyzing your codebase\"}}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"stop_timestamp\":\"2025-07-10T09:12:54.044672Z\",\"block_id\":\"block_001\"}\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"end_turn\"},\"usage\":{\"input_tokens\":432,\"output_tokens\":89}}\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"}\n\n"
                   }
                 }
               }
@@ -689,11 +689,11 @@
                 "examples": {
                   "async_streaming_response": {
                     "summary": "Server-sent events for async streaming",
-                    "value": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_async_12345\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"model\":\"private-gpt\",\"usage\":{}}}\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"block_id\":\"block_001\",\"content_block\":{\"type\":\"text\",\"start_timestamp\":\"2025-07-10T09:12:41.819953Z\",\"text\":\"\"}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"block_id\":\"block_001\",\"delta\":{\"type\":\"text_delta\",\"text\":\"Processing your request asynchronously\"}}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"stop_timestamp\":\"2025-07-10T09:12:54.044672Z\",\"block_id\":\"block_001\"}\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"end_turn\"},\"usage\":{\"input_tokens\":432,\"output_tokens\":89}}\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"}\n\n"
+                    "value": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_async_12345\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"model\":\"neural-private\",\"usage\":{}}}\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"block_id\":\"block_001\",\"content_block\":{\"type\":\"text\",\"start_timestamp\":\"2025-07-10T09:12:41.819953Z\",\"text\":\"\"}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"block_id\":\"block_001\",\"delta\":{\"type\":\"text_delta\",\"text\":\"Processing your request asynchronously\"}}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"stop_timestamp\":\"2025-07-10T09:12:54.044672Z\",\"block_id\":\"block_001\"}\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"end_turn\"},\"usage\":{\"input_tokens\":432,\"output_tokens\":89}}\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"}\n\n"
                   },
                   "async_tool_use_stream": {
                     "summary": "Async streaming with tool usage",
-                    "value": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_async_67890\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"model\":\"private-gpt\",\"usage\":{}}}\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"block_id\":\"block_001\",\"content_block\":{\"type\":\"text\",\"text\":\"\"}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"block_id\":\"block_001\",\"delta\":{\"type\":\"text_delta\",\"text\":\"I'll help you with that task.\"}}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"block_id\":\"block_001\"}\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"block_id\":\"block_002\",\"content_block\":{\"type\":\"tool_use\",\"id\":\"tool_001\",\"name\":\"security_scanner\",\"input\":{}}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"block_id\":\"block_002\",\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"directory\\\":\\\"/src\\\"}\"}}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"block_id\":\"block_002\"}\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\"},\"usage\":{\"input_tokens\":156,\"output_tokens\":67}}\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"}\n\n"
+                    "value": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_async_67890\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[],\"model\":\"neural-private\",\"usage\":{}}}\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"block_id\":\"block_001\",\"content_block\":{\"type\":\"text\",\"text\":\"\"}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"block_id\":\"block_001\",\"delta\":{\"type\":\"text_delta\",\"text\":\"I'll help you with that task.\"}}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"block_id\":\"block_001\"}\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"block_id\":\"block_002\",\"content_block\":{\"type\":\"tool_use\",\"id\":\"tool_001\",\"name\":\"security_scanner\",\"input\":{}}}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"block_id\":\"block_002\",\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"directory\\\":\\\"/src\\\"}\"}}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"block_id\":\"block_002\"}\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\"},\"usage\":{\"input_tokens\":156,\"output_tokens\":67}}\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"}\n\n"
                   }
                 }
               }
@@ -1062,7 +1062,7 @@
                     "summary": "Embedding for single text input",
                     "value": {
                       "object": "list",
-                      "model": "private-gpt",
+                      "model": "neural-private",
                       "data": [
                         {
                           "index": 0,
@@ -1087,7 +1087,7 @@
                     "summary": "Embeddings for multiple text inputs",
                     "value": {
                       "object": "list",
-                      "model": "private-gpt",
+                      "model": "neural-private",
                       "data": [
                         {
                           "index": 0,
@@ -1144,7 +1144,7 @@
                     "summary": "Embeddings for semantic similarity comparison",
                     "value": {
                       "object": "list",
-                      "model": "private-gpt",
+                      "model": "neural-private",
                       "data": [
                         {
                           "index": 0,
@@ -1340,7 +1340,7 @@
                 },
                 "example": {
                   "object": "list",
-                  "model": "private-gpt",
+                  "model": "neural-private",
                   "data": [
                     {
                       "object": "ingest.document",
@@ -1388,7 +1388,7 @@
             "response": {
               "body": {
                 "object": "list",
-                "model": "private-gpt",
+                "model": "neural-private",
                 "data": [
                   {
                     "object": "ingest.document",
@@ -1579,7 +1579,7 @@
                       "task_status": "SUCCESS",
                       "task_result": {
                         "object": "list",
-                        "model": "private-gpt",
+                        "model": "neural-private",
                         "data": [
                           {
                             "object": "ingest.document",
@@ -1676,7 +1676,7 @@
                 },
                 "example": {
                   "object": "list",
-                  "model": "private-gpt",
+                  "model": "neural-private",
                   "data": [
                     {
                       "object": "ingest.document",
@@ -2439,7 +2439,7 @@
                     "summary": "Semantic search with chunks",
                     "value": {
                       "object": "list",
-                      "model": "private-gpt",
+                      "model": "neural-private",
                       "data": [
                         {
                           "object": "context.chunk",
@@ -2480,7 +2480,7 @@
                     "summary": "Keyword-based search results",
                     "value": {
                       "object": "list",
-                      "model": "private-gpt",
+                      "model": "neural-private",
                       "data": [
                         {
                           "object": "context.chunk",
@@ -2502,7 +2502,7 @@
                     "summary": "Combined semantic and keyword search",
                     "value": {
                       "object": "list",
-                      "model": "private-gpt",
+                      "model": "neural-private",
                       "data": [
                         {
                           "object": "context.chunk",
@@ -2647,7 +2647,7 @@
             "response": {
               "body": {
                 "object": "list",
-                "model": "private-gpt",
+                "model": "neural-private",
                 "data": [
                   {
                     "object": "context.chunk",
@@ -7479,10 +7479,10 @@
           },
           "model": {
             "type": "string",
-            "const": "private-gpt",
+            "const": "neural-private",
             "title": "Model",
             "description": "The model used to generate embeddings",
-            "default": "private-gpt"
+            "default": "neural-private"
           },
           "data": {
             "items": {
@@ -7515,7 +7515,7 @@
                 "object": "embedding"
               }
             ],
-            "model": "private-gpt",
+            "model": "neural-private",
             "object": "list"
           },
           {
@@ -7539,7 +7539,7 @@
                 "object": "embedding"
               }
             ],
-            "model": "private-gpt",
+            "model": "neural-private",
             "object": "list"
           }
         ]
@@ -8173,10 +8173,10 @@
           },
           "model": {
             "type": "string",
-            "const": "private-gpt",
+            "const": "neural-private",
             "title": "Model",
-            "description": "Model identifier, always 'private-gpt'",
-            "default": "private-gpt"
+            "description": "Model identifier, always 'neural-private'",
+            "default": "neural-private"
           },
           "data": {
             "items": {
@@ -8207,7 +8207,7 @@
                 "object": "ingest.document"
               }
             ],
-            "model": "private-gpt",
+            "model": "neural-private",
             "object": "list"
           }
         ]
@@ -8686,7 +8686,7 @@
             "type": "string",
             "title": "Model",
             "description": "Model name used.",
-            "default": "private-gpt"
+            "default": "neural-private"
           },
           "container": {
             "anyOf": [
@@ -10941,7 +10941,7 @@
               "File format not supported",
               {
                 "data": [],
-                "model": "private-gpt",
+                "model": "neural-private",
                 "object": "list"
               }
             ]
@@ -10969,7 +10969,7 @@
                   "object": "ingest.document"
                 }
               ],
-              "model": "private-gpt",
+              "model": "neural-private",
               "object": "list"
             },
             "task_status": "SUCCESS"
@@ -11022,7 +11022,7 @@
               "File format not supported",
               {
                 "data": [],
-                "model": "private-gpt",
+                "model": "neural-private",
                 "object": "list"
               }
             ]
@@ -11050,7 +11050,7 @@
                   "object": "ingest.document"
                 }
               ],
-              "model": "private-gpt",
+              "model": "neural-private",
               "object": "list"
             },
             "task_status": "SUCCESS"
@@ -12309,7 +12309,7 @@
             "description": "The URL of the website",
             "examples": [
               "https://www.example.com",
-              "https://docs.privategpt.com/getting-started",
+              "https://docs.Neural-Private.com/getting-started",
               "https://en.wikipedia.org/wiki/Artificial_intelligence"
             ]
           },
@@ -12326,7 +12326,7 @@
             "description": "The URL of the website's favicon",
             "examples": [
               "https://www.example.com/favicon.ico",
-              "https://docs.privategpt.com/favicon.png",
+              "https://docs.Neural-Private.com/favicon.png",
               "https://en.wikipedia.org/static/favicon/wikipedia.ico"
             ]
           },
@@ -12343,7 +12343,7 @@
             "description": "The title of the website or webpage",
             "examples": [
               "Example Domain",
-              "Getting Started with PrivateGPT - Documentation",
+              "Getting Started with Neural-Private - Documentation",
               "Artificial Intelligence - Wikipedia"
             ]
           },
@@ -12360,7 +12360,7 @@
             "description": "A brief description or summary of the website content",
             "examples": [
               "This domain is for use in illustrative examples in documents.",
-              "PrivateGPT is an open-source project that enables private AI interactions.",
+              "Neural-Private is an open-source project that enables private AI interactions.",
               "Artificial intelligence (AI) is intelligence demonstrated by machines."
             ]
           },
@@ -12417,7 +12417,7 @@
             "description": "The actual text content extracted from the website",
             "examples": [
               "<html><head><title>Example Domain</title></head><body>This domain is for use in illustrative examples in documents.</body></html>",
-              "PrivateGPT is an open-source project that enables private AI interactions.",
+              "Neural-Private is an open-source project that enables private AI interactions.",
               "Artificial intelligence (AI) is intelligence demonstrated by machines."
             ]
           }
@@ -12489,3 +12489,4 @@
     }
   }
 }
+

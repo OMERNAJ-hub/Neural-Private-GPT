@@ -10,3 +10,5 @@ class ToolExecutionHook(BaseModel):
 
 class ExecutionHooks(BaseModel):
     tool_result: list[ToolExecutionHook] = Field(default_factory=list)
+
+

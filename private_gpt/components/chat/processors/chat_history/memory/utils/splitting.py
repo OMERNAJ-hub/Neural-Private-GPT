@@ -53,3 +53,5 @@ def get_user_blocks(
         blocks.append(current_block)
 
     return blocks
+
+

@@ -156,3 +156,5 @@ class PromptStyleBase(ABC):
             return self.format_messages(
                 messages_or_completion, tools, reasoning_effort, **kwargs
             )
+
+

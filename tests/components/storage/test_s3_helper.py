@@ -48,3 +48,5 @@ async def test_async_upload_file_encodes_unicode_filename_in_metadata() -> None:
     assert encoded_filename.isascii()
     assert unquote(encoded_filename) == "sámple_¡™£¢∞§.txt"
     assert result == "s3://test-bucket/object-id"
+
+

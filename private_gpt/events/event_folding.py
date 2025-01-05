@@ -193,3 +193,5 @@ async def fold(
     async for event in fold_events(streaming_handler):
         response = event
     return response
+
+

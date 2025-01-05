@@ -63,3 +63,5 @@ These are things not obvious from reading `index.html` that future agents should
 - **Code Execution file upload** — when Code Execution is enabled, a **Files** button appears in the composer toolbar. It opens a file picker that uploads directly to `POST /v1/files?scope_id={chat.id}` (multipart/form-data). Uploaded files land in the session workspace and are accessible to the model's bash/file tools.
 - **Code Execution file downloads** — `present_files` tool results that contain `local_resource` blocks are rendered as `.code-exec-download` anchor elements linking to `GET /v1/files/{file_id}/content?scope_id={chat.id}`. The `file_id` and `mime_type` come from the `local_resource` block schema.
 - **Code Execution server links** — `present_server` tool results that contain `resource_link` blocks are rendered as `.code-exec-server-link` anchor elements (globe icon + service name + tunneled URL) opening in a new tab. The `uri`, `name`, and `description` come from the `resource_link` block schema. The tool_use summary shows `service_name:port` (and an optional `initial_path` deep-link).
+
+

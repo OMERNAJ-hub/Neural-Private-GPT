@@ -41,3 +41,5 @@ class MarkHiddenNodesTransform(TransformComponent):
         return cls(
             hidden_regex=re.compile(hidden_regex, re.MULTILINE),
         )
+
+

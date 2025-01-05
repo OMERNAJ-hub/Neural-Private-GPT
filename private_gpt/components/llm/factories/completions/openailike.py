@@ -66,3 +66,5 @@ class OpenAILikeCompletionsFactory(LLMFactory):
         )
 
         return llm, model_config.alias
+
+

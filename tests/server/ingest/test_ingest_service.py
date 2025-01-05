@@ -51,3 +51,5 @@ def test_delete_non_populated_vector_index_fails(injector: MockInjector) -> None
                 artifact="non_existent_artifact",
             )
         assert error is not None
+
+

@@ -408,3 +408,5 @@ class SelectBestLinks(BaseWebSearchResultProcessor):
         except asyncio.CancelledError:
             logger.debug(f"Summary task for {res.url} was cancelled")
             raise
+
+

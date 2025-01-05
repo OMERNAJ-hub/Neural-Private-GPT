@@ -278,3 +278,5 @@ class DiscoveryHttpClient:
             for item in raw_items
             if (info := model_info_from_item(item)) is not None
         )
+
+

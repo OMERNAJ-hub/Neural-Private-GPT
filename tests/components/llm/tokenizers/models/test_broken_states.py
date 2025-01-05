@@ -212,3 +212,5 @@ class TestPartialDownloads:
         )
         assert result is not None
         assert result == snap_dir
+
+

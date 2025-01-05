@@ -20,3 +20,5 @@ local_data_path: Path = resolve_data_path(settings().data.local_data_folder)
 prompt_templates_path: Path = (
     Path(__file__).resolve().parent / "components" / "prompts" / "templates"
 )
+
+

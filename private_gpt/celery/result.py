@@ -29,3 +29,5 @@ def wait_for_celery_result(
     if result.failed():
         raise result.result
     return result.result
+
+

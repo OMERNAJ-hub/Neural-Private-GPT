@@ -37,3 +37,5 @@ class WebScraperProvider(ABC):
 WebScraperProviderFactory = (
     type[WebScraperProvider] | Callable[[Settings], WebScraperProvider]
 )
+
+

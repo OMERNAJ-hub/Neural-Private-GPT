@@ -648,3 +648,5 @@ class ResolvedChatRequest(ChatRequest):
         default_factory=ResolvedContextConfig,
         description="Configuration for context handling.",
     )
+
+

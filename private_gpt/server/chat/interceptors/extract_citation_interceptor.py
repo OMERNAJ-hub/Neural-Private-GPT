@@ -178,3 +178,5 @@ class ExtractCitationInterceptor(ChatResponseLoopInterceptor):
     ) -> "ExtractCitationInterceptor":
         # Return a new instance with the same logic but reset state
         return ExtractCitationInterceptor()
+
+

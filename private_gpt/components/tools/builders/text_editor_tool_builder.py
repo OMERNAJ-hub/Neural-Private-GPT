@@ -241,3 +241,5 @@ async def rebuild_text_editor_create_tool(**kwargs: Any) -> ToolSpec:
 async def rebuild_text_editor_insert_tool(**kwargs: Any) -> ToolSpec:
     builder = get_global_injector().get(TextEditorToolBuilder)
     return await builder.build_insert_tool(**cast(Any, kwargs))
+
+

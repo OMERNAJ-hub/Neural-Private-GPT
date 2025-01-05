@@ -109,3 +109,5 @@ class PathTranslator:
             result = result.replace(real_str + "/", canonical)
             result = result.replace(real_str, canonical.rstrip("/"))
         return result
+
+

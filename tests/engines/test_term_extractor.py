@@ -313,3 +313,5 @@ def test_unique_terms_multilingual() -> None:
     assert "profit" in unique_terms[0]
     assert "beneficio" in unique_terms[1]
     assert "growth" in unique_terms[2]
+
+

@@ -178,3 +178,5 @@ class ChatTemplatePromptStyle(PromptStyleBase):
                 part.get("text", "") for part in content if part.get("type") == "text"
             )
         return str(content)
+
+

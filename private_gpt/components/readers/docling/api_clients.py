@@ -519,3 +519,5 @@ class DoclingClientFactory:
     @staticmethod
     def create(config: DoclingConfig, async_client: bool = False) -> BaseDoclingClient:
         return AsyncDoclingClient(config) if async_client else DoclingClient(config)
+
+

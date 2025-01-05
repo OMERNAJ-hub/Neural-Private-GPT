@@ -131,3 +131,5 @@ def _pydantic_error_to_skill_error(error: dict[str, object]) -> SkillDomainError
         return SkillDomainError(SkillErrorCode.METADATA_INVALID_VALUE, msg)
 
     return SkillDomainError(SkillErrorCode.INVALID_FRONTMATTER, msg)
+
+

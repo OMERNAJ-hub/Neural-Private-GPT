@@ -374,3 +374,5 @@ async def test_accepts_valid_request() -> None:
     )
 
     await _run_interceptor(interceptor, request)
+
+

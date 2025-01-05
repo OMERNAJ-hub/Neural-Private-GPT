@@ -27,3 +27,5 @@ class SQLAlchemyRepositoryBase:
     async def _session_factory(self) -> AsyncIterator[AsyncSession]:
         async with self._client.async_session() as session:
             yield session
+
+

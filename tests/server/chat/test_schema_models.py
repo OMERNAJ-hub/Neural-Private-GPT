@@ -2429,3 +2429,5 @@ class TestRealWorldSchemas:
         dumped = instance2.model_dump()
         assert dumped["labels"] == ["bug", "urgent", "backend"]
         assert dumped["links"][0]["url"] == "https://example.com"
+
+

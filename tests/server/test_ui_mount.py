@@ -16,3 +16,5 @@ def test_ui_path_without_trailing_slash_redirects_to_index(
 
     assert response.status_code == 307
     assert response.headers["location"] == "/ui/"
+
+

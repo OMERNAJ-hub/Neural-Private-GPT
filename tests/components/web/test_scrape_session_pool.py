@@ -115,3 +115,5 @@ async def test_close_kills_idle_sessions() -> None:
 
     await pool.close()
     assert provider.killed == [session]
+
+

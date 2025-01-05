@@ -238,3 +238,5 @@ class WebScraperService:
     async def close(self) -> None:
         await self._registry.close_all()
         logger.debug("WebScraperService closed")
+
+

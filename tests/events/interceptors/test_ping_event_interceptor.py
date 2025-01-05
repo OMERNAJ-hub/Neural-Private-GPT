@@ -43,3 +43,5 @@ async def test_closing_listener_closes_paused_stream() -> None:
     await stream.aclose()
 
     assert generator_closed.is_set()
+
+

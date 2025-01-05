@@ -286,3 +286,5 @@ class PatchedOpenAILLM(StructuredChatMixin, OpenAIBase):  # type: ignore[misc]
             all_kwargs["stream_options"] = {"include_usage": True}
 
         return all_kwargs  # type: ignore[no-any-return]
+
+

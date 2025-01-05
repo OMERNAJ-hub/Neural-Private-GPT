@@ -180,3 +180,5 @@ async def test_mcp_client_list_tools_preserves_remote_input_schema() -> None:
     assert tools[0].name == "Call_test_tool_object_"
     assert tools[0].input_schema == original_schema
     assert "type" not in tools[0].input_schema["properties"]["object_param"]
+
+

@@ -18,3 +18,5 @@ class MultimodalProcessingResponse(BaseModel):
     processing_status: MultimodalProcessingStatus | None = None
     chat_history: list[ChatMessage] | None = None
     modified_message: ChatMessage | None = None
+
+

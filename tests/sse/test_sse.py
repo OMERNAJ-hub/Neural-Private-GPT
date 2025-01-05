@@ -677,3 +677,5 @@ def _make_thinking_mock_llm() -> FunctionCallingLLM:
 
     mock_llm.astream_chat_with_tools = _coro
     return mock_llm
+
+

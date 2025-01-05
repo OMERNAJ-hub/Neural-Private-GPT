@@ -196,7 +196,7 @@ def _model_info_to_config(
         support_image = _capability_count(capabilities.image_input, bool(support_image))
         support_audio = _capability_count(capabilities.audio_input, bool(support_audio))
 
-    # Default privateGPT values
+    # Default Neural-Private values
     mode = mode or DEFAULT_MODELS_VALUES["mode"]
     prompt_style = DEFAULT_MODELS_VALUES["prompt_style"]
 
@@ -297,3 +297,5 @@ def get_models(
         )
 
     return configs
+
+

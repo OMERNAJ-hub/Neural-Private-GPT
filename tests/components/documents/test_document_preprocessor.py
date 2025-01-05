@@ -400,3 +400,5 @@ class TestMultipleDocuments:
         assert any(
             isinstance(b, TextBlock) and "doc content" in b.text for b in result.blocks
         )
+
+

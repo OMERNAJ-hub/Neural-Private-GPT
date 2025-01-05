@@ -266,3 +266,5 @@ def test_complex_preprocessing_scenario():
         result["Sales_1"]
     )  # numeric ratio is lower than 0.8
     assert pd.api.types.is_numeric_dtype(result["Sales_2"])
+
+

@@ -25,3 +25,5 @@ class DatabaseViewInspector(DatabaseTableLikeInspector):
             result.append(self._extract_schema(schema, view_name, InspectedView))
 
         return result
+
+

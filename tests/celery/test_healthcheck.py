@@ -30,3 +30,5 @@ async def test_healthcheck_checks_only_celery_worker(
 
 async def _async_result(value: bool) -> bool:
     return value
+
+

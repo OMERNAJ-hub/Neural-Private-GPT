@@ -95,3 +95,5 @@ async def test_local_code_execution_files_survive_session_recreation(
     # The host directories outlive the sandbox — files reappear on reconnect.
     assert kept.success is True
     assert "data" in kept.output
+
+

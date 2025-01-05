@@ -32,3 +32,5 @@ class EmbeddingFactoryRegistry:
                 f"Embedding mode '{mode}' is not supported. Available: {available}"
             )
         return self._factories[mode]
+
+

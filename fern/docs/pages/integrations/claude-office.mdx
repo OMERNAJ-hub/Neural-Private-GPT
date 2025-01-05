@@ -1,6 +1,6 @@
 ---
 title: "Claude for Microsoft 365"
-description: "Connect the Claude add-ins for Word, Excel, PowerPoint, and Outlook to your private-gpt server."
+description: "Connect the Claude add-ins for Word, Excel, PowerPoint, and Outlook to your neural-private server."
 ---
 
 <Warning>
@@ -9,13 +9,13 @@ description: "Connect the Claude add-ins for Word, Excel, PowerPoint, and Outloo
   Please verify that your context window is more than 40k tokens to use it. Otherwise, you may encounter errors or degraded performance. If your model supports a smaller context window, consider using a compatible model or adjusting your configuration accordingly.
 </Warning>
 
-The official Claude add-ins for Word, Excel, PowerPoint, and Outlook support third-party LLM gateways. Because `private-gpt` exposes a native Anthropic-compatible API, it works as a drop-in gateway — no adapter or proxy needed.
+The official Claude add-ins for Word, Excel, PowerPoint, and Outlook support third-party LLM gateways. Because `neural-private` exposes a native Anthropic-compatible API, it works as a drop-in gateway — no adapter or proxy needed.
 
 For the official Anthropic documentation, see [Use Claude for Microsoft 365 with third-party platforms](https://support.claude.com/en/articles/13945233-use-claude-for-microsoft-365-with-third-party-platforms).
 
 ## Compatibility
 
-Tested against `private-gpt` on 2026-05-27.
+Tested against `neural-private` on 2026-05-27.
 
 | Feature | Status | Notes |
 |---|:---:|---|
@@ -34,7 +34,7 @@ Tested against `private-gpt` on 2026-05-27.
 
 - Claude add-ins installed from [Microsoft AppSource](https://appsource.microsoft.com) or deployed by your IT admin
 - Microsoft 365 with Entra ID
-- `private-gpt` server running and reachable from end-user machines (see [serve](/configuration/cli#serve))
+- `neural-private` server running and reachable from end-user machines (see [serve](/configuration/cli#serve))
 
 ---
 
@@ -73,7 +73,7 @@ Tested against `private-gpt` on 2026-05-27.
 
 ## CORS
 
-The add-in calls `private-gpt` directly from the browser, so your server must allow the origin. The required origin may change between Claude Desktop versions — using a wildcard is the safest default:
+The add-in calls `neural-private` directly from the browser, so your server must allow the origin. The required origin may change between Claude Desktop versions — using a wildcard is the safest default:
 
 ```yaml
 server:
@@ -98,3 +98,5 @@ If you prefer to restrict the origin, check the exact value in the network tab o
 | No models available | Confirm `GET /v1/models` returns a non-empty list |
 | Streaming fails | Verify your reverse proxy (if any) passes Server-Sent Events through without buffering |
 | CORS error in browser console | Set `server.cors.allow_origins: ["*"]` and restart |
+
+

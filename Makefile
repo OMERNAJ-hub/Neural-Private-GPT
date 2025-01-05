@@ -4,12 +4,12 @@ AUTO_DISCOVER_ARGS ?=
 WORKER_ARGS ?=
 PROD_DIST_DIR ?= .dist
 PROD_PYTHON ?= .venv/bin/python
-PROD_BINARY ?= .venv/bin/private-gpt
+PROD_BINARY ?= .venv/bin/neural-private
 PROD_ARGS ?= serve
 PROD_UV_CACHE_DIR ?= .uv-cache
 TEST_PGPT_HOME ?= $(CURDIR)
 TEST_LOCAL_DATA_DIR ?= $(TEST_PGPT_HOME)/local_data/tests
-WIPE_PGPT_HOME := $(if $(PGPT_HOME),$(PGPT_HOME),$(HOME)/.local/share/private-gpt)
+WIPE_PGPT_HOME := $(if $(PGPT_HOME),$(PGPT_HOME),$(HOME)/.local/share/neural-private)
 WIPE_LOCAL_DATA_DIR := $(WIPE_PGPT_HOME)/local_data
 
 .PHONY: test test-changed test-coverage quality-dependencies format lint typecheck fix check auto-discover-models update-openapi-spec run dev-windows dev prod-run api-docs docs ingest wipe celery flower celery-worker arq-worker chat-worker tools-worker
@@ -63,13 +63,13 @@ update-openapi-spec:
 ########################################################################################################################
 
 run:
-	uv run private-gpt serve
+	uv run neural-private serve
 
 dev-windows:
-	uv run private-gpt serve --reload
+	uv run neural-private serve --reload
 
 dev:
-	PYTHONUNBUFFERED=1 uv run private-gpt serve --reload --host 0.0.0.0 --port 8080
+	PYTHONUNBUFFERED=1 uv run neural-private serve --reload --host 0.0.0.0 --port 8080
 
 prod-run:
 	rm -rf $(PROD_DIST_DIR)
@@ -136,3 +136,5 @@ tools-worker:
 	PGPT_STATEFUL_WORKER_TYPE=tools \
 	PGPT_WORKER_WARM_PROFILE=tools \
 	./scripts/worker_entrypoint $(WORKER_ARGS)
+
+

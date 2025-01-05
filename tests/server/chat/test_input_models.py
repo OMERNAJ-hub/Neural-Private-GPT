@@ -2313,3 +2313,5 @@ def test_accumulated_right_tldr_with_thinking_blocks_causes_consecutive_assistan
         assert roles[i] != roles[i + 1], (
             f"Consecutive same-role at positions {i}/{i + 1}: {roles}"
         )
+
+

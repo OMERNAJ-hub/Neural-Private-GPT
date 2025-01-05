@@ -118,3 +118,5 @@ class StreamService(ABC):
     async def close(self) -> None:
         """Close any open connections."""
         pass
+
+

@@ -12,3 +12,4 @@ updates:
       all-python-packages:
         patterns:
           - "**"
+

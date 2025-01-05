@@ -213,3 +213,5 @@ class PaperDistanceAlg(Generic[T]):
             distance = self.small_jump
 
         return distance
+
+

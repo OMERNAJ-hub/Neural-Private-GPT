@@ -38,3 +38,5 @@ def test_worker_process_init_resets_before_warming(
     bootsteps.handle_worker_process_init()
 
     assert operations.call_args_list == [call("reset"), call("warm")]
+
+

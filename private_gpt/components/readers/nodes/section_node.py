@@ -44,3 +44,5 @@ class SectionNode(TextNode):
 
         # If the node is a section node, and it has no children with content, skip it
         return None
+
+

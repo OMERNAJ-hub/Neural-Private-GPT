@@ -992,3 +992,5 @@ def test_all_models_run_without_crash(
 
     assert isinstance(response, AIMessage)
     assert len(response.content) > 0
+
+

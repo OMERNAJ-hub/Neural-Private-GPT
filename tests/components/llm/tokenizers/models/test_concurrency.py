@@ -608,3 +608,5 @@ class TestCleanupStaleSnapshots:
         assert repo_dir.exists()
         assert snapshot_dir.exists()
         assert keep.exists()
+
+

@@ -142,3 +142,5 @@ class Principal:
         if self._cookies:
             parts.append(f"cookies=[{', '.join(self._cookies.keys())}]")
         return f"Principal({', '.join(parts)})" if parts else "Principal(anonymous)"
+
+

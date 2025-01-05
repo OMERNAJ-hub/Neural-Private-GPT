@@ -9,3 +9,5 @@ TOOL_TIMEOUT_TASK_NAME = "private_gpt.tool.timeout"
 
 def get_queue_name(settings: Settings) -> str:
     return build_queue_name(settings.scheduler.chat.celery_queue)
+
+

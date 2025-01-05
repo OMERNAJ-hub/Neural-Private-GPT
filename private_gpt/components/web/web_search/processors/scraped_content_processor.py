@@ -61,3 +61,5 @@ class ScrapedContentProcessor(BaseWebSearchResultProcessor):
                 result.content_type = "text/markdown"
 
         return limited_results
+
+

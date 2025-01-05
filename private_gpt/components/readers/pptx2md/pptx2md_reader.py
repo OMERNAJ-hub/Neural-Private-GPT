@@ -328,3 +328,5 @@ class PPTX2MdReader(IngestionReader):
             "Finished PPTX2md parsing and transformations of file: %s",
             file_info.file_name,
         )
+
+

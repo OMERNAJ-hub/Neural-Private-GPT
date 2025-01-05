@@ -96,3 +96,5 @@ class QdrantVectorStoreFactory(VectorStoreFactory):
         if self._client is not None and hasattr(self._client, "close"):
             self._client.close()
         self._client = None
+
+

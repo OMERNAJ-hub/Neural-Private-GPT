@@ -188,3 +188,5 @@ def test_success_task_without_callback(injector: MockInjector):
     )
 
     broker_mock.publish.assert_not_called()
+
+

@@ -261,3 +261,5 @@ class InMemoryStreamService(StreamService):
             self._events.clear()
             self._event_counters.clear()
             self._cancel_flags.clear()
+
+

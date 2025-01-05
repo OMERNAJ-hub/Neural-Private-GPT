@@ -46,3 +46,5 @@ class PatchedOpenAILikeLLM(  # ty: ignore[inconsistent-mro]
     (is_chat_model, api_version, etc.) take precedence while all method patches
     from PatchedOpenAILLM are inherited unchanged.
     """
+
+

@@ -59,3 +59,5 @@ class ToolResultBlock(CacheableContentBlock, StandardContentProtocol):
 
 
 ContentBlockType = ResultContentBlockType | ToolResultBlock
+
+

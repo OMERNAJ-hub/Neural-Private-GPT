@@ -256,3 +256,5 @@ class TreeSummarizeSynthesizer(BaseSynthesizer):
             return self.get_response(
                 query_str=query_str, text_chunks=summaries, **response_kwargs
             )
+
+

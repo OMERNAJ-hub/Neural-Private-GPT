@@ -150,3 +150,5 @@ class EmbeddingComponent:
     @property
     def config(self) -> EmbeddingModelConfig:
         return self.get_config()
+
+

@@ -127,3 +127,5 @@ class ReaderComponent:
 
     def unregister_extension_reader(self, extension: str) -> None:
         self.registry.unregister_extension_reader(extension)
+
+

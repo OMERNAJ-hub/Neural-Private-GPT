@@ -100,3 +100,5 @@ class BrokerComponent:
     def close(self) -> None:
         """No-op: publisher lifecycle is owned by INSTANCE_REGISTRY."""
         pass
+
+

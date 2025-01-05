@@ -105,3 +105,5 @@ class ScrapeBatcher:
                 p.future.set_exception(RuntimeError("Scrape batcher is closed"))
         if self._dispatches:
             await asyncio.gather(*self._dispatches, return_exceptions=True)
+
+

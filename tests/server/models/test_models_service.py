@@ -91,3 +91,5 @@ def test_global_reasoning_disable_overrides_model_support() -> None:
     assert model_info.capabilities.thinking.supported is False
     assert model_info.capabilities.thinking.types.enabled.supported is False
     assert model_info.capabilities.thinking.types.adaptive.supported is False
+
+

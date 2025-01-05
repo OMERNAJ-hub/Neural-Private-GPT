@@ -939,3 +939,5 @@ def test_checkpoint_context_stack_rejects_non_resumable_server_tool() -> None:
 
     with pytest.raises(NonResumableToolError, match="ephemeral"):
         stack.checkpoint_dump()
+
+

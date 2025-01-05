@@ -150,3 +150,5 @@ def convert_to_ocrmac_lang(lang: str) -> str:
         return lang
     except KeyError as e:
         raise ValueError(f"Language {lang} not supported by OCRMac") from e
+
+

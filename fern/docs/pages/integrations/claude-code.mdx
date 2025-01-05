@@ -1,9 +1,9 @@
 ---
 title: "Claude Code"
-description: "Run Claude Code against your private-gpt server."
+description: "Run Claude Code against your neural-private server."
 ---
 
-[Claude Code](https://claude.ai/code) is Anthropic's official CLI for Claude. When pointed at a `private-gpt` server it routes all requests through your private, self-hosted API instead of `api.anthropic.com`.
+[Claude Code](https://claude.ai/code) is Anthropic's official CLI for Claude. When pointed at a `neural-private` server it routes all requests through your private, self-hosted API instead of `api.anthropic.com`.
 
 ## Compatibility
 
@@ -21,16 +21,16 @@ description: "Run Claude Code against your private-gpt server."
 ## Prerequisites
 
 - `claude` binary installed — see [Claude Code docs](https://claude.ai/code)
-- `private-gpt` server running (see [serve](/configuration/cli#serve))
+- `neural-private` server running (see [serve](/configuration/cli#serve))
 
 ---
 
 ## Run
 
-`private-gpt run` resolves the server URL and API key from your settings and injects them automatically before launching Claude Code:
+`neural-private run` resolves the server URL and API key from your settings and injects them automatically before launching Claude Code:
 
 ```bash
-private-gpt run claude-code
+neural-private run claude-code
 ```
 
 The server is started automatically if it is not already running. Pass `--no-server` to skip that check when the server is managed externally.
@@ -38,19 +38,19 @@ The server is started automatically if it is not already running. Pass `--no-ser
 **With a specific model:**
 
 ```bash
-private-gpt run claude-code --model default
+neural-private run claude-code --model default
 ```
 
 **Resume a previous session:**
 
 ```bash
-private-gpt run claude-code -- --resume abc123
+neural-private run claude-code -- --resume abc123
 ```
 
 **CI / non-interactive:**
 
 ```bash
-private-gpt run claude-code --auto-approve --no-server -- -p "explain this file"
+neural-private run claude-code --auto-approve --no-server -- -p "explain this file"
 ```
 
 ---
@@ -94,7 +94,7 @@ If you prefer to manage the environment variables yourself:
 
 ## What gets injected
 
-`private-gpt run claude-code` writes these variables into the environment before exec. Values are derived from your server settings at launch time.
+`neural-private run claude-code` writes these variables into the environment before exec. Values are derived from your server settings at launch time.
 
 | Variable | Value |
 |---|---|
@@ -104,3 +104,5 @@ If you prefer to manage the environment variables yourself:
 | `ANTHROPIC_DEFAULT_OPUS_MODEL` | `--model` if provided, else `llm.default_model` from settings |
 | `ANTHROPIC_DEFAULT_SONNET_MODEL` | `--model` if provided, else `llm.default_model` from settings |
 | `ANTHROPIC_DEFAULT_HAIKU_MODEL` | `--model` if provided, else `llm.default_model` from settings |
+
+

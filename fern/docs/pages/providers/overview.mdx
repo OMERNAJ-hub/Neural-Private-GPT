@@ -1,15 +1,15 @@
 ---
 title: "Overview"
-description: "PrivateGPT works with any OpenAI-compatible server. This page covers common local setups."
+description: "Neural-Private works with any OpenAI-compatible server. This page covers common local setups."
 ---
 
-PrivateGPT connects to **any OpenAI-compatible LLM server** via `OPENAI_API_BASE`. If your server responds to `GET /v1/models` and `POST /v1/chat/completions`, it works — whether that is a local binary, a cloud endpoint, or a self-hosted service.
+Neural-Private connects to **any OpenAI-compatible LLM server** via `OPENAI_API_BASE`. If your server responds to `GET /v1/models` and `POST /v1/chat/completions`, it works — whether that is a local binary, a cloud endpoint, or a self-hosted service.
 
 ```bash
-OPENAI_API_BASE=https://your-openai-compatible-server/v1 private-gpt serve
+OPENAI_API_BASE=https://your-openai-compatible-server/v1 neural-private serve
 ```
 
-The server handles model inference; PrivateGPT handles the API, retrieval, document processing, and orchestration on top.
+The server handles model inference; Neural-Private handles the API, retrieval, document processing, and orchestration on top.
 
 ---
 
@@ -60,16 +60,16 @@ The guides below cover popular self-hosted options. These are examples — not a
 ### Impact of a missing tokenizer endpoint
 
 <Warning>
-  When the server does not expose `/tokenize` (Ollama), PrivateGPT falls back to a **character-based estimate (4 chars = 1 token)** for counting tokens. This can cause:
+  When the server does not expose `/tokenize` (Ollama), Neural-Private falls back to a **character-based estimate (4 chars = 1 token)** for counting tokens. This can cause:
   - Inaccurate context-window management on very long inputs
   - Potential context overflow for models with smaller windows (e.g. 4k, 8k)
 
-  **Mitigation:** Set `context_window` explicitly in a [detailed model profile](/configuration/advanced) to a conservative value. This tells PrivateGPT exactly how many tokens it can safely use.
+  **Mitigation:** Set `context_window` explicitly in a [detailed model profile](/configuration/advanced) to a conservative value. This tells Neural-Private exactly how many tokens it can safely use.
 </Warning>
 
 ### Structured output
 
-Only **vLLM** exposes the structured output (JSON schema enforcement) endpoint used by PrivateGPT for reliable tool calls and schema-constrained responses. With other providers, PrivateGPT falls back to prompt-based JSON extraction, which is less reliable for complex schemas.
+Only **vLLM** exposes the structured output (JSON schema enforcement) endpoint used by Neural-Private for reliable tool calls and schema-constrained responses. With other providers, Neural-Private falls back to prompt-based JSON extraction, which is less reliable for complex schemas.
 
 ---
 
@@ -102,3 +102,5 @@ models:
     mode: openai
     context_window: 512
 ```
+
+

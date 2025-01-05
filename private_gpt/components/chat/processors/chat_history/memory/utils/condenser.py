@@ -51,3 +51,5 @@ def build_condensed_history(
         guarantee_valid_message_sequence(condensed_history),
         truncated_blocks,
     )
+
+

@@ -525,3 +525,5 @@ def _latest_versions_subquery() -> Subquery:
         )
         .label("rn"),
     ).subquery("latest_versions")
+
+

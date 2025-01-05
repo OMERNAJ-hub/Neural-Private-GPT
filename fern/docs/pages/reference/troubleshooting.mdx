@@ -1,15 +1,15 @@
 ---
 title: "Troubleshooting"
-description: "Solutions to common issues when running PrivateGPT."
+description: "Solutions to common issues when running Neural-Private."
 ---
 
 ## Models not discovered at startup
 
-**Symptom:** PrivateGPT starts but shows no models, or API calls return a "no models available" error.
+**Symptom:** Neural-Private starts but shows no models, or API calls return a "no models available" error.
 
 **Causes and fixes:**
 
-1. **LLM server not running.** Make sure your LLM server is up before starting PrivateGPT.
+1. **LLM server not running.** Make sure your LLM server is up before starting Neural-Private.
    ```bash
    curl http://localhost:11434/v1/models   # Ollama
    curl http://localhost:8000/v1/models    # vLLM / LlamaCPP
@@ -17,7 +17,7 @@ description: "Solutions to common issues when running PrivateGPT."
 
 2. **Wrong `OPENAI_API_BASE`.** Verify the URL matches your server's address and includes `/v1`.
    ```bash
-   OPENAI_API_BASE=http://localhost:11434/v1 private-gpt serve
+   OPENAI_API_BASE=http://localhost:11434/v1 neural-private serve
    ```
 
 3. **Auto-discovery disabled.** Check that `PGPT_LLM_AUTO_DISCOVER_MODELS` is not set to `false`.
@@ -26,20 +26,20 @@ description: "Solutions to common issues when running PrivateGPT."
 
 ## Connection refused inside Docker
 
-When running PrivateGPT in Docker and pointing at a server on the host machine, `localhost` refers to the container, not the host.
+When running Neural-Private in Docker and pointing at a server on the host machine, `localhost` refers to the container, not the host.
 
 **macOS / Windows:** use `host.docker.internal`:
 ```bash
 docker run -p 8080:8080 \
   -e OPENAI_API_BASE=http://host.docker.internal:11434/v1 \
-  zylonai/private-gpt:latest
+  zylonai/neural-private:latest
 ```
 
 **Linux:** use `--network host` instead:
 ```bash
 docker run --network host \
   -e OPENAI_API_BASE=http://localhost:11434/v1 \
-  zylonai/private-gpt:latest
+  zylonai/neural-private:latest
 ```
 
 ---
@@ -48,7 +48,7 @@ docker run --network host \
 
 **Symptom:** Long conversations or large documents produce truncated responses or errors from the LLM server.
 
-**Cause:** Without a tokenizer endpoint (Ollama), PrivateGPT estimates token count at 4 chars = 1 token, which can be inaccurate.
+**Cause:** Without a tokenizer endpoint (Ollama), Neural-Private estimates token count at 4 chars = 1 token, which can be inaccurate.
 
 **Fix:** Set `context_window` explicitly in a [detailed model profile](/configuration/advanced) to a value below the model's actual limit:
 
@@ -95,7 +95,7 @@ vectorstore:
 2. [Generate an access token](https://huggingface.co/docs/hub/en/security-tokens).
 3. Pass the token via environment variable:
    ```bash
-   PGPT_HUGGINGFACE_TOKEN=hf_... private-gpt serve
+   PGPT_HUGGINGFACE_TOKEN=hf_... neural-private serve
    ```
    Or set it in your profile:
    ```yaml
@@ -111,12 +111,12 @@ vectorstore:
 
 **Fix:** Change the port with the `--port` flag:
 ```bash
-private-gpt serve --port 8081
+neural-private serve --port 8081
 ```
 
 Or for Docker:
 ```bash
-docker run -p 8081:8080 -e OPENAI_API_BASE=... zylonai/private-gpt:latest
+docker run -p 8081:8080 -e OPENAI_API_BASE=... zylonai/neural-private:latest
 ```
 
 ---
@@ -131,3 +131,5 @@ docker run -p 8081:8080 -e OPENAI_API_BASE=... zylonai/private-gpt:latest
 ```bash
 -v ./settings-foo.yaml:/home/worker/app/settings-foo.yaml
 ```
+
+

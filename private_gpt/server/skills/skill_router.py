@@ -708,3 +708,5 @@ def _version_response(version: SkillVersionEntity) -> SkillVersionResponse:
         skill_id=version.skill_id,
         version=version.version,
     )
+
+

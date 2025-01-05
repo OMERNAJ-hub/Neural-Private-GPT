@@ -533,3 +533,5 @@ def format_context(
         "format_context: done, returning %d documents", len(formatted_documents)
     )
     return formatted_documents, formatted_content
+
+

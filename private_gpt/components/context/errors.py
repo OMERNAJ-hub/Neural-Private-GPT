@@ -33,3 +33,5 @@ class NonResumableToolError(ContextDomainError):
 
     def __init__(self, message: str) -> None:
         super().__init__(ContextErrorCode.NON_RESUMABLE_TOOL, message)
+
+

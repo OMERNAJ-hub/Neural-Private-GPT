@@ -198,3 +198,5 @@ def test_custom_ca_cert_implies_ignore_https_errors() -> None:
     settings = _network_settings(cert_file="/certs/ca.pem")
     config = build_scrape_config(settings, ["https://example.com"], 10)
     assert config.ignore_https_errors is True
+
+

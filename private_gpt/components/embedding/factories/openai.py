@@ -59,3 +59,5 @@ class OpenAIEmbeddingFactory(EmbeddingFactory):
         )
 
         return OpenAILikeEmbeddingFactory(self.settings)._create_embedding(model_config)
+
+

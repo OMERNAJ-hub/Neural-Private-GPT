@@ -75,3 +75,5 @@ class ImageNode(TreeNode):
     def set_content(self, value: str) -> None:
         """Set the content of the node."""
         self.alt_text = value
+
+

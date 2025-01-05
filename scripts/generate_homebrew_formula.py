@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the Homebrew formula for private-gpt."""
+"""Generate the Homebrew formula for neural-private."""
 
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ def render_formula(
     package_files_url: str,
     extra: str,
 ) -> str:
-    return f"""class PrivateGpt < Formula
+    return f"""class Neural-Private < Formula
   desc "Private self-hosted AI API server"
   homepage "{homepage}"
   url "{source_url}"
@@ -27,15 +27,15 @@ def render_formula(
   depends_on "uv"
 
   def install
-    (bin/"private-gpt").write <<~SH
+    (bin/"neural-private").write <<~SH
       #!/bin/bash
-      exec "#{{Formula["uv"].opt_bin}}/uv" tool run --python "#{{Formula["python@3.11"].opt_bin}}/python3.11" --find-links "{package_files_url}" --from "private-gpt[{extra}]=={version}" private-gpt "$@"
+      exec "#{{Formula["uv"].opt_bin}}/uv" tool run --python "#{{Formula["python@3.11"].opt_bin}}/python3.11" --find-links "{package_files_url}" --from "neural-private[{extra}]=={version}" neural-private "$@"
     SH
   end
 
   test do
-    script = (bin/"private-gpt").read
-    assert_match "private-gpt[{extra}]=={version}", script
+    script = (bin/"neural-private").read
+    assert_match "neural-private[{extra}]=={version}", script
     assert_match "{package_files_url}", script
     assert_match Formula["uv"].opt_bin.realpath.to_s, script
   end
@@ -50,7 +50,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--sha256", required=True)
     parser.add_argument(
         "--homepage",
-        default="https://github.com/zylon-ai/private-gpt",
+        default="https://github.com/zylon-ai/neural-private",
     )
     parser.add_argument("--extra", default="core")
     parser.add_argument("--package-files-url", required=True)
@@ -73,3 +73,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+

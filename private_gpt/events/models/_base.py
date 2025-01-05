@@ -140,3 +140,5 @@ class CacheableContentBlock(BaseContentBlock, StandardContentProtocol):
     cache_control: (
         Annotated[CacheControlEphemeral, Field(discriminator="type")] | None
     ) = Field(default=None)
+
+

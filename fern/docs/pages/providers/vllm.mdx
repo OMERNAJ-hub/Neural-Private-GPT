@@ -9,7 +9,7 @@ description: "High-throughput inference with vLLM — full capability support in
   vLLM requires an **NVIDIA GPU** with CUDA support. It is not designed for CPU-only inference.
 </Note>
 
-## Capabilities with PrivateGPT
+## Capabilities with Neural-Private
 
 | Capability | Status |
 |---|---|
@@ -83,13 +83,13 @@ description: "High-throughput inference with vLLM — full capability support in
     The LLM API is available at `http://localhost:8000/v1`. If you start the second instance, the embeddings API is available at `http://localhost:8001/v1`.
   </Step>
 
-  <Step title="Run PrivateGPT">
+  <Step title="Run Neural-Private">
     <Tabs>
       <Tab title="Package install">
         ```bash
         OPENAI_API_BASE=http://localhost:8000/v1 \
           OPENAI_EMBEDDING_API_BASE=http://localhost:8001/v1 \
-          private-gpt serve
+          neural-private serve
         ```
       </Tab>
       <Tab title="Docker">
@@ -97,14 +97,14 @@ description: "High-throughput inference with vLLM — full capability support in
         docker run -p 8080:8080 \
           -e OPENAI_API_BASE=http://host.docker.internal:8000/v1 \
           -e OPENAI_EMBEDDING_API_BASE=http://host.docker.internal:8001/v1 \
-          zylonai/private-gpt:latest
+          zylonai/neural-private:latest
         ```
       </Tab>
       <Tab title="uv (local)">
         ```bash
         OPENAI_API_BASE=http://localhost:8000/v1 \
           OPENAI_EMBEDDING_API_BASE=http://localhost:8001/v1 \
-          uv run private-gpt serve
+          uv run neural-private serve
         ```
       </Tab>
     </Tabs>
@@ -157,6 +157,8 @@ OPENAI_API_BASE=http://localhost:8000/v1 \
 
 ## Structured output
 
-vLLM supports the OpenAI `response_format` parameter for JSON schema enforcement. When PrivateGPT detects this capability, it uses schema-constrained generation for tool calls and structured responses — significantly more reliable than prompt-based approaches.
+vLLM supports the OpenAI `response_format` parameter for JSON schema enforcement. When Neural-Private detects this capability, it uses schema-constrained generation for tool calls and structured responses — significantly more reliable than prompt-based approaches.
 
-No extra configuration is needed; PrivateGPT detects structured output support automatically on startup.
+No extra configuration is needed; Neural-Private detects structured output support automatically on startup.
+
+

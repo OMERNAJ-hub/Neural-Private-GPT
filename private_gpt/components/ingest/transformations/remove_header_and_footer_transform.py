@@ -160,3 +160,5 @@ class RemoveHeaderAndFooterTransform(TransformComponent):
                 pages = self._remove_footer(pages, footer_candidates, win)
 
         return pages
+
+

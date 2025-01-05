@@ -208,3 +208,5 @@ def test_set_end_message(manager: SSEStreamManager, producer: SSEProducer):
     event = manager._queue.get()
     assert event.delta.stop_reason == "end_turn"  # Default value
     assert event.usage.output_tokens == 42
+
+

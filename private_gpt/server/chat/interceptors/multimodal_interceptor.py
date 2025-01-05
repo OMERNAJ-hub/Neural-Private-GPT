@@ -203,3 +203,5 @@ class MultimodalRequestInterceptor(ChatRequestLoopInterceptor):
                 audio_model = potential[0]
 
         return image_model, audio_model
+
+

@@ -178,3 +178,5 @@ def test_create_loop_injector_does_not_reuse_global_injector() -> None:
         assert get_injector(allow_to_generate_new_injectors=False) is loop_injector
 
     asyncio.run(create_fresh_injector())
+
+

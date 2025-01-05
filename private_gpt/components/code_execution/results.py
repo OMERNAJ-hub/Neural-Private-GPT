@@ -19,3 +19,5 @@ class FileOperationResult(BaseModel):
     success: bool
     output: str = ""
     error: str | None = None
+
+

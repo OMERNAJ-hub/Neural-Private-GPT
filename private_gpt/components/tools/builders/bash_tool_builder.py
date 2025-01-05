@@ -89,3 +89,5 @@ class BashToolBuilder:
 async def rebuild_bash_tool(**kwargs: Any) -> ToolSpec:
     builder = get_global_injector().get(BashToolBuilder)
     return await builder.build_tool(**cast(Any, kwargs))
+
+

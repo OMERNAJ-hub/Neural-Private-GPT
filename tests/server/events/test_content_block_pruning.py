@@ -313,3 +313,5 @@ class TestDeltaBlockPruning:
 
         assert result is not None
         assert isinstance(result, TLDRDelta)
+
+

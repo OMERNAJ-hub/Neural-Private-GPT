@@ -272,3 +272,5 @@ def test_paper_distance_expands_tables():
     debug_print(tree, result)
     _common_assertions(tree, hit, token_limit, result)
     _assert_no_fail_nodes_in_result(tree, result)
+
+

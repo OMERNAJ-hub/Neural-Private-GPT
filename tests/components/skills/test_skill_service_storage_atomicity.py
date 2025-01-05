@@ -113,3 +113,5 @@ async def test_storage_prefix_uses_version_id_not_version_token() -> None:
 
     payload = repo.create_skill.await_args.args[0]
     assert payload.initial_version.id in payload.initial_version.storage_prefix
+
+

@@ -24,3 +24,5 @@ Read these files in order before changing behavior, UI, or API wiring:
 - Follow the validation steps documented in `README.md` and `docs/SOURCE_OF_TRUTH.md`.
 - If implementation and docs disagree, fix the disagreement in the same change.
 - When finishing work, summarize what changed, what validation ran, and any known limitations.
+
+

@@ -18,3 +18,5 @@ class BaseEventInterceptor(ABC):
             Event: The intercepted Event objects.
         """
         pass
+
+

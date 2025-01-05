@@ -244,3 +244,5 @@ ArtifactType = Annotated[
     | SkillArtifact,
     Field(discriminator="type"),
 ]
+
+

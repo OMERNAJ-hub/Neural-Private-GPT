@@ -157,21 +157,21 @@ def build_index(package_dir: Path, output_dir: Path, extra: str) -> None:
 
     write_text(
         packages_dir / "index.html",
-        render_page("PrivateGPT package files", "\n    ".join(artifact_links)),
+        render_page("Neural-Private package files", "\n    ".join(artifact_links)),
     )
 
     write_text(
         simple_dir / "index.html",
-        render_page("PrivateGPT package index", "\n    ".join(package_links)),
+        render_page("Neural-Private package index", "\n    ".join(package_links)),
     )
     write_text(
         output_dir / "index.html",
         render_page(
-            "PrivateGPT package index",
+            "Neural-Private package index",
             (
-                "<p>Install PrivateGPT with <code>uv tool install --find-links "
-                "https://wheels.privategpt.dev/packages/ "
-                f"&quot;private-gpt[{html.escape(extra)}]&quot;</code>.</p>"
+                "<p>Install Neural-Private with <code>uv tool install --find-links "
+                "https://wheels.Neural-Private.dev/packages/ "
+                f"&quot;neural-private[{html.escape(extra)}]&quot;</code>.</p>"
             ),
         ),
     )
@@ -190,3 +190,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+

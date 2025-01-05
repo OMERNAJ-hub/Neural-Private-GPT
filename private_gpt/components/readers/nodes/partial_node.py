@@ -96,3 +96,5 @@ class PartialNode(TreeNode):
             return any(self.isinstance(c) for c in cls)
         tree_type = cls.get_type() if cls and issubclass(cls, TreeNode) else None
         return tree_type == self.type
+
+

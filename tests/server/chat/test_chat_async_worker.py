@@ -88,3 +88,5 @@ async def test_cancel_only_delegates_to_stream_manager() -> None:
 
     stream_manager.cancel_stream.assert_awaited_once_with("msg-3")
     chat_facade.cancel.assert_not_awaited()
+
+

@@ -42,3 +42,5 @@ class ChatFacadeService:
 
     async def cancel(self, correlation_id: str) -> bool:
         return await self._chat_service.cancel(correlation_id)
+
+

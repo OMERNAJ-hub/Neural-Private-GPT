@@ -779,3 +779,5 @@ def test_table_row_mixed_node_types_in_table() -> None:
     assert not row1.is_last_row()
     assert not row2.is_first_row()
     assert row2.is_last_row()
+
+

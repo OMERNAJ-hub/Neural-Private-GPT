@@ -1,9 +1,9 @@
 ---
 title: "OpenCode"
-description: "Point OpenCode at your private-gpt server for fully local AI coding."
+description: "Point OpenCode at your neural-private server for fully local AI coding."
 ---
 
-[OpenCode](https://opencode.ai) is an open-source AI coding agent with terminal, IDE, and desktop interfaces. It supports custom OpenAI-compatible providers via the `@ai-sdk/openai-compatible` package, so it works with `private-gpt` out of the box.
+[OpenCode](https://opencode.ai) is an open-source AI coding agent with terminal, IDE, and desktop interfaces. It supports custom OpenAI-compatible providers via the `@ai-sdk/openai-compatible` package, so it works with `neural-private` out of the box.
 
 ## Compatibility
 
@@ -21,16 +21,16 @@ description: "Point OpenCode at your private-gpt server for fully local AI codin
 ## Prerequisites
 
 - OpenCode installed — see [opencode.ai](https://opencode.ai)
-- `private-gpt` server running (see [serve](/configuration/cli#serve))
+- `neural-private` server running (see [serve](/configuration/cli#serve))
 
 ---
 
 ## Run
 
-`private-gpt run` generates a config file at `~/.config/opencode/private-gpt.json`, sets `OPENCODE_CONFIG` to point at it, and launches OpenCode:
+`neural-private run` generates a config file at `~/.config/opencode/neural-private.json`, sets `OPENCODE_CONFIG` to point at it, and launches OpenCode:
 
 ```bash
-private-gpt run opencode
+neural-private run opencode
 ```
 
 The server is started automatically if it is not already running. Pass `--no-server` to skip that check when the server is managed externally.
@@ -38,10 +38,10 @@ The server is started automatically if it is not already running. Pass `--no-ser
 **With a specific model:**
 
 ```bash
-private-gpt run opencode --model my-model
+neural-private run opencode --model my-model
 ```
 
-On first launch, press `Ctrl+P` → **Switch Model** → select the model under **PrivateGPT**.
+On first launch, press `Ctrl+P` → **Switch Model** → select the model under **Neural-Private**.
 
 ---
 
@@ -51,22 +51,22 @@ If you prefer to manage the configuration yourself:
 
 **1. Create the config file**
 
-Create `~/.config/opencode/private-gpt.json` (a separate file to avoid overriding your default OpenCode config):
+Create `~/.config/opencode/neural-private.json` (a separate file to avoid overriding your default OpenCode config):
 
 ```json
 {
   "$schema": "https://opencode.ai/config.json",
   "provider": {
-    "private-gpt": {
+    "neural-private": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "PrivateGPT",
+      "name": "Neural-Private",
       "options": {
         "baseURL": "http://localhost:8080/v1",
         "apiKey": "secret-key"
       },
       "models": {
         "default": {
-          "name": "PrivateGPT - default",
+          "name": "Neural-Private - default",
           "limit": {
             "context": 8096,
             "output": 1024
@@ -78,13 +78,15 @@ Create `~/.config/opencode/private-gpt.json` (a separate file to avoid overridin
 }
 ```
 
-Replace `secret-key` with the value of `server.auth.secret` from your `private-gpt` settings. If auth is disabled, any non-empty string works.
+Replace `secret-key` with the value of `server.auth.secret` from your `neural-private` settings. If auth is disabled, any non-empty string works.
 
 **2. Launch with the custom config**
 
 ```bash
-export OPENCODE_CONFIG=~/.config/opencode/private-gpt.json
+export OPENCODE_CONFIG=~/.config/opencode/neural-private.json
 opencode
 ```
 
-On first launch, press `Ctrl+P` → **Switch Model** → select the model under **PrivateGPT**.
+On first launch, press `Ctrl+P` → **Switch Model** → select the model under **Neural-Private**.
+
+

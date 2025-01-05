@@ -3343,3 +3343,5 @@ async def test_streaming_schema_coercion_partial_json_wire_format(
     assert inp["count"] == 42
     assert inp["tags"] == ["a", "b", "c"]
     assert inp["active"] is True
+
+
